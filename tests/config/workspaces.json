@@ -59,20 +59,8 @@
       "resource_group": "huggingface-registry-test",
       "secret_name": "AZ_CRED"
     },
-    "test-germanywestcentral": {
-      "region": "germanywestcentral",
-      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
-      "resource_group": "huggingface-registry-test1",
-      "secret_name": "AZ_CRED1"
-    },
     "test-japaneast": {
       "region": "japaneast",
-      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
-      "resource_group": "huggingface-registry-test1",
-      "secret_name": "AZ_CRED1"
-    },
-    "test-japanwest": {
-      "region": "japanwest",
       "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
       "resource_group": "huggingface-registry-test1",
       "secret_name": "AZ_CRED1"
@@ -151,12 +139,6 @@
     },
     "test-westcentralus": {
       "region": "westcentralus",
-      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
-      "resource_group": "huggingface-registry-test22",
-      "secret_name": "AZ_CRED2"
-    },
-    "test-westeurope": {
-      "region": "westeurope",
       "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
       "resource_group": "huggingface-registry-test22",
       "secret_name": "AZ_CRED2"

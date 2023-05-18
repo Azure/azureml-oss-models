@@ -1,0 +1,19 @@
+name: HELLO_WORLD
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  start-tests-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check-out-repo-step
+      uses: actions/checkout@v2
+    - name: start-tests-step
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "::warning:: testing warning message\n multi-line warning message"
+        echo "::error:: testing error message\n multi-line error message"  
+        exit 1
+      working-directory: tests/config/queue
