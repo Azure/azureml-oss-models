@@ -4,6 +4,7 @@
 
 
 #### [configure_auth.py](./configure_auth.py)
+See: https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md
 Pre-req: Install Az cli, Gh cli, and login to both
 Setup auth between the github repo workflow and resource groups that have workspaces. Steps
 * Create service principle (SP)
@@ -14,6 +15,7 @@ Setup auth between the github repo workflow and resource groups that have worksp
 #### [create_workspaces.py](./create_workspaces.py)
 Pre-req: [configure_auth.py](./configure_auth.py) 
 Create workspaces listed in [workspaces.json](../config/workspaces.json). Skips if workspace already exists.
+> Has some bugs, use [configure-auth.sh](./configure-auth.sh)
 
 #### [create_queue.py](./create_queue.py)
 Pre-req:

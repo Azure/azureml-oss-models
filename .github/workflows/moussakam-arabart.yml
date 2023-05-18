@@ -20,7 +20,7 @@ jobs:
     - name: azure-login-step
       uses: azure/login@v1
       with:
-        creds: ${{secrets.AZ_CRED}}
+        creds: ${{secrets.AZ_CRED2}}
     - name: pip-install-azure-ai-ml
       run: pip install azure-ai-ml 
     - name: deploy-model-step

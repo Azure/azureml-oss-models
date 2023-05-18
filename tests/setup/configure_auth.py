@@ -49,7 +49,7 @@ def set_azure_subscription(subscription_id):
         print('stderr: {}'.format(e.stderr.decode(sys.getfilesystemencoding())))
 
 def create_service_principal(sp_name):
-    cmd = f"az ad sp create-for-rbac --name {sp_name}"
+    cmd = f"az ad sp create-for-rbac --name {sp_name} --sdk-auth"
     try:
         output = subprocess.check_output(cmd, stderr=subprocess.PIPE, shell=True).decode(sys.getfilesystemencoding())
         return output
@@ -71,7 +71,7 @@ def save_token_to_github_secret(token, secret_name):
         print('stderr: {}'.format(e.stderr.decode(sys.getfilesystemencoding())))
 
 # function to get the service principal id
-def get_service_principal_id(sp_name):
+def get_service_principal_app_id(sp_name):
     cmd = f"az ad sp list --display-name {sp_name} --query [].appId -o tsv"
     try:
         sp_id = subprocess.check_output(cmd, stderr=subprocess.PIPE, shell=True).decode(sys.getfilesystemencoding())
@@ -103,23 +103,20 @@ def main():
         auth_scopes[workspace_list[workspace]["subscription"]] = workspace_list[workspace]["resource_group"]
     
     output = create_service_principal(args.service_principal_name)
-    # load output as json and get appId and token
-    output_json = json.loads(output)
-    token = output_json["password"]
-    appId = output_json["appId"]
     print(f"Created service principal {args.service_principal_name}")
-    print(f"AppId: {appId}")
+
     if PRINT_TOKEN: 
-        print(f"Token: {token}")
+        print(f"Token: {output}")
 
     # save token to github secret
-    save_token_to_github_secret(token, args.github_workflow_cred)
-    
+    save_token_to_github_secret(output, args.github_workflow_cred)
+
+ 
     print(f"Saved token to github secret {args.github_workflow_cred}")
 
-    # get service principal id
-    # sp_id = get_service_principal_id(args.service_principal_name)
-    # print service principal name and id
+    #get service principal id
+    appId = get_service_principal_app_id(args.service_principal_name)
+    print(f"Service principal app id: {appId}")
 
     # for each subscription in auth_scope, assign role to service principal
     for subscription in auth_scopes:

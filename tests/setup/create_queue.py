@@ -35,7 +35,7 @@ parser.add_argument("--queue_dir", type=str, default="../config/queue")
 # !!! backup files in this folder will be overwritten !!!
 parser.add_argument("--test_set", type=str, default="huggingface-all")
 # file containing list of models to test, one per line
-parser.add_argument("--model_list_file", type=str, default="../config/smoke.txt")
+parser.add_argument("--model_list_file", type=str, default="../logs/get_model_containers/17May2023-231031.json")
 # test_keep_looping, to keep looping through the queue after all models have been tested
 parser.add_argument("--test_keep_looping", type=str, default="false")
 # test_trigger_next_model, to trigger next model in queue after each model is tested
@@ -215,7 +215,7 @@ def create_workflow_files(queue, workspace_list):
     for workspace in queue:
         for thread in queue[workspace]:
             for model in queue[workspace][thread]:
-                write_single_workflow_file(model, f"{workspace}-{thread}")
+                write_single_workflow_file(model, f"{workspace}-{thread}", workspace_list[workspace]['secret_name'])
                 # print progress
                 counter=counter+1
                 sys.stdout.write(f'{counter}\r')
@@ -223,7 +223,7 @@ def create_workflow_files(queue, workspace_list):
     print (f"\nCreated {counter} workflow files")
 
 # function to write a single workflow file
-def write_single_workflow_file(model, q):
+def write_single_workflow_file(model, q, secret_name):
     # print a single dot without a newline to show progress
     print (".", end="", flush=True)
     workflow_file=f"{args.workflow_dir}/{model}.yml"
@@ -241,6 +241,8 @@ def write_single_workflow_file(model, q):
     os.system(f"sed -i 's/<test_model_name>/{model}/g' {workflow_file}")
     # replace <test_set> with test_set in workflow_file
     os.system(f"sed -i 's/<test_set>/{args.test_set}/g' {workflow_file}")
+    # replace <test_secret_name> 
+    os.system(f"sed -i 's/<test_secret_name>/{secret_name}/g' {workflow_file}")
 
 # main function
 def main():

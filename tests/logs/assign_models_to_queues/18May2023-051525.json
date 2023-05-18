@@ -1,0 +1,10 @@
+{
+    "test-australiaeast": {
+        "0": [
+            "bert-based-uncased"
+        ],
+        "1": [
+            "bert-based-cased"
+        ]
+    }
+}

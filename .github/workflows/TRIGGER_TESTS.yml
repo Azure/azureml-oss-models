@@ -3,7 +3,8 @@ name: TRIGGER_TESTS
 on: 
   workflow_dispatch:
     inputs:
-      test_queue:
+      test_set:
+        description: 'Test set to run'
         default: huggingface-all
 
 jobs:
@@ -16,7 +17,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        cd ${{ test_queue}}
+        cd ${{ inputs.test_set }}
         for file in `ls -1`  
         do  
           gh workflow run `cat $file | head -n 1`
