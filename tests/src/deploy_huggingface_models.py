@@ -221,8 +221,14 @@ def sample_inference(latest_model,registry, workspace_ml_client, online_endpoint
         output = json.dumps(response_json, indent=2)
         print(f"response: \n\n{output}")
         with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as fh:
-            print(f'### Sample input\n{scoring_input}\n###Sample output\n{output}', file=fh)
-            
+            print(f'####Sample input', file=fh)
+            print(f'```json', file=fh)
+            print(f'{scoring_input}', file=fh)
+            print(f'```', file=fh)
+            print(f'####Sample output', file=fh)
+            print(f'```json', file=fh)
+            print(f'{output}', file=fh)
+            print(f'```', file=fh)
     except Exception as e:
         print (f"::error:: Could not invoke endpoint: \n")
         print (f"{e}\n\n check logs:\n\n")
