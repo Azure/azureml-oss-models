@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westus-0",
+    "models": [
+        "hfl-rbtl3",
+        "textattack-bert-base-uncased-cola",
+        "elinas-llama-7b-hf-transformers-4.29",
+        "eugenesiow-bart-paraphrase",
+        "helsinki-nlp-opus-mt-fr-ru",
+        "helsinki-nlp-opus-mt-ht-en",
+        "asahi417-tner-xlm-roberta-base-ontonotes5",
+        "hooshvarelab-bert-base-parsbert-uncased",
+        "joeddav-bart-large-mnli-yahoo-answers",
+        "cross-encoder-nli-minilm2-l6-h768",
+        "flaubert-flaubert-base-uncased",
+        "cerebras-cerebras-gpt-2.7b",
+        "aubmindlab-bert-base-arabertv02",
+        "tscholak-cxmefzzi",
+        "eleutherai-pythia-160m",
+        "pszemraj-flan-t5-large-grammar-synthesis",
+        "jean-baptiste-roberta-large-ner-english"
+    ],
+    "workspace": "test-westus",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

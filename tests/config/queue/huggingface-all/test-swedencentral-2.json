@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-swedencentral-2",
+    "models": [
+        "nlpconnect-roberta-base-squad2-nq",
+        "alexwortega-instruct-rugptlarge",
+        "nlphust-ner-vietnamese-electra-base",
+        "unicamp-dl-ptt5-base-portuguese-vocab",
+        "whaleloops-keptlongformer",
+        "intel-distilbert-base-uncased-finetuned-sst-2-english-int8-static",
+        "daspartho-text-emotion",
+        "ai-forever-fred-t5-1.7b",
+        "oliverguhr-spelling-correction-english-base",
+        "geotrend-distilbert-base-es-cased",
+        "saattrupdan-nbailab-base-ner-scandi",
+        "dbmdz-bert-base-italian-xxl-uncased",
+        "camel-lab-bert-base-arabic-camelbert-mix",
+        "xlm-clm-ende-1024",
+        "typeform-distilbert-base-uncased-mnli",
+        "shahrukhx01-question-vs-statement-classifier",
+        "microsoft-deberta-v2-xlarge"
+    ],
+    "workspace": "test-swedencentral",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

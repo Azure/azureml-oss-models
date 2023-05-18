@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-germanywestcentral-0",
+    "models": [
+        "turkunlp-gpt3-finnish-small",
+        "nytk-puli-gpt-2",
+        "valhalla-s2t-mustc-multilinguial-medium",
+        "unicamp-dl-translation-en-pt-t5",
+        "vinai-phobert-base-v2",
+        "facebook-blenderbot-1b-distill",
+        "allenai-wmt19-de-en-6-6-base",
+        "eleutherai-polyglot-ko-3.8b",
+        "helsinki-nlp-opus-mt-uk-sl",
+        "stanfordaimi-stanford-deidentifier-only-i2b2",
+        "rucaibox-mvp",
+        "thatdramebaazguy-roberta-base-squad",
+        "kes-t5-kes",
+        "helsinki-nlp-opus-mt-ja-en",
+        "yale-lily-brio-cnndm-uncased",
+        "entropy-roberta-zinc-480m",
+        "sultan-biom-electra-large-squad2",
+        "helsinki-nlp-opus-mt-en-es"
+    ],
+    "workspace": "test-germanywestcentral",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

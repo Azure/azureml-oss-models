@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-southafricanorth-0",
+    "models": [
+        "pszemraj-pegasus-x-large-book-summary",
+        "facebook-esm-1b",
+        "taeminlee-kogpt2",
+        "scite-roberta-base-squad2-nq-bioasq",
+        "rogerkam-roberta-rcade-fine-tuned-sentiment-covid-news",
+        "helsinki-nlp-opus-mt-en-jap",
+        "maltehb-danish-bert-botxo",
+        "larryvrh-mt5-translation-ja-zh",
+        "uw-madison-yoso-4096",
+        "microsoft-tapex-large",
+        "google-t5-efficient-tiny",
+        "jsylee-scibert-scivocab-uncased-finetuned-ner",
+        "csarron-bert-base-uncased-squad-v1",
+        "prithivida-grammar-error-correcter-v1",
+        "koboldai-ppo-pygway-6b-mix",
+        "tsmatz-xlm-roberta-ner-japanese",
+        "mrm8488-t5-base-finetuned-summarize-news",
+        "roberta-base"
+    ],
+    "workspace": "test-southafricanorth",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

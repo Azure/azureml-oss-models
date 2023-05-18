@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westus-1",
+    "models": [
+        "deepmind-language-perceiver",
+        "keti-air-ke-t5-large",
+        "moritzlaurer-multilingual-minilmv2-l6-mnli-xnli",
+        "neulab-codebert-javascript",
+        "stanfordaimi-stanford-deidentifier-with-radiology-reports-and-i2b2",
+        "salesforce-codet5-large",
+        "albert-xlarge-v2",
+        "facebook-opt-iml-max-1.3b",
+        "qcri-bert-base-multilingual-cased-pos-english",
+        "jorgeutd-bert-large-uncased-finetuned-ner",
+        "deepset-gbert-base",
+        "google-t5-small-lm-adapt",
+        "alinear-albert-japanese-v2",
+        "microsoft-codegpt-small-java-adaptedgpt2",
+        "helsinki-nlp-opus-mt-fi-en",
+        "microsoft-biomednlp-pubmedbert-base-uncased-abstract-fulltext",
+        "bigscience-test-bloomd-6b3"
+    ],
+    "workspace": "test-westus",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

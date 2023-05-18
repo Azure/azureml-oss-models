@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-canadaeast-1",
+    "models": [
+        "cardiffnlp-twitter-roberta-base-2022-154m",
+        "mbzuai-lamini-gpt-1.5b",
+        "t-systems-onsite-mt5-small-sum-de-en-v2",
+        "ml6team-mt5-small-german-query-generation",
+        "ilyagusev-rubertconv-toxic-clf",
+        "helsinki-nlp-opus-mt-eo-en",
+        "prithivida-informal-to-formal-styletransfer",
+        "hakurei-lit-6b",
+        "mrm8488-distill-bert-base-spanish-wwm-cased-finetuned-spa-squad2-es",
+        "salesforce-codegen-6b-multi",
+        "bigscience-bloomz-1b1",
+        "bert-base-cased-finetuned-mrpc",
+        "voidful-context-only-question-generator",
+        "togethercomputer-pythia-chat-base-7b",
+        "microsoft-dialogpt-large",
+        "helsinki-nlp-opus-mt-en-ru",
+        "martin-ha-toxic-comment-model",
+        "prithivida-parrot-paraphraser-on-t5"
+    ],
+    "workspace": "test-canadaeast",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

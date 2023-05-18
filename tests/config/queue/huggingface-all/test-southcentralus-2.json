@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-southcentralus-2",
+    "models": [
+        "aitslab-biobert-huner-disease-v1",
+        "ntas-charles-dickens-gpt2",
+        "helsinki-nlp-opus-mt-en-vi",
+        "dumitrescustefan-bert-base-romanian-uncased-v1",
+        "allenai-primera-multi-lexsum-source-short",
+        "rinna-japanese-gpt2-xsmall",
+        "xlm-roberta-large-finetuned-conll03-german",
+        "akdeniz27-bert-base-turkish-cased-ner",
+        "ktrapeznikov-albert-xlarge-v2-squad-v2",
+        "jb2k-bert-base-multilingual-cased-language-detection",
+        "microsoft-multilingual-minilm-l12-h384",
+        "cross-encoder-nli-deberta-v3-small",
+        "allenai-led-base-16384",
+        "sxie3333-bert",
+        "babylm-t5-base-strict",
+        "mrm8488-distilroberta-finetuned-financial-news-sentiment-analysis",
+        "distilbert-base-cased-distilled-squad"
+    ],
+    "workspace": "test-southcentralus",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

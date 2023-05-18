@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-uaenorth-0",
+    "models": [
+        "urukhan-t5-russian-spell",
+        "hf-internal-testing-tiny-random-debertav2forquestionanswering",
+        "fredzhang7-danbooru-tag-generator",
+        "cointegrated-rut5-base-paraphraser",
+        "thomasnlg-t5-qg-squad1-en",
+        "google-long-t5-tglobal-xl",
+        "aktsvigun-electra-large-cola",
+        "hfl-chinese-macbert-large",
+        "m3hrdadfi-typo-detector-distilbert-en",
+        "samuel-fipps-t5-efficient-large-nl36-fine-tune-sum-v2",
+        "hooshvarelab-bert-fa-base-uncased",
+        "ramsrigouthamg-t5-paraphraser",
+        "uer-chinese-roberta-l-12-h-768",
+        "succinctly-text2image-prompt-generator",
+        "google-mt5-small",
+        "finiteautomata-bertweet-base-sentiment-analysis",
+        "cross-encoder-ms-marco-minilm-l-6-v2"
+    ],
+    "workspace": "test-uaenorth",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-brazilsouth-1",
+    "models": [
+        "curiousily-layoutlmv3-financial-document-classification",
+        "uer-chinese-roberta-l-8-h-512",
+        "consciousai-question-answering-roberta-base-s",
+        "nlpaueb-sec-bert-base",
+        "mlrs-bertu",
+        "uer-gpt2-chinese-lyric",
+        "apanc-russian-inappropriate-messages",
+        "mrm8488-bert-medium-finetuned-squadv2",
+        "allenai-ivila-row-layoutlm-finetuned-s2vl-v2",
+        "deepset-gelectra-base-germanquad-distilled",
+        "timpal0l-mdeberta-v3-base-squad2",
+        "cmarkea-distilcamembert-base",
+        "cross-encoder-stsb-roberta-base",
+        "facebook-nllb-200-1.3b",
+        "tehvenom-dolly-shygmalion-6b",
+        "salesforce-codet5-base",
+        "dccuchile-bert-base-spanish-wwm-cased",
+        "bert-large-uncased-whole-word-masking-finetuned-squad"
+    ],
+    "workspace": "test-brazilsouth",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

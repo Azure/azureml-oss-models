@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-eastus2-0",
+    "models": [
+        "ninedaywang-polycoder-160m",
+        "jdchang-t5-10-bc",
+        "vocab-transformers-distilbert-word2vec-256k-mlm-best",
+        "microsoft-dialogrpt-depth",
+        "sshleifer-distilbart-xsum-12-6",
+        "koboldai-gpt-j-6b-janeway",
+        "benjamin-gerpt2-large",
+        "cross-encoder-quora-distilroberta-base",
+        "helsinki-nlp-opus-mt-uk-en",
+        "cl-tohoku-bert-large-japanese",
+        "cardiffnlp-twitter-roberta-base-hate-latest",
+        "michaelrglass-albert-base-rci-wikisql-row",
+        "lmsys-fastchat-t5-3b-v1.0",
+        "mingzhong-unieval-sum",
+        "bert-base-german-dbmdz-uncased",
+        "textattack-bert-base-uncased-sts-b",
+        "klue-bert-base",
+        "distilgpt2"
+    ],
+    "workspace": "test-eastus2",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

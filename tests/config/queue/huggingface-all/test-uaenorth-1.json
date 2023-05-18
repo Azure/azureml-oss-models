@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-uaenorth-1",
+    "models": [
+        "neko-institute-of-science-llama-7b-hf",
+        "helsinki-nlp-opus-mt-en-uk",
+        "helsinki-nlp-opus-mt-en-el",
+        "yeungnlp-firefly-1b4",
+        "ckiplab-albert-base-chinese-ner",
+        "hooshvarelab-bert-fa-zwnj-base",
+        "beir-query-gen-msmarco-t5-base-v1",
+        "bigscience-bigscience-small-testing",
+        "stevenlimcorn-indonesian-roberta-base-emotion-classifier",
+        "yiyanghkust-finbert-esg-9-categories",
+        "google-long-t5-local-base",
+        "bert-large-cased-whole-word-masking-finetuned-squad",
+        "eleutherai-pythia-2.8b",
+        "cl-tohoku-bert-base-japanese-v2",
+        "mrm8488-bert-spanish-cased-finetuned-ner",
+        "ckiplab-bert-base-chinese-ws",
+        "uer-albert-base-chinese-cluecorpussmall"
+    ],
+    "workspace": "test-uaenorth",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-eastus2-1",
+    "models": [
+        "nghuyong-ernie-3.0-medium-zh",
+        "hf-internal-testing-tiny-random-rembertforcausallm",
+        "hfl-rbt6",
+        "eistakovskii-xlm-roberta-base-multilingual-toxicity-classifier-plus",
+        "neuralspace-reverie-indic-transformers-hi-bert",
+        "cambridgeltl-sst-mobilebert-uncased",
+        "hfl-chinese-lert-base",
+        "aubmindlab-aragpt2-base",
+        "stanford-crfm-biomedlm",
+        "yiyanghkust-finbert-pretrain",
+        "google-bigbird-pegasus-large-arxiv",
+        "hyunwoongko-kobart",
+        "studio-ousia-luke-base",
+        "valhalla-distilbart-mnli-12-3",
+        "sbcbi-sentiment-analysis-model",
+        "textattack-roberta-base-cola",
+        "bigscience-bloomz-7b1",
+        "seethal-sentiment-analysis-generic-dataset"
+    ],
+    "workspace": "test-eastus2",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

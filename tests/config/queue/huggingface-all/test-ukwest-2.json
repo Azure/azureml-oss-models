@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-ukwest-2",
+    "models": [
+        "helsinki-nlp-opus-mt-tc-big-fr-en",
+        "hf-internal-testing-tiny-random-albertfortokenclassification",
+        "ethanyt-guwenbert-base",
+        "stanfordaimi-radbert",
+        "mbartolo-roberta-large-synqa-ext",
+        "aekupor-eliciting",
+        "helsinki-nlp-opus-mt-it-fr",
+        "musixmatch-umberto-commoncrawl-cased-v1",
+        "fabiochiu-t5-base-tag-generation",
+        "pszemraj-long-t5-tglobal-base-16384-book-summary",
+        "ai-forever-rubert-base",
+        "eleutherai-pythia-1b-deduped",
+        "cross-encoder-stsb-distilroberta-base",
+        "classla-bcms-bertic-ner",
+        "pszemraj-grammar-synthesis-small",
+        "deepset-roberta-base-squad2-covid",
+        "neulab-codebert-cpp"
+    ],
+    "workspace": "test-ukwest",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

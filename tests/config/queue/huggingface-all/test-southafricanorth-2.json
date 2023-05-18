@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-southafricanorth-2",
+    "models": [
+        "emelnov-t5-tags-g-b",
+        "jaehyeong-koelectra-base-v3-generalized-sentiment-analysis",
+        "qiliang-bart-large-cnn-samsum-electrifai-v10",
+        "michaelrglass-albert-base-rci-wikisql-col",
+        "google-bigbird-base-trivia-itc",
+        "aekupor-adding-on",
+        "girinlp-i2i-phibert-finetuned-ner",
+        "asahi417-tner-xlm-roberta-large-all-english",
+        "bigscience-bloom-petals",
+        "helsinki-nlp-opus-mt-en-id",
+        "deepset-electra-base-squad2",
+        "eleutherai-pythia-2.8b-deduped-v0",
+        "cross-encoder-nli-distilroberta-base",
+        "ml6team-keyphrase-extraction-distilbert-inspec",
+        "langboat-mengzi-bert-base",
+        "michellejieli-emotion-text-classifier",
+        "michellejieli-nsfw-text-classifier",
+        "gpt2"
+    ],
+    "workspace": "test-southafricanorth",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

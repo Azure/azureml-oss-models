@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westcentralus-0",
+    "models": [
+        "koboldai-fairseq-dense-125m",
+        "hf-internal-testing-tiny-random-albertformaskedlm",
+        "cahya-bert-base-indonesian-522m",
+        "modeltc-bert-base-uncased-qqp",
+        "gchhablani-fnet-base-finetuned-mrpc",
+        "ai4bharat-indicner",
+        "ai-forever-rut5-large",
+        "cointegrated-rut5-base-multitask",
+        "sagorsarker-codeswitch-hineng-ner-lince",
+        "daspartho-prompt-extend",
+        "google-pegasus-newsroom",
+        "tals-albert-xlarge-vitaminc-mnli",
+        "hooshvarelab-bert-base-parsbert-ner-uncased",
+        "facebook-mbart-large-50-one-to-many-mmt",
+        "michau-t5-base-en-generate-headline",
+        "koboldai-opt-6.7b-nerybus-mix",
+        "mrm8488-bert-multi-cased-finetuned-xquadv1"
+    ],
+    "workspace": "test-westcentralus",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

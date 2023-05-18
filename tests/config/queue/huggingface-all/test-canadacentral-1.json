@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-canadacentral-1",
+    "models": [
+        "thunlp-lawformer",
+        "shahules786-blade2blade-t5-base",
+        "thanathorn-mt5-cpe-kmutt-thai-sentence-sum",
+        "junnyu-roformer-chinese-sim-char-small",
+        "togethercomputer-redpajama-incite-instruct-7b-v0.1",
+        "meli-gpt2-prompt",
+        "bhadresh-savani-bert-base-uncased-emotion",
+        "philschmid-bert-banking77",
+        "tau-splinter-base",
+        "fnlp-cpt-base",
+        "tuner007-pegasus-qa",
+        "microsoft-deberta-v2-xxlarge-mnli",
+        "vamsi-t5-paraphrase-paws",
+        "fnlp-bart-base-chinese",
+        "cross-encoder-nli-roberta-base",
+        "deepset-roberta-large-squad2",
+        "tehvenom-ppo-pygway-v8p4-dev-6b",
+        "emilyalsentzer-bio-clinicalbert"
+    ],
+    "workspace": "test-canadacentral",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

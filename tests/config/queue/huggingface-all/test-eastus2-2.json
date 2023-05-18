@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-eastus2-2",
+    "models": [
+        "mrm8488-t5-small-finetuned-emotion",
+        "openmatch-cocodr-base-msmarco",
+        "mrm8488-bert-italian-finedtuned-squadv1-it-alfa",
+        "fav-kky-fernet-c5",
+        "mywateriswet-shuanbot",
+        "alexkay-xlm-roberta-large-qa-multilingual-finedtuned-ru",
+        "w11wo-indonesian-roberta-base-sentiment-classifier",
+        "ehartford-wizardlm-7b-uncensored",
+        "idea-ccnl-randeng-pegasus-238m-summary-chinese",
+        "helsinki-nlp-opus-mt-vi-en",
+        "deepset-xlm-roberta-base-squad2-distilled",
+        "helsinki-nlp-opus-mt-gem-gem",
+        "connorboyle-bert-ner-i2b2",
+        "sagorsarker-bangla-bert-base",
+        "albert-base-v1",
+        "citizenlab-twitter-xlm-roberta-base-sentiment-finetunned",
+        "cross-encoder-ms-marco-tinybert-l-2-v2",
+        "camembert-base"
+    ],
+    "workspace": "test-eastus2",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

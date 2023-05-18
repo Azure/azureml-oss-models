@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-northeurope-0",
+    "models": [
+        "alenusch-rugpt3-paraphraser",
+        "flax-community-gpt-2-spanish",
+        "plantl-gob-es-bsc-bio-ehr-es",
+        "mayagalvez-bert-base-multilingual-cased-finetuned-pos",
+        "dbmdz-convbert-base-turkish-mc4-uncased",
+        "surdan-labse-ner-nerel",
+        "coppercitylabs-uzbert-base-uncased",
+        "shahrukhx01-roberta-base-boolq",
+        "monologg-biobert-v1.1-pubmed",
+        "declare-lab-flan-alpaca-gpt4-xl",
+        "microsoft-deberta-base-mnli",
+        "damapika-distilbert-base-uncased-mod",
+        "moritzlaurer-mdeberta-v3-base-mnli-xnli",
+        "microsoft-graphcodebert-base",
+        "koboldai-opt-2.7b-erebus",
+        "rostlab-prot-bert",
+        "oliverguhr-german-sentiment-bert",
+        "microsoft-deberta-base"
+    ],
+    "workspace": "test-northeurope",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

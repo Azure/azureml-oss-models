@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-japanwest-2",
+    "models": [
+        "andreasmadsen-efficient-mlm-m0.40",
+        "ibm-knowgl-large",
+        "helsinki-nlp-opus-mt-eu-en",
+        "pierreguillou-t5-base-qa-squad-v1.1-portuguese",
+        "ar4ikov-gpt2-650k-stable-diffusion-prompt-generator",
+        "google-byt5-large",
+        "vietai-gpt-neo-1.3b-vietnamese-news",
+        "plantl-gob-es-roberta-base-biomedical-clinical-es",
+        "fnlp-bart-large-chinese",
+        "tehvenom-gpt-j-pyg-ppo-6b",
+        "cross-encoder-qnli-electra-base",
+        "cross-encoder-stsb-roberta-large",
+        "camel-lab-bert-base-arabic-camelbert-ca-pos-egy",
+        "bigscience-t0-3b",
+        "fredzhang7-distilgpt2-stable-diffusion-v2",
+        "mrm8488-t5-base-finetuned-span-sentiment-extraction",
+        "bhadresh-savani-distilbert-base-uncased-emotion",
+        "facebook-bart-large-mnli"
+    ],
+    "workspace": "test-japanwest",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

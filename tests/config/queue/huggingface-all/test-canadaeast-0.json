@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-canadaeast-0",
+    "models": [
+        "xlm-roberta-large-finetuned-conll02-dutch",
+        "moritzlaurer-deberta-v3-base-mnli-fever-docnli-ling-2c",
+        "ainize-kobart-news",
+        "trl-internal-testing-tiny-bloomforcausallm-correct-vocab",
+        "bigscience-bloomz-petals",
+        "morit-xlm-t-full-xnli",
+        "anakin87-electra-italian-xxl-cased-squad-it",
+        "mrm8488-bert-tiny-finetuned-sms-spam-detection",
+        "bioformers-bioformer-16l",
+        "ai-forever-rut5-base",
+        "yiyanghkust-finbert-fls",
+        "declare-lab-flan-alpaca-base",
+        "cogcomp-bart-faithful-summary-detector",
+        "facebook-wmt19-de-en",
+        "textattack-bert-base-uncased-yelp-polarity",
+        "google-mt5-base",
+        "kredor-punctuate-all",
+        "j-hartmann-emotion-english-distilroberta-base"
+    ],
+    "workspace": "test-canadaeast",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

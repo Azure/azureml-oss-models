@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-koreacentral-2",
+    "models": [
+        "lmqg-t5-small-tweetqa-qa",
+        "helsinki-nlp-opus-mt-cy-en",
+        "dennlinger-roberta-cls-consec",
+        "textattack-roberta-base-mnli",
+        "pszemraj-bigbird-pegasus-large-k-booksum",
+        "cardiffnlp-xlm-twitter-politics-sentiment",
+        "typeform-squeezebert-mnli",
+        "eleutherai-pythia-1b-deduped-v0",
+        "cristian-popa-bart-tl-ng",
+        "eleutherai-pythia-6.9b-deduped-v0",
+        "staka-fugumt-en-ja",
+        "microsoft-deberta-v3-xsmall",
+        "eleutherai-pythia-1.4b-deduped",
+        "nlpaueb-legal-bert-base-uncased",
+        "microsoft-biogpt",
+        "bigscience-bloomz-560m",
+        "microsoft-deberta-large-mnli",
+        "albert-base-v2"
+    ],
+    "workspace": "test-koreacentral",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

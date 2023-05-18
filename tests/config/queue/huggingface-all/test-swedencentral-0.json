@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-swedencentral-0",
+    "models": [
+        "hetpandya-t5-base-tapaco",
+        "deutsche-telekom-bert-multi-english-german-squad2",
+        "mrm8488-bert-tiny-finetuned-squadv2",
+        "hfl-chinese-lert-small",
+        "facebook-mgenre-wiki",
+        "ckiplab-gpt2-base-chinese",
+        "gerulata-slovakbert",
+        "pi3141-dialogpt-medium-elon-3",
+        "google-tapas-base-finetuned-sqa",
+        "neulab-codebert-python",
+        "facebook-esm2-t12-35m-ur50d",
+        "eleutherai-polyglot-ko-5.8b",
+        "helsinki-nlp-opus-mt-fr-es",
+        "recognai-bert-base-spanish-wwm-cased-xnli",
+        "helsinki-nlp-opus-mt-tr-en",
+        "microsoft-dialogpt-medium",
+        "helsinki-nlp-opus-mt-ru-en"
+    ],
+    "workspace": "test-swedencentral",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

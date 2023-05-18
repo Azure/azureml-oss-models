@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-francecentral-1",
+    "models": [
+        "51la5-roberta-large-ner",
+        "hf-internal-testing-tiny-random-rembertforsequenceclassification",
+        "hf-internal-testing-tiny-random-ctrllmheadmodel",
+        "ganjinzero-biobart-large",
+        "juierror-text-to-sql-with-table-schema",
+        "facebook-xglm-7.5b",
+        "cahya-distilbert-base-indonesian",
+        "bert-large-cased-whole-word-masking",
+        "hfl-rbt3",
+        "norahalshahrani-bertmsda",
+        "oliverguhr-fullstop-punctuation-multilingual-base",
+        "google-mt5-xl",
+        "openassistant-reward-model-deberta-v3-large-v2",
+        "valhalla-t5-small-e2e-qg",
+        "microsoft-dialogpt-small",
+        "textattack-bert-base-uncased-mnli",
+        "finiteautomata-beto-sentiment-analysis",
+        "gpt2-large"
+    ],
+    "workspace": "test-francecentral",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

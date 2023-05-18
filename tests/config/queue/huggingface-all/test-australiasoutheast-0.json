@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-australiasoutheast-0",
+    "models": [
+        "l3cube-pune-marathi-ner",
+        "uwb-air-czert-b-base-cased",
+        "lvwerra-t5-imdb",
+        "luyu-co-condenser-wiki",
+        "huggingface-course-bert-finetuned-squad",
+        "facebook-esm1v-t33-650m-ur90s-2",
+        "marco127-dralberto",
+        "helsinki-nlp-opus-mt-nl-fr",
+        "bigscience-mt0-small",
+        "ai-forever-rubert-large",
+        "cardiffnlp-twitter-roberta-base-irony",
+        "asafaya-bert-base-arabic",
+        "ckiplab-albert-tiny-chinese",
+        "sxie3333-distilbert",
+        "google-t5-v1-1-small",
+        "bert-large-uncased-whole-word-masking",
+        "microsoft-deberta-xlarge-mnli",
+        "mrm8488-t5-base-finetuned-common-gen"
+    ],
+    "workspace": "test-australiasoutheast",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

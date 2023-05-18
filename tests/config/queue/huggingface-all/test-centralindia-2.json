@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-centralindia-2",
+    "models": [
+        "helsinki-nlp-opus-mt-en-mk",
+        "koboldai-gpt-neo-1.3b-adventure",
+        "nghuyong-ernie-3.0-xbase-zh",
+        "hit-tmg-dialogue-bart-large-chinese",
+        "anonymous-german-nlp-german-gpt2",
+        "idea-ccnl-randeng-pegasus-523m-summary-chinese",
+        "thomassimonini-t5-end2end-question-generation",
+        "vietai-gpt-j-6b-vietnamese-news",
+        "facebook-opt-iml-1.3b",
+        "helsinki-nlp-opus-mt-ine-en",
+        "albert-xxlarge-v1",
+        "helsinki-nlp-opus-mt-en-fi",
+        "hfl-chinese-bert-wwm",
+        "hfl-chinese-roberta-wwm-ext-large",
+        "facebook-nllb-200-distilled-1.3b",
+        "microsoft-mpnet-base",
+        "valhalla-distilbart-mnli-12-1",
+        "philschmid-bart-large-cnn-samsum"
+    ],
+    "workspace": "test-centralindia",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

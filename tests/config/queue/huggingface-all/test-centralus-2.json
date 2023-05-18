@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-centralus-2",
+    "models": [
+        "philschmid-instruct-igel-001",
+        "obi-deid-bert-i2b2",
+        "ckiplab-albert-base-chinese-pos",
+        "seyonec-pubchem10m-smiles-bpe-60k",
+        "liyuan-amazon-review-sentiment-analysis",
+        "naver-efficient-splade-v-large-doc",
+        "seyonec-pubchem10m-smiles-bpe-396-250",
+        "persiannlp-mt5-large-parsinlu-opus-translation-fa-en",
+        "manishiitg-distilbert-resume-parts-classify",
+        "microsoft-xtremedistil-l6-h384-uncased",
+        "sbcbi-sentiment-analysis",
+        "declare-lab-flan-alpaca-xl",
+        "bigscience-bloomz-1b7",
+        "onlplab-alephbert-base",
+        "pdelobelle-robbert-v2-dutch-base",
+        "cl-tohoku-bert-base-japanese-char-v2",
+        "ismail-lucifer011-autotrain-name-all-904029577",
+        "facebook-bart-large-cnn"
+    ],
+    "workspace": "test-centralus",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

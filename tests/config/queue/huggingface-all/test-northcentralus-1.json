@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-northcentralus-1",
+    "models": [
+        "mrm8488-bert-base-spanish-wwm-cased-finetuned-spa-squad2-es",
+        "google-t5-large-ssm",
+        "helsinki-nlp-opus-mt-sv-fi",
+        "ckiplab-albert-base-chinese-ws",
+        "castorini-afriberta-base",
+        "deeppavlov-rudialogpt3-medium-based-on-gpt2-v2",
+        "oliverguhr-fullstop-dutch-punctuation-prediction",
+        "cardiffnlp-twitter-roberta-base-sep2022",
+        "cointegrated-rut5-base-absum",
+        "eleutherai-pythia-1.4b",
+        "pygmalionai-pygmalion-350m",
+        "salesforce-codegen-350m-nl",
+        "m3rg-iitd-matscibert",
+        "sxie3333-xlnet",
+        "google-pegasus-large",
+        "openai-gpt",
+        "cl-tohoku-bert-base-japanese-char",
+        "distilbert-base-multilingual-cased"
+    ],
+    "workspace": "test-northcentralus",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

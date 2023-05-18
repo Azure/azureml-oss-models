@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-eastus-0",
+    "models": [
+        "jy46604790-fake-news-bert-detect",
+        "ibm-re2g-reranker-nq",
+        "nghuyong-ernie-1.0-base-zh",
+        "jarvisx17-japanese-sentiment-analysis",
+        "arthur-lima-layoutlmv3-triagem-documentos",
+        "batterydata-bde-pos-bert-cased-base",
+        "ganjinzero-biobart-v2-large",
+        "dmitrypogrebnoy-meddistilbertbaserucased",
+        "togethercomputer-redpajama-incite-chat-3b-v1",
+        "ltg-norbert2",
+        "beomi-koalpaca-polyglot-5.8b",
+        "koboldai-gpt-j-6b-shinen",
+        "ahotrod-albert-xxlargev1-squad2-512",
+        "google-t5-xl-lm-adapt",
+        "bigscience-bloom-1b1",
+        "rakib-roberta-base-on-cuad",
+        "eleutherai-gpt-neo-125m"
+    ],
+    "workspace": "test-eastus",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

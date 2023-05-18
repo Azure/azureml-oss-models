@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-francecentral-2",
+    "models": [
+        "tanrei-gptsan-japanese",
+        "iacopo-shakespear-gpt2",
+        "facebook-esm1b-t33-650m-ur50s",
+        "sshleifer-distilbart-xsum-1-1",
+        "mfeb-albert-xxlarge-v2-squad2",
+        "microsoft-tapex-base-finetuned-wtq",
+        "mrm8488-bert2bert-shared-spanish-finetuned-summarization",
+        "cointegrated-roberta-large-cola-krishna2020",
+        "helsinki-nlp-opus-mt-ca-en",
+        "facebook-blenderbot-90m",
+        "nlpcloud-instruct-gpt-j-fp16",
+        "kblab-bert-base-swedish-cased",
+        "pierreguillou-lilt-xlm-roberta-base-finetuned-with-doclaynet-base-at-linelevel-ml384",
+        "bhadresh-savani-albert-base-v2-emotion",
+        "helsinki-nlp-opus-mt-de-es",
+        "facebook-blenderbot-400m-distill",
+        "helsinki-nlp-opus-mt-en-de",
+        "bigcode-santacoder"
+    ],
+    "workspace": "test-francecentral",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

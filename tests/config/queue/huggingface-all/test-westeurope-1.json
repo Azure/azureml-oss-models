@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westeurope-1",
+    "models": [
+        "elnaggarlab-ankh-base",
+        "hf-internal-testing-tiny-random-albertforquestionanswering",
+        "deepset-bert-base-uncased-squad2",
+        "tomh-toxigen-roberta",
+        "alan-turing-institute-mt5-large-finetuned-mnli-xtreme-xnli",
+        "imsypp-hate-speech-en",
+        "mrm8488-codebert-base-finetuned-stackoverflow-ner",
+        "togethercomputer-redpajama-incite-base-3b-v1",
+        "google-bigbird-pegasus-large-bigpatent",
+        "facebook-mbart-large-en-ro",
+        "facebook-esm2-t33-650m-ur50d",
+        "helsinki-nlp-opus-mt-gem-en",
+        "google-t5-base-lm-adapt",
+        "elastic-distilbert-base-cased-finetuned-conll03-english",
+        "facebook-mbart-large-50-many-to-many-mmt",
+        "mingzhong-dialogled-base-16384",
+        "bigscience-bloom-7b1"
+    ],
+    "workspace": "test-westeurope",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

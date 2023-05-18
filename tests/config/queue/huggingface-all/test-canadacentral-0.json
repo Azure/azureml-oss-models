@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-canadacentral-0",
+    "models": [
+        "activebus-bert-review",
+        "jean-baptiste-roberta-large-financial-news-sentiment-en",
+        "lightonai-rita-s",
+        "liam168-c4-zh-distilbert-base-uncased",
+        "google-t5-large-ssm-nqo",
+        "codeparrot-codeparrot-small",
+        "bergum-xtremedistil-l6-h384-go-emotion",
+        "allenai-unifiedqa-t5-small",
+        "cardiffnlp-bertweet-base-hate",
+        "luhua-chinese-pretrain-mrc-macbert-large",
+        "ckiplab-bert-base-chinese",
+        "koboldai-gpt-neo-2.7b-shinen",
+        "klue-roberta-large",
+        "microsoft-deberta-large",
+        "ahotrod-electra-large-discriminator-squad2-512",
+        "human-centered-summarization-financial-summarization-pegasus",
+        "hfl-chinese-bert-wwm-ext",
+        "neuralmind-bert-base-portuguese-cased"
+    ],
+    "workspace": "test-canadacentral",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

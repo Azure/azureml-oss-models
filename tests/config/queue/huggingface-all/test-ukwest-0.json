@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-ukwest-0",
+    "models": [
+        "shibing624-bart4csc-base-chinese",
+        "studio-ousia-luke-japanese-base-lite",
+        "sultan-arabict5-base",
+        "transquest-monotransquest-da-multilingual",
+        "uer-roberta-base-finetuned-jd-full-chinese",
+        "ktrapeznikov-biobert-v1.1-pubmed-squad-v2",
+        "has-abi-distilbert-finetuned-resumes-sections",
+        "vinai-bertweet-large",
+        "narsil-deberta-large-mnli-zero-cls",
+        "it5-it5-large-question-generation",
+        "eleutherai-polyglot-ko-1.3b",
+        "google-tapas-small-finetuned-wtq",
+        "m-polignano-uniba-bert-uncased-l-12-h-768-a-12-italian-alb3rt0",
+        "indolem-indobertweet-base-uncased",
+        "salesforce-codegen-350m-mono",
+        "qiliang-bart-large-cnn-samsum-chatgpt-v3",
+        "helsinki-nlp-opus-mt-fr-en"
+    ],
+    "workspace": "test-ukwest",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

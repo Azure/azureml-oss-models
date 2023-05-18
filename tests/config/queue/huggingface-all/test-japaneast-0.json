@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-japaneast-0",
+    "models": [
+        "linydub-bart-large-samsum",
+        "hf-internal-testing-tiny-random-rembertformaskedlm",
+        "philschmid-lilt-en-funsd",
+        "hooshvarelab-albert-fa-zwnj-base-v2",
+        "keti-air-ke-t5-small",
+        "casehold-custom-legalbert",
+        "hfl-chinese-xlnet-base",
+        "camel-lab-bert-base-arabic-camelbert-mix-ner",
+        "helsinki-nlp-opus-mt-ar-de",
+        "patrickvonplaten-led-large-16384-pubmed",
+        "deepset-gelectra-large-germanquad",
+        "plantl-gob-es-roberta-base-bne",
+        "dkleczek-bert-base-polish-uncased-v1",
+        "airesearch-wangchanberta-base-att-spm-uncased",
+        "facebook-bart-large-xsum",
+        "facebook-opt-6.7b",
+        "helsinki-nlp-opus-mt-ar-en",
+        "bert-base-chinese"
+    ],
+    "workspace": "test-japaneast",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-southafricanorth-1",
+    "models": [
+        "helsinki-nlp-opus-mt-en-bg",
+        "davlan-afro-xlmr-large",
+        "davlan-xlm-roberta-large-ner-hrl",
+        "helsinki-nlp-opus-mt-tc-big-en-fr",
+        "merry-aid-neo-125m",
+        "helsinki-nlp-opus-mt-uk-sv",
+        "nsi319-legal-pegasus",
+        "neuraly-bert-base-italian-cased-sentiment",
+        "eleutherai-pythia-160m-deduped-v0",
+        "jimypbr-bert-base-uncased-squad",
+        "eleutherai-pythia-410m",
+        "fredzhang7-anime-anything-promptgen-v2",
+        "automatic-promptgen-lexart",
+        "bigscience-bloom-1b7",
+        "beomi-kcbert-base",
+        "vinai-bertweet-covid19-base-uncased",
+        "ramsrigouthamg-t5-sentence-paraphraser",
+        "xlm-roberta-base"
+    ],
+    "workspace": "test-southafricanorth",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

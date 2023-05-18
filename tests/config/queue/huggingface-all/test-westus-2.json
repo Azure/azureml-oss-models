@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westus-2",
+    "models": [
+        "gchhablani-fnet-base-finetuned-qnli",
+        "yeungnlp-firefly-2b6",
+        "allegro-plt5-base",
+        "dianx-e5-small-violence-detection",
+        "malteos-bloom-6b4-clp-german",
+        "elastic-distilbert-base-uncased-finetuned-conll03-english",
+        "helsinki-nlp-opus-mt-en-da",
+        "google-switch-base-8",
+        "zhihan1996-dna-bert-6",
+        "google-muril-base-cased",
+        "fabriceyhc-bert-base-uncased-amazon-polarity",
+        "ai-forever-rugpt3small-based-on-gpt2",
+        "kb-bert-base-swedish-cased",
+        "alvaroalon2-biobert-genetic-ner",
+        "bhadresh-savani-bert-base-go-emotion",
+        "google-t5-v1-1-base",
+        "baptistedoyen-camembert-base-xnli"
+    ],
+    "workspace": "test-westus",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

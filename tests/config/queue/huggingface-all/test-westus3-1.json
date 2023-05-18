@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westus3-1",
+    "models": [
+        "helsinki-nlp-opus-mt-en-sla",
+        "hello-simpleai-chatgpt-qa-detector-roberta",
+        "uer-roberta-base-finetuned-cluener2020-chinese",
+        "mrm8488-t5-base-finetuned-wikisql",
+        "embeddia-crosloengual-bert",
+        "textattack-albert-base-v2-mrpc",
+        "deepset-gelectra-base-germanquad",
+        "tehvenom-dolly-malion-6b",
+        "ramsrigouthamg-t5-large-paraphraser-diverse-high-quality",
+        "andreaskoepf-pythia-1.4b-gpt4all-pretrain",
+        "lighteternal-sse-tuc-mt-el-en-cased",
+        "avichr-hebert-sentiment-analysis",
+        "luhua-chinese-pretrain-mrc-roberta-wwm-ext-large",
+        "medicalai-clinicalbert",
+        "jpwahle-t5-large-word-sense-disambiguation",
+        "dbmdz-bert-large-cased-finetuned-conll03-english",
+        "rostlab-prot-bert-bfd"
+    ],
+    "workspace": "test-westus3",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

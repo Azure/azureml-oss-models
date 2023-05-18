@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-japaneast-1",
+    "models": [
+        "kodiks-news-category-classification-turkish",
+        "plantl-gob-es-roberta-large-bne-capitel-ner",
+        "elnaggarlab-ankh-large",
+        "gchhablani-fnet-base-finetuned-sst2",
+        "hz53-bert-base-uncased-cb",
+        "cltl-medroberta.nl",
+        "rajkumarrrk-gpt2-fine-tuned-on-imdb-positive-reviews",
+        "koboldai-gpt-neo-2.7b-horni-ln",
+        "aleksickx-llama-7b-hf",
+        "salti-bert-base-multilingual-cased-finetuned-squad",
+        "ahmetayrnc-distilroberta-base",
+        "facebook-blenderbot-small-90m",
+        "ai-forever-rugpt3large-based-on-gpt2",
+        "salesforce-codegen-2b-mono",
+        "valhalla-t5-base-qa-qg-hl",
+        "textattack-bert-base-uncased-sst-2",
+        "microsoft-deberta-v3-base",
+        "t5-small"
+    ],
+    "workspace": "test-japaneast",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

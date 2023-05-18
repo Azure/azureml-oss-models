@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-japanwest-0",
+    "models": [
+        "cl-tohoku-bert-base-japanese-char-whole-word-masking",
+        "helsinki-nlp-opus-mt-tc-big-he-en",
+        "ck46-t5-base-hotpot-qa-qg",
+        "savasy-bert-base-turkish-sentiment-cased",
+        "crumb-bloom-560m-rlhf-sd2-prompter-aesthetic",
+        "nlp-waseda-roberta-base-japanese",
+        "alekseykorshuk-vicuna-7b",
+        "oliverguhr-fullstop-punctuation-multilingual-sonar-base",
+        "stevhliu-my-awesome-billsum-model",
+        "microsoft-prophetnet-large-uncased",
+        "helsinki-nlp-opus-mt-gmw-gmw",
+        "roberta-large-openai-detector",
+        "jjzha-jobbert-base-cased",
+        "lidiya-bart-large-xsum-samsum",
+        "alexjercan-codet5-base-buggy-error-description",
+        "valhalla-t5-base-e2e-qg",
+        "deepset-bert-large-uncased-whole-word-masking-squad2",
+        "bigscience-bloom-560m"
+    ],
+    "workspace": "test-japanwest",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

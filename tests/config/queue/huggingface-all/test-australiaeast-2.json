@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-australiaeast-2",
+    "models": [
+        "l3cube-pune-mahahate-bert",
+        "google-pegasus-x-large",
+        "zixtrauce-johnbot",
+        "shitao-retromae-msmarco",
+        "idea-ccnl-erlangshen-roberta-110m-nli",
+        "unitary-unbiased-toxic-roberta",
+        "sonnenblume-bert-base-uncased-ancient-greek-v4",
+        "idea-ccnl-wenzhong-gpt2-110m",
+        "eleutherai-pythia-1.4b-deduped-v0",
+        "yarongef-distilprotbert",
+        "eleutherai-pythia-1b",
+        "microsoft-minilm-l12-h384-uncased",
+        "dbmdz-bert-base-italian-cased",
+        "milanlproc-feel-it-italian-sentiment",
+        "cardiffnlp-twitter-xlm-roberta-base-sentiment-multilingual",
+        "deepset-tinyroberta-squad2",
+        "cardiffnlp-twitter-roberta-base-emotion",
+        "neulab-codebert-java"
+    ],
+    "workspace": "test-australiaeast",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

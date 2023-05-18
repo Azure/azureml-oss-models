@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westeurope-2",
+    "models": [
+        "smanjil-german-medbert",
+        "hf-internal-testing-tiny-random-xglmforcausallm",
+        "togethercomputer-redpajama-incite-base-7b-v0.1",
+        "microsoft-codereviewer",
+        "philschmid-tiny-bert-sst2-distilled",
+        "deep-learning-analytics-automatic-title-generation",
+        "batterydata-bde-cner-batteryonlybert-uncased-base",
+        "ramsrigouthamg-t5-boolean-questions",
+        "avichr-hebert",
+        "cross-encoder-ms-marco-minilm-l-4-v2",
+        "dbmdz-electra-large-discriminator-finetuned-conll03-english",
+        "hate-speech-cnerg-bert-base-uncased-hatexplain",
+        "ai-forever-mgpt",
+        "turkunlp-bert-base-finnish-cased-v1",
+        "luyu-co-condenser-marco",
+        "joeddav-distilbert-base-uncased-go-emotions-student",
+        "davlan-bert-base-multilingual-cased-ner-hrl"
+    ],
+    "workspace": "test-westeurope",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

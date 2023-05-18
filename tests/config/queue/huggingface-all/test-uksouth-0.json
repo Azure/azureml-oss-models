@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-uksouth-0",
+    "models": [
+        "moussakam-arabart",
+        "helsinki-nlp-opus-mt-it-de",
+        "helsinki-nlp-opus-mt-tc-big-en-ar",
+        "togethercomputer-redpajama-incite-chat-7b-v0.1",
+        "twitter-twhin-bert-base",
+        "aitslab-biobert-huner-species-v1",
+        "cahya-xlm-roberta-base-indonesian-ner",
+        "lordtt13-emo-mobilebert",
+        "bigscience-mt0-xl",
+        "ku-nlp-deberta-v2-tiny-japanese-char-wwm",
+        "facebook-esm2-t30-150m-ur50d",
+        "moritzlaurer-deberta-v3-large-mnli-fever-anli-ling-wanli",
+        "microsoft-codebert-base-mlm",
+        "huggyllama-llama-7b",
+        "aubmindlab-bert-base-arabert",
+        "eleutherai-gpt-neo-1.3b",
+        "google-flan-t5-xl"
+    ],
+    "workspace": "test-uksouth",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

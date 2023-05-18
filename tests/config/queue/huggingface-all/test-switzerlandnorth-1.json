@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-switzerlandnorth-1",
+    "models": [
+        "imxly-t5-copy",
+        "hf-internal-testing-tiny-random-debertav2fortokenclassification",
+        "zixtrauce-bdbot4epoch",
+        "idea-ccnl-randeng-bart-139m-summary",
+        "langboat-mengzi-t5-base",
+        "koboldai-gpt-neo-2.7b-aid",
+        "stancld-longt5-tglobal-large-16384-pubmed-3k-steps",
+        "facebook-xglm-564m",
+        "kit-nlp-bert-base-japanese-sentiment-irony",
+        "tscholak-1wnr382e",
+        "abeja-gpt-neox-japanese-2.7b",
+        "castorini-monot5-3b-msmarco-10k",
+        "nghuyong-ernie-3.0-base-zh",
+        "microsoft-infoxlm-base",
+        "eleutherai-pythia-70m",
+        "vicgalle-xlm-roberta-large-xnli-anli",
+        "gpt2-xl"
+    ],
+    "workspace": "test-switzerlandnorth",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

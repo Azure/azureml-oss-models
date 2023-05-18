@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-uksouth-2",
+    "models": [
+        "emelnov-keyt5-tags-custom",
+        "helsinki-nlp-opus-mt-en-af",
+        "salesforce-grappa-large-jnt",
+        "helsinki-nlp-opus-mt-wa-en",
+        "s-nlp-roberta-base-formality-ranker",
+        "reginaboateng-bert-for-finacial-triples",
+        "uer-roberta-base-finetuned-chinanews-chinese",
+        "valhalla-t5-small-qg-prepend",
+        "russiannlp-ruroberta-large-rucola",
+        "nreimers-minilmv2-l6-h384-distilled-from-bert-large",
+        "automatic-promptgen-majinai-unsafe",
+        "samrawal-bert-base-uncased-clinical-ner",
+        "camel-lab-bert-base-arabic-camelbert-mix-pos-msa",
+        "google-long-t5-tglobal-base",
+        "babelscape-wikineural-multilingual-ner",
+        "wietsedv-xlm-roberta-base-ft-udpos28-en",
+        "microsoft-infoxlm-large"
+    ],
+    "workspace": "test-uksouth",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

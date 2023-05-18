@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-eastasia-1",
+    "models": [
+        "sshleifer-student-marian-en-ro-6-1",
+        "helsinki-nlp-opus-mt-tc-big-fi-en",
+        "aychang-roberta-base-imdb",
+        "uclanlp-plbart-java-cs",
+        "mrm8488-t5-base-finetuned-imdb-sentiment",
+        "mbzuai-lamini-flan-t5-783m",
+        "ckiplab-bert-tiny-chinese",
+        "microsoft-biomedvlp-cxr-bert-general",
+        "helsinki-nlp-opus-mt-sl-uk",
+        "sshleifer-tiny-ctrl",
+        "ml6team-keyphrase-extraction-kbir-inspec",
+        "facebook-xglm-1.7b",
+        "snrspeaks-keyphrasetransformer",
+        "dbmdz-bert-base-german-cased",
+        "helsinki-nlp-opus-mt-en-sv",
+        "monologg-koelectra-small-v2-distilled-korquad-384",
+        "xlnet-base-cased",
+        "jean-baptiste-camembert-ner"
+    ],
+    "workspace": "test-eastasia",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-canadaeast-2",
+    "models": [
+        "gogamza-kobart-summarization",
+        "mingzhong-dialogled-large-5120",
+        "jihuai-bert-ancient-chinese",
+        "microsoft-dialogrpt-human-vs-machine",
+        "uer-roberta-base-finetuned-jd-binary-chinese",
+        "nreimers-mminilmv2-l6-h384-distilled-from-xlmr-large",
+        "aubmindlab-bert-base-arabertv02-twitter",
+        "dmis-lab-biobert-large-cased-v1.1-squad",
+        "google-byt5-xl",
+        "etalab-ia-camembert-base-squadfr-fquad-piaf",
+        "textattack-bert-base-uncased-ag-news",
+        "microsoft-dialogrpt-updown",
+        "klue-roberta-base",
+        "mrm8488-bert-spanish-cased-finetuned-pos-16-tags",
+        "cardiffnlp-twitter-xlm-roberta-base",
+        "cardiffnlp-tweet-topic-21-multi",
+        "huggingface-codeberta-small-v1",
+        "madhurjindal-autonlp-gibberish-detector-492513457"
+    ],
+    "workspace": "test-canadaeast",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

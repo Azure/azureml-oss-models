@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-eastus-2",
+    "models": [
+        "aidenh20-dnabert-500down",
+        "koboldai-gpt-neo-2.7b-janeway",
+        "tinkoff-ai-rudialogpt-medium",
+        "cointegrated-rubert-tiny-sentiment-balanced",
+        "mrm8488-longformer-base-4096-finetuned-squadv2",
+        "moussakam-barthez",
+        "idea-ccnl-erlangshen-roberta-110m-sentiment",
+        "rajkumarrrk-t5-common-gen",
+        "eleutherai-pythia-410m-deduped-v0",
+        "hooshvarelab-bert-fa-base-uncased-sentiment-digikala",
+        "helsinki-nlp-opus-mt-es-fr",
+        "helsinki-nlp-opus-mt-bat-en",
+        "transfo-xl-wt103",
+        "felflare-bert-restore-punctuation",
+        "nbailab-nb-bert-base",
+        "google-pegasus-xsum",
+        "dmis-lab-biobert-base-cased-v1.2"
+    ],
+    "workspace": "test-eastus",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westcentralus-1",
+    "models": [
+        "cross-encoder-ms-marco-tinybert-l-6",
+        "aubmindlab-bert-large-arabertv02",
+        "microsoft-deberta-v2-xlarge-mnli",
+        "alexandrainst-da-hatespeech-detection-base",
+        "davlan-afro-xlmr-base",
+        "cahya-xlm-roberta-large-indonesian-ner",
+        "monohime-rubert-base-cased-sentiment-new",
+        "allenai-unifiedqa-t5-large",
+        "hyunwoongko-asian-bart-ecjk",
+        "idea-ccnl-wenzhong2.0-gpt2-3.5b-chinese",
+        "ramsrigouthamg-t5-squad-v1",
+        "yiyanghkust-finbert-esg",
+        "vblagoje-bart-lfqa",
+        "ckiplab-bert-base-chinese-ner",
+        "finiteautomata-beto-emotion-analysis",
+        "roberta-large-mnli",
+        "helsinki-nlp-opus-mt-zh-en"
+    ],
+    "workspace": "test-westcentralus",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

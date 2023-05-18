@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-switzerlandnorth-2",
+    "models": [
+        "thu-coai-roberta-base-cold",
+        "bloomberg-keybart",
+        "twmkn9-distilroberta-base-squad2",
+        "voidful-albert-chinese-tiny",
+        "ainize-bart-base-cnn",
+        "ilyagusev-mbart-ru-sum-gazeta",
+        "google-long-t5-tglobal-large",
+        "pierreguillou-bert-base-cased-squad-v1.1-portuguese",
+        "dimitriz-greek-media-bert-base-uncased",
+        "cross-encoder-ms-marco-minilm-l-2-v2",
+        "xenova-sponsorblock-small",
+        "albert-large-v2",
+        "babelscape-rebel-large",
+        "mmg-xlm-roberta-large-ner-spanish",
+        "hfl-chinese-macbert-base",
+        "facebook-opt-350m",
+        "helsinki-nlp-opus-mt-es-en"
+    ],
+    "workspace": "test-switzerlandnorth",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

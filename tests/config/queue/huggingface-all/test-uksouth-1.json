@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-uksouth-1",
+    "models": [
+        "tribbiani-vicuna-7b",
+        "hf-internal-testing-tiny-random-debertav2forsequenceclassification",
+        "helsinki-nlp-opus-mt-en-roa",
+        "csebuetnlp-banglat5-banglaparaphrase",
+        "allenai-macaw-large",
+        "yoshitomo-matsubara-bert-base-uncased-mnli",
+        "camel-lab-bert-base-arabic-camelbert-msa",
+        "bertin-project-bertin-roberta-base-spanish",
+        "plguillou-t5-base-fr-sum-cnndm",
+        "facebook-xmod-base",
+        "philschmid-flan-t5-base-samsum",
+        "emilyalsentzer-bio-discharge-summary-bert",
+        "google-tapas-base-finetuned-wtq",
+        "moussakam-frugalscore-tiny-bert-base-bert-score",
+        "vblagoje-bert-english-uncased-finetuned-pos",
+        "cross-encoder-ms-marco-minilm-l-12-v2",
+        "moussakam-barthez-orangesum-abstract"
+    ],
+    "workspace": "test-uksouth",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

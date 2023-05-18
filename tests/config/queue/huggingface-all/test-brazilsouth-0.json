@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-brazilsouth-0",
+    "models": [
+        "helsinki-nlp-opus-mt-mt-en",
+        "henryk-bert-base-multilingual-cased-finetuned-dutch-squad2",
+        "castorini-doc2query-t5-base-msmarco",
+        "allenai-tk-instruct-base-def-pos",
+        "beir-query-gen-msmarco-t5-large-v1",
+        "facebook-esm1v-t33-650m-ur90s-5",
+        "amberoad-bert-multilingual-passage-reranking-msmarco",
+        "helsinki-nlp-opus-mt-en-ro",
+        "robinhad-ukrainian-qa",
+        "facebook-galactica-6.7b",
+        "shahrukhx01-bert-mini-finetune-question-detection",
+        "tehvenom-ppo-shygmalion-6b",
+        "stabilityai-stablelm-base-alpha-3b",
+        "facebook-blenderbot-3b",
+        "uer-gpt2-chinese-cluecorpussmall",
+        "cross-encoder-mmarco-mminilmv2-l12-h384-v1",
+        "microsoft-biomednlp-pubmedbert-base-uncased-abstract",
+        "dslim-bert-base-ner-uncased"
+    ],
+    "workspace": "test-brazilsouth",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

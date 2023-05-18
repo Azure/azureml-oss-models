@@ -1,0 +1,152 @@
+{
+    "test-australiaeast": {
+      "region": "australiaeast",
+      "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+      "resource_group": "huggingface-registry-test"
+    },
+    "test-australiasoutheast": {
+      "region": "australiasoutheast",
+      "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+      "resource_group": "huggingface-registry-test"
+    },
+    "test-brazilsouth": {
+      "region": "brazilsouth",
+      "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+      "resource_group": "huggingface-registry-test"
+    },
+    "test-canadacentral": {
+      "region": "canadacentral",
+      "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+      "resource_group": "huggingface-registry-test"
+    },
+    "test-canadaeast": {
+      "region": "canadaeast",
+      "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+      "resource_group": "huggingface-registry-test"
+    },
+    "test-centralindia": {
+      "region": "centralindia",
+      "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+      "resource_group": "huggingface-registry-test"
+    },
+    "test-centralus": {
+      "region": "centralus",
+      "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+      "resource_group": "huggingface-registry-test"
+    },
+    "test-eastasia": {
+      "region": "eastasia",
+      "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+      "resource_group": "huggingface-registry-test"
+    },
+    "test-eastus2": {
+      "region": "eastus2",
+      "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+      "resource_group": "huggingface-registry-test"
+    },
+    "test-francecentral": {
+      "region": "francecentral",
+      "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+      "resource_group": "huggingface-registry-test"
+    },
+    "test-germanywestcentral": {
+      "region": "germanywestcentral",
+      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+      "resource_group": "huggingface-registry-test1"
+    },
+    "test-japaneast": {
+      "region": "japaneast",
+      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+      "resource_group": "huggingface-registry-test1"
+    },
+    "test-japanwest": {
+      "region": "japanwest",
+      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+      "resource_group": "huggingface-registry-test1"
+    },
+    "test-koreacentral": {
+      "region": "koreacentral",
+      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+      "resource_group": "huggingface-registry-test1"
+    },
+    "test-northcentralus": {
+      "region": "northcentralus",
+      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+      "resource_group": "huggingface-registry-test1"
+    },
+    "test-northeurope": {
+      "region": "northeurope",
+      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+      "resource_group": "huggingface-registry-test1"
+    },
+    "test-norwayeast": {
+      "region": "norwayeast",
+      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+      "resource_group": "huggingface-registry-test1"
+    },
+    "test-southafricanorth": {
+      "region": "southafricanorth",
+      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+      "resource_group": "huggingface-registry-test1"
+    },
+    "test-southcentralus": {
+      "region": "southcentralus",
+      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+      "resource_group": "huggingface-registry-test1"
+    },
+    "test-eastus": {
+      "region": "eastus",
+      "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+      "resource_group": "huggingface-registry-test1"
+    },
+    "test-swedencentral": {
+      "region": "swedencentral",
+      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+      "resource_group": "huggingface-registry-test22"
+    },
+    "test-switzerlandnorth": {
+      "region": "switzerlandnorth",
+      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+      "resource_group": "huggingface-registry-test22"
+    },
+    "test-uaenorth": {
+      "region": "uaenorth",
+      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+      "resource_group": "huggingface-registry-test22"
+    },
+    "test-uksouth": {
+      "region": "uksouth",
+      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+      "resource_group": "huggingface-registry-test22"
+    },
+    "test-ukwest": {
+      "region": "ukwest",
+      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+      "resource_group": "huggingface-registry-test22"
+    },
+    "test-westcentralus": {
+      "region": "westcentralus",
+      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+      "resource_group": "huggingface-registry-test22"
+    },
+    "test-westeurope": {
+      "region": "westeurope",
+      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+      "resource_group": "huggingface-registry-test22"
+    },
+    "test-westus": {
+      "region": "westus",
+      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+      "resource_group": "huggingface-registry-test22"
+    },
+    "test-westus3": {
+      "region": "westus3",
+      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+      "resource_group": "huggingface-registry-test22"
+    },
+    "test-southcentralus": {
+      "region": "southcentralus",
+      "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+      "resource_group": "huggingface-registry-test22"
+    }
+  }

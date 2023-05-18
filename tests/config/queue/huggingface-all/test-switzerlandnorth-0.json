@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-switzerlandnorth-0",
+    "models": [
+        "l3cube-pune-hing-bert",
+        "phiyodr-bert-base-finetuned-squad2",
+        "asi-gpt-fr-cased-base",
+        "nlpodyssey-bert-multilingual-uncased-geo-countries-headlines",
+        "gargam-roberta-base-crest",
+        "uclanlp-plbart-python-en-xx",
+        "deepset-gbert-base-germandpr-reranking",
+        "monologg-kobigbird-bert-base",
+        "ganjinzero-biobart-v2-base",
+        "sshleifer-distilbart-cnn-6-6",
+        "microsoft-biogpt-large",
+        "xlnet-large-cased",
+        "kykim-bert-kor-base",
+        "textattack-distilbert-base-cased-cola",
+        "deepset-bert-base-cased-squad2",
+        "xlm-roberta-large-finetuned-conll03-english",
+        "microsoft-deberta-v2-xxlarge"
+    ],
+    "workspace": "test-switzerlandnorth",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

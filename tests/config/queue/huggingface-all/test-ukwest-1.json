@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-ukwest-1",
+    "models": [
+        "wietsedv-bert-base-dutch-cased-finetuned-udlassy-ner",
+        "textattack-albert-base-v2-imdb",
+        "textattack-distilbert-base-uncased-cola",
+        "nchunlp-chinese-question-answering",
+        "maryaai-opus-mt-ar-en-finetuned-ar-to-en",
+        "aekupor-model-utterance",
+        "marcosgg-bert-small-gl-cased",
+        "ahmedrachid-financialbert-sentiment-analysis",
+        "jaynlp-t5-large-samsum",
+        "csarron-mobilebert-uncased-squad-v2",
+        "uclanlp-visualbert-vqa",
+        "aubmindlab-bert-base-arabertv2",
+        "hyunwoongko-ctrlsum-cnndm",
+        "dominguesm-bert-restore-punctuation-ptbr",
+        "beyond-genius-large-k2t",
+        "dccuchile-bert-base-spanish-wwm-uncased",
+        "bert-large-cased"
+    ],
+    "workspace": "test-ukwest",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

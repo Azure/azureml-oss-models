@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westus3-2",
+    "models": [
+        "kontur-ai-sbert-punc-case-ru",
+        "ingen51-dialogpt-medium-gpt4",
+        "plantl-gob-es-roberta-base-bne-sqac",
+        "datificate-gpt2-small-spanish",
+        "facebook-esm1v-t33-650m-ur90s-3",
+        "peerapongch-baikal-sentiment-ball",
+        "squirro-albert-base-v2-squad-v2",
+        "eleutherai-pythia-70m-deduped-v0",
+        "clueai-promptclue-base-v1-5",
+        "laituan245-molt5-large-caption2smiles",
+        "staka-fugumt-ja-en",
+        "bigcode-gpt-bigcode-santacoder",
+        "castorini-monot5-base-msmarco-10k",
+        "salesforce-codet5-small",
+        "voidful-albert-chinese-small",
+        "mrm8488-codebert-base-finetuned-detect-insecure-code",
+        "sshleifer-distilbart-cnn-12-6"
+    ],
+    "workspace": "test-westus3",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

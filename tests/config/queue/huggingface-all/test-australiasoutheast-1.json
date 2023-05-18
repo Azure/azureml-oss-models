@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-australiasoutheast-1",
+    "models": [
+        "mdraw-german-news-sentiment-bert",
+        "xlm-mlm-100-1280",
+        "mrsinghania-asr-question-detection",
+        "ckiplab-bert-base-chinese-qa",
+        "google-bigbird-roberta-large",
+        "helsinki-nlp-opus-mt-en-cs",
+        "yangheng-deberta-v3-base-absa-v1.1",
+        "yikuan8-clinical-longformer",
+        "hooshvarelab-distilbert-fa-zwnj-base-ner",
+        "s-nlp-russian-toxicity-classifier",
+        "yanekyuk-bert-uncased-keyword-extractor",
+        "databricks-dolly-v1-6b",
+        "cross-encoder-nli-deberta-base",
+        "google-mt5-large",
+        "alvaroalon2-biobert-diseases-ner",
+        "wonrax-phobert-base-vietnamese-sentiment",
+        "cerebras-cerebras-gpt-111m",
+        "valhalla-longformer-base-4096-finetuned-squadv1"
+    ],
+    "workspace": "test-australiasoutheast",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

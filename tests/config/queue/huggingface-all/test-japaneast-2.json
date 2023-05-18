@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-japaneast-2",
+    "models": [
+        "teomotun-finetuning-sentiment-model-for-c2er",
+        "pysentimiento-robertuito-base-uncased",
+        "hf-internal-testing-tiny-random-ctrlforsequenceclassification",
+        "facebook-npm-single",
+        "philschmid-distilbert-base-multilingual-cased-sentiment-2",
+        "xlm-mlm-xnli15-1024",
+        "sshleifer-distill-pegasus-xsum-16-4",
+        "sshleifer-distilbart-cnn-12-3",
+        "michiyasunaga-biolinkbert-base",
+        "modeltc-bert-base-uncased-mrpc",
+        "chainyo-alpaca-lora-7b",
+        "google-byt5-base",
+        "lvwerra-gpt2-imdb",
+        "dbmdz-german-gpt2",
+        "camel-lab-bert-base-arabic-camelbert-da-sentiment",
+        "prithivida-parrot-fluency-model",
+        "facebook-opt-1.3b",
+        "dslim-bert-base-ner"
+    ],
+    "workspace": "test-japaneast",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

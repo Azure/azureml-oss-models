@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westcentralus-2",
+    "models": [
+        "elron-bleurt-large-512",
+        "hf-internal-testing-tiny-random-albertforsequenceclassification",
+        "plantl-gob-es-gpt2-large-bne",
+        "toddgoldfarb-cadet-tiny",
+        "daisymak-bert-finetuned-squad-accelerate-10epoch-transformerfrozen",
+        "af-ai-center-bert-base-swedish-uncased",
+        "ilyagusev-rugpt3medium-sum-gazeta",
+        "microsoft-sportsbert",
+        "bloom-testing-test-bloomd-560m-db788ae2594f597e839fb48fedb0895f04d853006df99f79d446b6b29c715eb7",
+        "facebook-galactica-125m",
+        "salesforce-codet5-large-ntp-py",
+        "cerebras-cerebras-gpt-1.3b",
+        "lmsys-vicuna-7b-delta-v1.1",
+        "google-t5-v1-1-large",
+        "bhadresh-savani-roberta-base-emotion",
+        "helsinki-nlp-opus-mt-romance-en",
+        "siebert-sentiment-roberta-large-english"
+    ],
+    "workspace": "test-westcentralus",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

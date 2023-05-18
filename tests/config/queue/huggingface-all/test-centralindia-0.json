@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-centralindia-0",
+    "models": [
+        "hf-internal-testing-mrpc-bert-base-cased",
+        "helsinki-nlp-opus-mt-de-fr",
+        "intel-t5-small-xsum-int8-dynamic",
+        "ixa-ehu-scibert-squad-quac",
+        "moritzlaurer-deberta-v3-base-mnli-fever-anli",
+        "jhu-clsp-bibert-ende",
+        "hugherinit-hi",
+        "cmarkea-distilcamembert-base-ner",
+        "djagatiya-ner-roberta-base-ontonotesv5-englishv4",
+        "dbmdz-bert-base-italian-uncased",
+        "cardiffnlp-twitter-roberta-base-hate",
+        "eleutherai-pythia-410m-deduped",
+        "it5-it5-base-news-summarization",
+        "soleimanian-financial-roberta-large-sentiment",
+        "facebook-wmt19-ru-en",
+        "vennify-t5-base-grammar-correction",
+        "eleutherai-gpt-neo-2.7b",
+        "gpt2-medium"
+    ],
+    "workspace": "test-centralindia",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

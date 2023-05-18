@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-northcentralus-2",
+    "models": [
+        "snorkelai-sdnet",
+        "b3ck1-gpt-neo-125m-finetuned-beer-recipes",
+        "yuanzhoulvpi-gpt2-chinese",
+        "climatebert-distilroberta-base-climate-f",
+        "helsinki-nlp-opus-mt-sk-en",
+        "sonoisa-t5-base-japanese-title-generation",
+        "it5-it5-large-news-summarization",
+        "dumitrescustefan-bert-base-romanian-cased-v1",
+        "allenai-unifiedqa-v2-t5-large-1363200",
+        "bloom-testing-test-bloomd-560m-a47152861e4132c9080d4f84ba87c7a58f556a2f997765c1f9fc9a40c4b643f3",
+        "wietsedv-bert-base-dutch-cased",
+        "damapika-electra-base-discriminator-squad-mod",
+        "allenai-led-large-16384",
+        "einmalumdiewelt-t5-base-gnad",
+        "distilbert-base-german-cased",
+        "ckiplab-bert-base-chinese-pos",
+        "google-flan-t5-small",
+        "bert-base-multilingual-cased"
+    ],
+    "workspace": "test-northcentralus",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

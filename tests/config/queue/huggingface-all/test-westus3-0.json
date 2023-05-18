@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westus3-0",
+    "models": [
+        "microsoft-biogpt-large-pubmedqa",
+        "mrm8488-bert-mini-finetuned-age-news-classification",
+        "thebloke-koala-7b-hf",
+        "pile-of-law-legalbert-large-1.7m-2",
+        "allenai-led-large-16384-arxiv",
+        "google-t5-small-ssm-nq",
+        "mrm8488-bert-small-finetuned-squadv2",
+        "kiddothe2b-hierarchical-transformer-base-4096",
+        "ku-nlp-deberta-v2-tiny-japanese",
+        "microsoft-xtremedistil-l12-h384-uncased",
+        "allenai-unifiedqa-t5-3b",
+        "anferico-bert-for-patents",
+        "microsoft-deberta-v3-small",
+        "skt-kogpt2-base-v2",
+        "cross-encoder-ms-marco-electra-base",
+        "allenai-longformer-large-4096-finetuned-triviaqa",
+        "t5-large"
+    ],
+    "workspace": "test-westus3",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

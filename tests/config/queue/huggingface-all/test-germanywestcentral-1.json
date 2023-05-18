@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-germanywestcentral-1",
+    "models": [
+        "cardiffnlp-twitter-roberta-base-emotion-multilabel-latest",
+        "uer-gpt2-distil-chinese-cluecorpussmall",
+        "zhihan1996-dna-bert-3",
+        "potsawee-t5-large-generation-squad-questionanswer",
+        "sijunhe-nezha-cn-base",
+        "kaludi-reviews-sentiment-analysis",
+        "koboldai-gpt-j-6b-skein",
+        "helsinki-nlp-opus-mt-cs-en",
+        "thebloke-vicuna-7b-1.1-hf",
+        "thebloke-wizardlm-7b-hf",
+        "kssteven-ibert-roberta-base",
+        "valhalla-t5-small-qa-qg-hl",
+        "law-ai-inlegalbert",
+        "stabilityai-stablelm-tuned-alpha-3b",
+        "snrspeaks-t5-one-line-summary",
+        "philschmid-distilbart-cnn-12-6-samsum",
+        "gronlp-bert-base-dutch-cased",
+        "davlan-distilbert-base-multilingual-cased-ner-hrl"
+    ],
+    "workspace": "test-germanywestcentral",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

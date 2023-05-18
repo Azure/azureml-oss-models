@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-centralus-1",
+    "models": [
+        "aubmindlab-bert-base-arabertv01",
+        "flaubert-flaubert-large-cased",
+        "juierror-flan-t5-text2sql-with-schema",
+        "helsinki-nlp-opus-mt-bg-en",
+        "prachipatel-text-results",
+        "thomasnlg-t5-qa-squad2neg-en",
+        "batterydata-batterybert-cased-squad-v1",
+        "helsinki-nlp-opus-mt-th-en",
+        "helsinki-nlp-opus-mt-en-hi",
+        "tweebanknlp-bertweet-tb2-ewt-pos-tagging",
+        "facebook-galactica-1.3b",
+        "helsinki-nlp-opus-mt-ko-en",
+        "deepset-gbert-large",
+        "humarin-chatgpt-paraphraser-on-t5-base",
+        "helsinki-nlp-opus-mt-da-en",
+        "kamalkraj-bioelectra-pico",
+        "ismail-lucifer011-autotrain-job-all-903929564",
+        "prosusai-finbert"
+    ],
+    "workspace": "test-centralus",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

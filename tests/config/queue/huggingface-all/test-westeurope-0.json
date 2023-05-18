@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-westeurope-0",
+    "models": [
+        "alexandrainst-da-binary-emotion-classification-base",
+        "dennlinger-bert-wiki-paragraphs",
+        "alexandrainst-da-sentiment-base",
+        "clueai-promptclue-base",
+        "aloxatel-bert-base-mnli",
+        "optimalscale-gpt-neo2.7b-inst-tuning",
+        "nielsr-layoutlmv2-finetuned-funsd",
+        "facebook-muppet-roberta-large",
+        "ku-nlp-deberta-v2-base-japanese",
+        "richielo-small-e-czech-finetuned-ner-wikiann",
+        "saibo-legal-roberta-base",
+        "eleutherai-pythia-6.9b",
+        "jean-baptiste-camembert-ner-with-dates",
+        "fran-martinez-scibert-scivocab-cased-ner-jnlpba",
+        "vinai-phobert-base",
+        "microsoft-deberta-v3-large",
+        "d4data-biomedical-ner-all"
+    ],
+    "workspace": "test-westeurope",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

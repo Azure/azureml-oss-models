@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-canadacentral-2",
+    "models": [
+        "jiaqilee-imdb-finetuned-bert-base-uncased",
+        "hf-internal-testing-tiny-random-rembertfortokenclassification",
+        "microsoft-prophetnet-large-uncased-squad-qg",
+        "cointegrated-rut5-base",
+        "salesforce-bart-large-xsum-samsum",
+        "crabz-slovakbert-ner",
+        "dtai-kuleuven-robbert-v2-dutch-sentiment",
+        "parth-result",
+        "uer-gpt2-chinese-poem",
+        "hf-internal-testing-tiny-random-bloom",
+        "liam168-trans-opus-mt-zh-en",
+        "seyonec-chemberta-zinc-base-v1",
+        "nateraw-bert-base-uncased-emotion",
+        "unitary-toxic-bert",
+        "alvaroalon2-biobert-chemical-ner",
+        "cross-encoder-ms-marco-tinybert-l-2",
+        "lvwerra-distilbert-imdb",
+        "papluca-xlm-roberta-base-language-detection"
+    ],
+    "workspace": "test-canadacentral",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-northcentralus-0",
+    "models": [
+        "zongqianli-matbert-base-cased",
+        "huggingface-codeberta-language-id",
+        "bhadresh-savani-distilbert-base-uncased-go-emotion",
+        "paulagarciaserrano-roberta-depression-detection",
+        "mingzhong-unieval-fact",
+        "helsinki-nlp-opus-mt-sv-uk",
+        "uklfr-gottbert-base",
+        "neko-institute-of-science-pygmalion-7b",
+        "helsinki-nlp-opus-mt-de-ar",
+        "iarfmoose-t5-base-question-generator",
+        "togethercomputer-gpt-jt-moderation-6b",
+        "cross-encoder-nli-deberta-v3-base",
+        "allenai-unifiedqa-t5-base",
+        "helsinki-nlp-opus-mt-af-en",
+        "obi-deid-roberta-i2b2",
+        "heegyu-gpt2-emotion",
+        "bert-base-multilingual-uncased",
+        "roberta-large"
+    ],
+    "workspace": "test-northcentralus",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

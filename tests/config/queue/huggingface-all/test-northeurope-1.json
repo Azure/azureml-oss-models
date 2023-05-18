@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-northeurope-1",
+    "models": [
+        "salesforce-codegen-2b-nl",
+        "deepesp-gpt2-spanish",
+        "helsinki-nlp-opus-mt-fi-sv",
+        "valhalla-t5-small-qg-hl",
+        "bert-base-german-dbmdz-cased",
+        "google-roberta2roberta-l-24-cnn-daily-mail",
+        "facebook-esm1v-t33-650m-ur90s-1",
+        "textattack-roberta-base-sst-2",
+        "salesforce-codegen-6b-mono",
+        "yjernite-bart-eli5",
+        "helsinki-nlp-opus-mt-en-nl",
+        "wajidlinux99-gibberish-text-detector",
+        "eleutherai-pythia-2.8b-deduped",
+        "facebook-mbart-large-cc25",
+        "cardiffnlp-twitter-roberta-base-offensive",
+        "microsoft-mdeberta-v3-base",
+        "roberta-base-openai-detector",
+        "xlm-roberta-large"
+    ],
+    "workspace": "test-northeurope",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

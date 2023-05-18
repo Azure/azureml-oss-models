@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-germanywestcentral-2",
+    "models": [
+        "ilyagusev-fred-t5-ru-turbo-alpaca",
+        "ncfrey-chemgpt-1.2b",
+        "sonnenblume-bert-base-uncased-ancient-greek-v3",
+        "naltukhov-joke-generator-rus-t5",
+        "helsinki-nlp-opus-mt-es-it",
+        "clueai-chatyuan-large-v1",
+        "atharvamundada99-bert-large-question-answering-finetuned-legal",
+        "allenai-primera",
+        "facebook-incoder-1b",
+        "eachadea-vicuna-7b-1.1",
+        "tner-roberta-large-ontonotes5",
+        "flaubert-flaubert-base-cased",
+        "pygmalionai-pygmalion-2.7b",
+        "nlpaueb-bert-base-greek-uncased-v1",
+        "neuralmind-bert-large-portuguese-cased",
+        "kwoncho-ko-sroberta-multitask-suspicious",
+        "tuner007-pegasus-paraphrase",
+        "cardiffnlp-twitter-roberta-base-sentiment-latest"
+    ],
+    "workspace": "test-germanywestcentral",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

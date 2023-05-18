@@ -1,0 +1,6 @@
+{
+    "inputs": [
+      "Paris is the [MASK] of France",
+      "The goal of life is [MASK]"
+    ]
+}

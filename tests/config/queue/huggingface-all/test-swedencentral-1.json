@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-swedencentral-1",
+    "models": [
+        "geinitz-gpt2-medium-hemingway",
+        "allenai-unifiedqa-v2-t5-large-1251000",
+        "ninedaywang-polycoder-2.7b",
+        "google-t5-large-ssm-nq",
+        "mrm8488-t5-base-finetuned-emotion",
+        "skt-ko-gpt-trinity-1.2b-v0.5",
+        "line-corporation-line-distilbert-base-japanese",
+        "dlicari-italian-legal-bert",
+        "bioformers-bioformer-8l",
+        "jordyvl-biobert-base-cased-v1.2-ncbi-disease-softmax-labelall-ner",
+        "vietai-envit5-translation",
+        "cointegrated-rubert-tiny2-cedr-emotion-detection",
+        "deepset-roberta-base-squad2-distilled",
+        "moritzlaurer-mdeberta-v3-base-xnli-multilingual-nli-2mil7",
+        "knkarthick-meeting-summary",
+        "indolem-indobert-base-uncased",
+        "nlpaueb-legal-bert-small-uncased"
+    ],
+    "workspace": "test-swedencentral",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

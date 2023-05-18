@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-brazilsouth-2",
+    "models": [
+        "bigscience-bloom-7b1-petals",
+        "ninedaywang-polycoder-0.4b",
+        "mlrs-mbertu",
+        "akshatsurolia-icd-10-code-prediction",
+        "sismetanin-rubert-ru-sentiment-rusentiment",
+        "maryaai-opus-mt-en-ar-finetuned-math-13-10-en-to-ar",
+        "diptanu-fbert",
+        "facebook-xlm-roberta-xl",
+        "cross-encoder-stsb-tinybert-l-4",
+        "manishiitg-resume-ner",
+        "xhan77-ssdlm",
+        "rinna-japanese-gpt2-medium",
+        "yahma-llama-7b-hf",
+        "microsoft-xtremedistil-l6-h256-uncased",
+        "facebook-nllb-200-distilled-600m",
+        "helsinki-nlp-opus-mt-tc-big-en-pt",
+        "facebook-esm2-t6-8m-ur50d",
+        "nlptown-bert-base-multilingual-uncased-sentiment"
+    ],
+    "workspace": "test-brazilsouth",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

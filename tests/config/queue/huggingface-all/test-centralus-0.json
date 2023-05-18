@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-centralus-0",
+    "models": [
+        "alger-ia-dziribert",
+        "alexandrainst-da-discourse-coherence-base",
+        "aubmindlab-aragpt2-large",
+        "marcosgg-bert-base-gl-cased",
+        "zixtrauce-baekbot",
+        "amansolanki-autonlp-tweet-sentiment-extraction-20114061",
+        "alimazhar-110-website-classification",
+        "bigscience-mt0-base",
+        "moritzlaurer-deberta-v3-xsmall-mnli-fever-anli-ling-binary",
+        "rinna-japanese-gpt2-small",
+        "seyonec-pubchem10m-smiles-bpe-450k",
+        "deepset-xlm-roberta-large-squad2",
+        "salesforce-codegen-2b-multi",
+        "google-electra-small-generator",
+        "facebook-xlm-v-base",
+        "bert-base-german-cased",
+        "ismail-lucifer011-autotrain-company-all-903429548",
+        "cardiffnlp-twitter-xlm-roberta-base-sentiment"
+    ],
+    "workspace": "test-centralus",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

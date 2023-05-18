@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-australiasoutheast-2",
+    "models": [
+        "helsinki-nlp-opus-mt-en-hy",
+        "pranavpsv-gpt2-genre-story-generator",
+        "lemon234071-t5-base-chinese",
+        "idea-ccnl-randeng-t5-77m-multitask-chinese",
+        "castorini-monot5-base-msmarco",
+        "facebook-esm1v-t33-650m-ur90s-4",
+        "togethercomputer-redpajama-incite-instruct-3b-v1",
+        "mrm8488-bert-small2bert-small-finetuned-cnn-daily-mail-summarization",
+        "google-bigbird-pegasus-large-pubmed",
+        "drishtisharma-stablediffusion-prompt-generator-gpt-neo-125m",
+        "cardiffnlp-twitter-roberta-base-dec2021-tweet-topic-multi-all",
+        "google-pegasus-pubmed",
+        "intel-bert-base-uncased-mrpc",
+        "j-hartmann-sentiment-roberta-large-english-3-classes",
+        "facebook-roberta-hate-speech-dynabench-r4-target",
+        "lmsys-vicuna-7b-delta-v0",
+        "gustavosta-magicprompt-stable-diffusion",
+        "dslim-bert-large-ner"
+    ],
+    "workspace": "test-australiasoutheast",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

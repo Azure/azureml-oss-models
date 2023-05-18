@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-japanwest-1",
+    "models": [
+        "pysentimiento-roberta-es-sentiment",
+        "deep-learning-analytics-wikihow-t5-small",
+        "ar4ikov-gpt2-medium-650k-stable-diffusion-prompt-generator",
+        "allenai-tk-instruct-3b-def",
+        "helsinki-nlp-opus-mt-de-fi",
+        "idea-ccnl-erlangshen-deberta-v2-320m-chinese",
+        "apanc-russian-sensitive-topics",
+        "automatic-promptgen-majinai-safe",
+        "uer-roberta-base-chinese-extractive-qa",
+        "iarfmoose-bert-base-cased-qa-evaluator",
+        "helsinki-nlp-opus-mt-fi-de",
+        "helsinki-nlp-opus-mt-it-es",
+        "koboldai-gpt-neo-2.7b-horni",
+        "nferruz-protgpt2",
+        "cointegrated-rubert-tiny-toxicity",
+        "mel-iza0-zero-shot",
+        "facebook-m2m100-1.2b",
+        "cardiffnlp-twitter-roberta-base-sentiment"
+    ],
+    "workspace": "test-japanwest",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

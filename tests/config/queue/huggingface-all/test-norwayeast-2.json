@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-norwayeast-2",
+    "models": [
+        "gagan3012-k2t",
+        "norod78-hebrew-bad-wiki-gpt-neo-tiny",
+        "tabbyml-j-350m",
+        "ckip-joint-bloom-1b1-zh",
+        "maltehb-aelaectra-danish-electra-small-cased-ner-dane",
+        "it5-it5-efficient-small-el32-news-summarization",
+        "wangrongsheng-minigpt-4-llama-7b",
+        "vinai-phobert-large",
+        "cerebras-cerebras-gpt-256m",
+        "deep-learning-analytics-grammarcorrector",
+        "pszemraj-led-base-book-summary",
+        "kb-bert-base-swedish-cased-ner",
+        "tae898-emoberta-large",
+        "elron-bleurt-tiny-512",
+        "digit82-kobart-summarization",
+        "google-pegasus-cnn-dailymail",
+        "distilbert-base-uncased-distilled-squad",
+        "bert-base-uncased"
+    ],
+    "workspace": "test-norwayeast",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

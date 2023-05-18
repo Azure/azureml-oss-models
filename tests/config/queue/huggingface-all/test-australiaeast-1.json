@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-australiaeast-1",
+    "models": [
+        "idea-ccnl-erlangshen-unimc-albert-235m-english",
+        "allenai-tk-instruct-3b-def-pos",
+        "mariagrandury-roberta-base-finetuned-sms-spam-detection",
+        "adasnew-t5-small-xsum",
+        "pszemraj-led-large-book-summary",
+        "valhalla-distilbart-mnli-12-6",
+        "stanford-crfm-alias-gpt2-small-x21",
+        "koboldai-fairseq-dense-2.7b-nerys",
+        "ivanlau-language-detection-fine-tuned-on-xlm-roberta-base",
+        "sahajtomar-german-zeroshot",
+        "flax-community-t5-recipe-generation",
+        "helsinki-nlp-opus-mt-gmq-en",
+        "sxie3333-roberta",
+        "shibing624-macbert4csc-base-chinese",
+        "helsinki-nlp-opus-mt-pl-en",
+        "helsinki-nlp-opus-mt-nl-en",
+        "helsinki-nlp-opus-mt-it-en",
+        "helsinki-nlp-opus-mt-de-en"
+    ],
+    "workspace": "test-australiaeast",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

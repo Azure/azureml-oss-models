@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-centralindia-1",
+    "models": [
+        "llukas22-all-minilm-l12-v2-qa-en",
+        "yurtsai-yurts-python-code-gen-30-sparse",
+        "rostlab-prot-t5-base-mt-uniref50",
+        "milanlproc-xlm-emo-t",
+        "circulus-kobart-trans-en-ko-v2",
+        "circulus-kobart-trans-ko-en-v2",
+        "microsoft-deberta-xlarge",
+        "codeparrot-codeparrot",
+        "google-electra-base-generator",
+        "gronlp-hatebert",
+        "microsoft-godel-v1-1-base-seq2seq",
+        "facebook-mbart-large-50-many-to-one-mmt",
+        "dandelin-vilt-b32-mlm",
+        "hello-simpleai-chatgpt-detector-roberta",
+        "blanchefort-rubert-base-cased-sentiment-rusentiment",
+        "helsinki-nlp-opus-mt-en-romance",
+        "prithivida-parrot-adequacy-model",
+        "cl-tohoku-bert-base-japanese-whole-word-masking"
+    ],
+    "workspace": "test-centralindia",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

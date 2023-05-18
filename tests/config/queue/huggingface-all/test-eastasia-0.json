@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-eastasia-0",
+    "models": [
+        "nbailab-nb-bert-base-mnli",
+        "intel-dynamic-tinybert",
+        "j-hartmann-emotion-english-roberta-large",
+        "microsoft-biomednlp-pubmedbert-large-uncased-abstract",
+        "ku-nlp-deberta-v2-large-japanese",
+        "snunlp-kr-finbert-sc",
+        "seyonec-smiles-tokenized-pubchem-shard00-160k",
+        "keti-air-ke-t5-base",
+        "helsinki-nlp-opus-mt-en-sq",
+        "sander-wood-text-to-music",
+        "bigscience-bloomz-3b",
+        "bigscience-mt0-large",
+        "csebuetnlp-mt5-multilingual-xlsum",
+        "ufal-robeczech-base",
+        "milanlproc-feel-it-italian-emotion",
+        "helsinki-nlp-opus-mt-sv-en",
+        "facebook-mbart-large-50",
+        "bert-large-uncased"
+    ],
+    "workspace": "test-eastasia",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

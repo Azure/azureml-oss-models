@@ -1,0 +1,26 @@
+{
+    "queue_name": "test-uaenorth-2",
+    "models": [
+        "consciousai-question-answering-roberta-base-s-v2",
+        "hf-internal-testing-tiny-random-debertav2formaskedlm",
+        "google-t5-efficient-mini",
+        "microsoft-tapex-large-finetuned-wikisql",
+        "koheiduck-bert-japanese-finetuned-sentiment",
+        "cmarkea-distilcamembert-base-sentiment",
+        "izumi-lab-bert-small-japanese",
+        "asi-gpt-fr-cased-small",
+        "qwant-fralbert-base",
+        "allenai-t5-small-squad2-question-generation",
+        "twmkn9-albert-base-v2-squad2",
+        "bigwiz83-sapbert-from-pubmedbert-squad2",
+        "google-t5-large-lm-adapt",
+        "rinna-japanese-roberta-base",
+        "mrm8488-t5-base-finetuned-question-generation-ap",
+        "vinai-bertweet-base",
+        "google-flan-t5-large"
+    ],
+    "workspace": "test-uaenorth",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

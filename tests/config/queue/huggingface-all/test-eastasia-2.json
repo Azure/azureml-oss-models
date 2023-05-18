@@ -1,0 +1,27 @@
+{
+    "queue_name": "test-eastasia-2",
+    "models": [
+        "microsoft-tapex-base",
+        "svalabs-gbert-large-zeroshot-nli",
+        "chanind-frame-semantic-transformer-base",
+        "satvikag-chatbot",
+        "michiyasunaga-biolinkbert-large",
+        "timpal0l-xlm-roberta-base-faq-extractor",
+        "ai-forever-fred-t5-large",
+        "helsinki-nlp-opus-mt-roa-en",
+        "helsinki-nlp-opus-mt-es-de",
+        "xlm-mlm-en-2048",
+        "helsinki-nlp-opus-mt-no-de",
+        "cointegrated-rubert-tiny",
+        "helsinki-nlp-opus-mt-hi-en",
+        "rjuro-scinertopic",
+        "albert-xxlarge-v2",
+        "facebook-opt-2.7b",
+        "stanfordaimi-stanford-deidentifier-base",
+        "yiyanghkust-finbert-tone"
+    ],
+    "workspace": "test-eastasia",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

@@ -1,0 +1,6 @@
+{
+   "microsoft-deberta-v2-xlarge": {
+        "sku": "Standard_DS3_v2",
+        "status": "tbd"
+    }
+}
