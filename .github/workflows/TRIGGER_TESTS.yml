@@ -18,6 +18,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         cd ${{ inputs.test_set }}
+        pwd
+        ls -1
         for file in `ls -1`  
         do  
           gh workflow run `cat $file | head -n 1`
