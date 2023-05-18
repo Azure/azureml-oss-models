@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-southafricanorth-1",
+    "models": [
+        "oliverguhr-fullstop-punctuation-multilingual-sonar-base",
+        "bigscience-mt0-large"
+    ],
+    "workspace": "test-southafricanorth",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

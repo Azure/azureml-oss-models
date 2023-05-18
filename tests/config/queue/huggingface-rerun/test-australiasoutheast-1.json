@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-australiasoutheast-1",
+    "models": [
+        "andreasmadsen-efficient-mlm-m0.40",
+        "yale-lily-brio-cnndm-uncased"
+    ],
+    "workspace": "test-australiasoutheast",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

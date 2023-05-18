@@ -1,0 +1,360 @@
+{
+    "test-australiaeast": {
+        "0": [
+            "turkunlp-gpt3-finnish-small",
+            "nlpaueb-bert-base-greek-uncased-v1"
+        ],
+        "1": [
+            "cardiffnlp-twitter-roberta-base-emotion-multilabel-latest",
+            "lidiya-bart-large-xsum-samsum"
+        ],
+        "2": [
+            "ilyagusev-fred-t5-ru-turbo-alpaca",
+            "nferruz-protgpt2"
+        ]
+    },
+    "test-australiasoutheast": {
+        "0": [
+            "cl-tohoku-bert-base-japanese-char-whole-word-masking",
+            "nferruz-protgpt2"
+        ],
+        "1": [
+            "andreasmadsen-efficient-mlm-m0.40",
+            "yale-lily-brio-cnndm-uncased"
+        ],
+        "2": [
+            "nytk-puli-gpt-2",
+            "snrspeaks-t5-one-line-summary"
+        ]
+    },
+    "test-brazilsouth": {
+        "0": [
+            "uer-gpt2-distil-chinese-cluecorpussmall",
+            "neuralmind-bert-large-portuguese-cased"
+        ],
+        "1": [
+            "ncfrey-chemgpt-1.2b",
+            "alexjercan-codet5-base-buggy-error-description"
+        ],
+        "2": [
+            "helsinki-nlp-opus-mt-tc-big-he-en",
+            "alexjercan-codet5-base-buggy-error-description"
+        ]
+    },
+    "test-canadacentral": {
+        "0": [
+            "deep-learning-analytics-wikihow-t5-small",
+            "cointegrated-rubert-tiny-toxicity"
+        ],
+        "1": [
+            "ibm-knowgl-large",
+            "fredzhang7-distilgpt2-stable-diffusion-v2"
+        ],
+        "2": [
+            "valhalla-s2t-mustc-multilinguial-medium",
+            "entropy-roberta-zinc-480m"
+        ]
+    },
+    "test-canadaeast": {
+        "0": [
+            "zhihan1996-dna-bert-3",
+            "philschmid-distilbart-cnn-12-6-samsum"
+        ],
+        "1": [
+            "sonnenblume-bert-base-uncased-ancient-greek-v3",
+            "kwoncho-ko-sroberta-multitask-suspicious"
+        ],
+        "2": [
+            "ck46-t5-base-hotpot-qa-qg",
+            "kwoncho-ko-sroberta-multitask-suspicious"
+        ]
+    },
+    "test-centralindia": {
+        "0": [
+            "ar4ikov-gpt2-medium-650k-stable-diffusion-prompt-generator",
+            "mel-iza0-zero-shot"
+        ],
+        "1": [
+            "helsinki-nlp-opus-mt-eu-end",
+            "sultan-biom-electra-large-squad2"
+        ],
+        "2": [
+            "unicamp-dl-translation-en-pt-t5",
+            "gronlp-bert-base-dutch-cased"
+        ]
+    },
+    "test-centralus": {
+        "0": [
+            "potsawee-t5-large-generation-squad-questionanswer",
+            "tuner007-pegasus-paraphrase"
+        ],
+        "1": [
+            "savasy-bert-base-turkish-sentiment-cased",
+            "deepset-bert-large-uncased-whole-word-masking-squad2"
+        ],
+        "2": [
+            "allenai-tk-instruct-3b-def",
+            "facebook-m2m100-1.2b"
+        ]
+    },
+    "test-eastasia": {
+        "0": [
+            "pierreguillou-t5-base-qa-squad-v1.1-portuguese",
+            "bhadresh-savani-distilbert-base-uncased-emotion"
+        ],
+        "1": [
+            "michaelrglass-albert-base-rci-wikisql-col",
+            "helsinki-nlp-opus-mt-en-es"
+        ],
+        "2": [
+            "vinai-phobert-base-v2",
+            "davlan-distilbert-base-multilingual-cased-ner-hrl"
+        ]
+    },
+    "test-eastus2": {
+        "0": [
+            "sijunhe-nezha-cn-base",
+            "cardiffnlp-twitter-roberta-base-sentiment-latest"
+        ],
+        "1": [
+            "helsinki-nlp-opus-mt-es-it",
+            "bigscience-bloom-560m"
+        ],
+        "2": [
+            "crumb-bloom-560m-rlhf-sd2-prompter-aesthetic",
+            "cardiffnlp-twitter-roberta-base-sentiment"
+        ]
+    },
+    "test-francecentral": {
+        "0": [
+            "helsinki-nlp-opus-mt-de-fi",
+            "facebook-bart-large-mnli"
+        ],
+        "1": [
+            "ar4ikov-gpt2-650k-stable-diffusion-prompt-generator",
+            "bigscience-t0-3b"
+        ],
+        "2": [
+            "facebook-blenderbot-1b-distill",
+            "cerebras-cerebras-gpt-1.3b"
+        ]
+    },
+    "test-japaneast": {
+        "0": [
+            "kaludi-reviews-sentiment-analysis",
+            "mbzuai-lamini-flan-t5-248m"
+        ],
+        "1": [
+            "clueai-chatyuan-large-v1",
+            "neko-institute-of-science-llama-7b-hf"
+        ],
+        "2": [
+            "nlp-waseda-roberta-base-japanese",
+            "ehartford-wizardlm-7b-uncensored"
+        ]
+    },
+    "test-koreacentral": {
+        "0": [
+            "idea-ccnl-erlangshen-deberta-v2-320m-chinese",
+            "google-pegasus-newsroom"
+        ],
+        "1": [
+            "google-byt5-large",
+            "emelnov-t5-summarization-g-b"
+        ],
+        "2": [
+            "allenai-wmt19-de-en-6-6-base",
+            "idea-ccnl-wenzhong2.0-gpt2-3.5b-chinese"
+        ]
+    },
+    "test-northcentralus": {
+        "0": [
+            "koboldai-gpt-j-6b-skein",
+            "textattack-albert-base-v2-imdb"
+        ],
+        "1": [
+            "atharvamundada99-bert-large-question-answering-finetuned-legal",
+            "naltukhov-joke-generator-rus-t5"
+        ],
+        "2": [
+            "rajkumarrrk-gpt2-fine-tuned-on-imdb-positive-reviews",
+            "lemon234071-t5-base-chinese"
+        ]
+    },
+    "test-northeurope": {
+        "0": [
+            "alekseykorshuk-vicuna-7b",
+            "eleutherai-pythia-70m-deduped-v0"
+        ],
+        "1": [
+            "apanc-russian-sensitive-topics",
+            "bigwiz83-sapbert-from-pubmedbert-squad2"
+        ],
+        "2": [
+            "vietai-gpt-neo-1.3b-vietnamese-news",
+            "bigscience-bloomz-3b"
+        ]
+    },
+    "test-norwayeast": {
+        "0": [
+            "cross-encoder-quora-distilroberta-base",
+            "bigscience-bloom-7b1-petals"
+        ],
+        "1": [
+            "eleutherai-polyglot-ko-3.8b",
+            "bigscience-bloomz-petals"
+        ],
+        "2": [
+            "helsinki-nlp-opus-mt-cs-en",
+            "bigscience-bloom-petals"
+        ]
+    },
+    "test-southafricanorth": {
+        "0": [
+            "allenai-primera",
+            "bigscience-test-bloomd-6b3"
+        ],
+        "1": [
+            "oliverguhr-fullstop-punctuation-multilingual-sonar-base",
+            "bigscience-mt0-large"
+        ],
+        "2": [
+            "automatic-promptgen-majinai-safe",
+            "staka-fugumt-ja-en"
+        ]
+    },
+    "test-southcentralus": {
+        "0": [
+            "plantl-gob-es-roberta-base-biomedical-clinical-es",
+            "laituan245-molt5-large-caption2smiles"
+        ],
+        "1": [
+            "helsinki-nlp-opus-mt-uk-sl",
+            "bigcode-gpt-bigcode-santacoder"
+        ],
+        "2": [
+            "thebloke-vicuna-7b-1.1-hf",
+            "castorini-monot5-base-msmarco-10k"
+        ]
+    },
+    "test-eastus": {
+        "0": [
+            "facebook-incoder-1b",
+            "salesforce-codet5-small"
+        ],
+        "1": [
+            "stevhliu-my-awesome-billsum-model",
+            "voidful-albert-chinese-small"
+        ],
+        "2": [
+            "uer-roberta-base-chinese-extractive-qa",
+            "mrm8488-codebert-base-finetuned-detect-insecure-code"
+        ]
+    },
+    "test-swedencentral": {
+        "0": [
+            "fnlp-bart-large-chinese",
+            "sshleifer-distilbart-cnn-12-6"
+        ],
+        "1": [
+            "stanfordaimi-stanford-deidentifier-only-i2b2",
+            "csebuetnlp-mt5-multilingual-xlsum"
+        ],
+        "2": [
+            "thebloke-wizardlm-7b-hf",
+            "ufal-robeczech-base"
+        ]
+    },
+    "test-switzerlandnorth": {
+        "0": [
+            "eachadea-vicuna-7b-1.1",
+            "milanlproc-feel-it-italian-emotion"
+        ],
+        "1": [
+            "microsoft-prophetnet-large-uncased",
+            "helsinki-nlp-opus-mt-sv-en"
+        ],
+        "2": [
+            "iarfmoose-bert-base-cased-qa-evaluator",
+            "facebook-mbart-large-50"
+        ]
+    },
+    "test-uaenorth": {
+        "0": [
+            "tehvenom-gpt-j-pyg-ppo-6b",
+            "bert-large-uncased"
+        ],
+        "1": [
+            "rucaibox-mvp"
+        ],
+        "2": [
+            "kssteven-ibert-roberta-base"
+        ]
+    },
+    "test-uksouth": {
+        "0": [
+            "tner-roberta-large-ontonotes5"
+        ],
+        "1": [
+            "helsinki-nlp-opus-mt-gmw-gmw"
+        ],
+        "2": [
+            "helsinki-nlp-opus-mt-fi-de"
+        ]
+    },
+    "test-ukwest": {
+        "0": [
+            "cross-encoder-qnli-electra-base"
+        ],
+        "1": [
+            "thatdramebaazguy-roberta-base-squad"
+        ],
+        "2": [
+            "valhalla-t5-small-qa-qg-hl"
+        ]
+    },
+    "test-westcentralus": {
+        "0": [
+            "flaubert-flaubert-base-cased"
+        ],
+        "1": [
+            "roberta-large-openai-detector"
+        ],
+        "2": [
+            "helsinki-nlp-opus-mt-it-es"
+        ]
+    },
+    "test-westeurope": {
+        "0": [
+            "cross-encoder-stsb-roberta-large"
+        ],
+        "1": [
+            "kes-t5-kes"
+        ],
+        "2": [
+            "law-ai-inlegalbert"
+        ]
+    },
+    "test-westus": {
+        "0": [
+            "pygmalionai-pygmalion-2.7b"
+        ],
+        "1": [
+            "jjzha-jobbert-base-cased"
+        ],
+        "2": [
+            "koboldai-gpt-neo-2.7b-horni"
+        ]
+    },
+    "test-westus3": {
+        "0": [
+            "camel-lab-bert-base-arabic-camelbert-ca-pos-egy"
+        ],
+        "1": [
+            "helsinki-nlp-opus-mt-ja-en"
+        ],
+        "2": [
+            "stabilityai-stablelm-tuned-alpha-3b"
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-centralus-2",
+    "models": [
+        "allenai-tk-instruct-3b-def",
+        "facebook-m2m100-1.2b"
+    ],
+    "workspace": "test-centralus",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

@@ -7,8 +7,8 @@ env:
   test_model_name: laituan245-molt5-large-caption2smiles
   test_sku_type: cpu
   test_trigger_next_model: true
-  test_queue: test-westus3-2
-  test_set: huggingface-all
+  test_queue: test-southcentralus-0
+  test_set: huggingface-rerun
   test_keep_looping: false
 
 jobs:

@@ -5,7 +5,7 @@ on:
     inputs:
       test_set:
         description: 'Test set to run'
-        default: huggingface-all
+        default: huggingface-rerun
 
 jobs:
   start-tests-job:

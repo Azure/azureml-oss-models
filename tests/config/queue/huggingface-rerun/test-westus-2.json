@@ -1,0 +1,10 @@
+{
+    "queue_name": "test-westus-2",
+    "models": [
+        "koboldai-gpt-neo-2.7b-horni"
+    ],
+    "workspace": "test-westus",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

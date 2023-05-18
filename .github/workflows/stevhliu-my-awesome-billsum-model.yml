@@ -7,8 +7,8 @@ env:
   test_model_name: stevhliu-my-awesome-billsum-model
   test_sku_type: cpu
   test_trigger_next_model: true
-  test_queue: test-japanwest-0
-  test_set: huggingface-all
+  test_queue: test-eastus-1
+  test_set: huggingface-rerun
   test_keep_looping: false
 
 jobs:

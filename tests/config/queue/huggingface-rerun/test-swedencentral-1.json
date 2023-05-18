@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-swedencentral-1",
+    "models": [
+        "stanfordaimi-stanford-deidentifier-only-i2b2",
+        "csebuetnlp-mt5-multilingual-xlsum"
+    ],
+    "workspace": "test-swedencentral",
+    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
+    "resource_group": "huggingface-registry-test22",
+    "registry": "HuggingFace"
+}

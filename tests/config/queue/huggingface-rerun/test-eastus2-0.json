@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-eastus2-0",
+    "models": [
+        "sijunhe-nezha-cn-base",
+        "cardiffnlp-twitter-roberta-base-sentiment-latest"
+    ],
+    "workspace": "test-eastus2",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

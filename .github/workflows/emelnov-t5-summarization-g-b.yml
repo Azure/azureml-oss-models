@@ -8,7 +8,7 @@ env:
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-1
-  test_set: huggingface-all
+  test_set: huggingface-rerun
   test_keep_looping: false
 
 jobs:

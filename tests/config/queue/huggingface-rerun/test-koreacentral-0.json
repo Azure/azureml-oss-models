@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-koreacentral-0",
+    "models": [
+        "idea-ccnl-erlangshen-deberta-v2-320m-chinese",
+        "google-pegasus-newsroom"
+    ],
+    "workspace": "test-koreacentral",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

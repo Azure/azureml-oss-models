@@ -15,6 +15,16 @@ from azure.ai.ml.entities import (
 import json
 import os
 
+# constants
+check_override = True
+
+def get_error_messages():
+    # load ../config/errors.json into a dictionary
+    with open('../config/errors.json') as f:
+        return json.load(f)
+    
+error_messages = get_error_messages()
+
 # model to test    
 test_model_name = os.environ.get('test_model_name')
 
@@ -47,10 +57,10 @@ def get_test_queue():
 # this is useful if you want to force a specific sku for a model   
 def get_sku_override():
     try:
-        with open('../config/sku-override/{test_set}/.json') as json_file:
+        with open('../config/sku-override/{test_set}.json') as json_file:
             return json.load(json_file)
     except Exception as e:
-        print (f"::warning Could not find sku-override file: \n{e}")
+        print (f"::warning:: Could not find sku-override file: \n{e}")
         return None
 
 
@@ -68,7 +78,7 @@ def set_next_trigger_model(queue):
         if (test_keep_looping == "true"):
             next_model = queue[0]
         else:
-            print ("::warning finishing the queue")
+            print ("::warning:: finishing the queue")
             next_model = ""
 # write the next model to github step output
     with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
@@ -110,7 +120,7 @@ def get_instance_type(latest_model, sku_override, registry_ml_client, check_over
     # find the sku_template that has sku_type as a substring
     sku_template = next((s for s in sku_templates_list if test_sku_type in s), None)
     if sku_template is None:
-        print (f"::error Could not find sku_template for {test_sku_type}")
+        print (f"::error:: Could not find sku_template for {test_sku_type}")
         exit (1)
     print (f"sku_template: {sku_template}")
     # split sku_template by / and get the 5th element into a variable called template_name
@@ -125,7 +135,7 @@ def get_instance_type(latest_model, sku_override, registry_ml_client, check_over
     print (f"instance_type: {instance_type}")
 
     if instance_type is None:
-        print (f"::error Could not find instance_type for {test_sku_type}")
+        print (f"::error:: Could not find instance_type for {test_sku_type}")
         exit (1)
 
     if check_override:
@@ -143,7 +153,9 @@ def create_online_endpoint(workspace_ml_client, endpoint):
     try:
         workspace_ml_client.online_endpoints.begin_create_or_update(endpoint).wait()
     except Exception as e:
-        print (f"::error Could not create endpoint: \n{e}")
+        print (f"::error:: Could not create endpoint: \n")
+        print (f"{e}\n\n check logs:\n\n")
+        prase_logs(e)
         exit (1)
 
     print(workspace_ml_client.online_endpoints.get(name=endpoint.name))
@@ -161,7 +173,9 @@ def create_online_deployment(workspace_ml_client, endpoint, instance_type, lates
     try:
         workspace_ml_client.online_deployments.begin_create_or_update(demo_deployment).wait()
     except Exception as e:
-        print (f"::error Could not create deployment: \n{e}\n\n check logs:\n\n")
+        print (f"::error:: Could not create deployment\n")
+        print (f"{e}\n\n check logs:\n\n")
+        prase_logs(e)
         get_online_endpoint_logs(workspace_ml_client, endpoint.name)
         workspace_ml_client.online_endpoints.begin_delete(name=endpoint.name).wait()
         exit (1)
@@ -170,7 +184,8 @@ def create_online_deployment(workspace_ml_client, endpoint, instance_type, lates
     try:
         workspace_ml_client.begin_create_or_update(endpoint).result()
     except Exception as e:
-        print (f"::error Could not update endpoint traffic: : \n{e}\n\ncheck logs:\n\n")
+        print (f"::error:: Could not create deployment\n")
+        print (f"{e}\n\n check logs:\n\n")
         get_online_endpoint_logs(workspace_ml_client, endpoint.name)
         workspace_ml_client.online_endpoints.begin_delete(name=endpoint.name).wait()
         exit (1)
@@ -193,7 +208,7 @@ def sample_inference(latest_model,registry, workspace_ml_client, online_endpoint
             scoring_input = json.load(f)
             print (f"scoring_input file:\n\n {scoring_input}\n\n")
     except Exception as e:
-        print (f"::warning Could not find scoring_file: {scoring_file}. Finishing without sample scoring: \n{e}")
+        print (f"::warning:: Could not find scoring_file: {scoring_file}. Finishing without sample scoring: \n{e}")
 
     # invoke the endpoint
     try:
@@ -203,33 +218,53 @@ def sample_inference(latest_model,registry, workspace_ml_client, online_endpoint
             request_file=scoring_file,
         )
         response_json = json.loads(response)
-        print(json.dumps(response_json, indent=2))
+        output = json.dumps(response_json, indent=2)
+        print(f"response: \n\n{output}")
+        with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as fh:
+            print(f'### Sample input\n{scoring_input}\n###Sample output\n{output}', file=fh)
+            
     except Exception as e:
-        print (f"::warning Could not invoke endpoint: \n{e}\n\n check logs:\n\n")
+        print (f"::error:: Could not invoke endpoint: \n")
+        print (f"{e}\n\n check logs:\n\n")
         get_online_endpoint_logs(workspace_ml_client, online_endpoint_name)
+
+def prase_logs(logs):
+
+    # split logs by \n
+    logs_list = logs.split("\n")
+    # loop through each line in logs_list
+    for line in logs_list:
+        # loop through each error in errors
+        for error in error_messages:
+            # if error is found in line, print error message
+            if error['parse_string'] in line:
+                print (f"::error category - {error_messages['error_category']}:: {line}")
 
 def get_online_endpoint_logs(workspace_ml_client, online_endpoint_name):
     print("Deployment logs: \n\n")
-    print(workspace_ml_client.online_deployments.get_logs(name="demo", endpoint_name=online_endpoint_name, lines=100000))
+    logs=workspace_ml_client.online_deployments.get_logs(name="demo", endpoint_name=online_endpoint_name, lines=100000)
+    print(logs)
+    prase_logs(logs)
 
 
 def delete_online_endpoint(workspace_ml_client, online_endpoint_name):
     try:
         workspace_ml_client.online_endpoints.begin_delete(name=online_endpoint_name).wait()
     except Exception as e:
-        print (f"::warning Could not delete endpoint: : \n{e}")
+        print (f"::warning:: Could not delete endpoint: : \n{e}")
         exit (0)    
+
+
 
 def main():
 
     # if any of the above are not set, exit with error
     if test_model_name is None or test_sku_type is None or test_queue is None or test_set is None or test_trigger_next_model is None or test_keep_looping is None:
-        print ("::error One or more of the environment variables test_model_name, test_sku_type, test_queue, test_set, test_trigger_next_model, test_keep_looping are not set")
+        print ("::error:: One or more of the environment variables test_model_name, test_sku_type, test_queue, test_set, test_trigger_next_model, test_keep_looping are not set")
         exit (1)
 
     queue = get_test_queue()
 
-    check_override = True
     sku_override = get_sku_override()
     if sku_override is None:
         check_override = False
@@ -238,9 +273,9 @@ def main():
         set_next_trigger_model(queue)
 
     # print values of all above variables
-    print (f"test_subscription_id: queue['subscription']")
-    print (f"test_resource_group: queue['subscription']")
-    print (f"test_workspace_name: queue['workspace']")
+    print (f"test_subscription_id: {queue['subscription']}")
+    print (f"test_resource_group: {queue['subscription']}")
+    print (f"test_workspace_name: {queue['workspace']}")
     print (f"test_model_name: {test_model_name}")
     print (f"test_sku_type: {test_sku_type}")
     print (f"test_registry: queue['registry']")
@@ -252,7 +287,7 @@ def main():
         credential = DefaultAzureCredential()
         credential.get_token("https://management.azure.com/.default")
     except Exception as ex:
-        print ("::error Auth failed, DefaultAzureCredential not working: \n{e}")
+        print ("::error:: Auth failed, DefaultAzureCredential not working: \n{e}")
         exit (1)
 
     # connect to workspace

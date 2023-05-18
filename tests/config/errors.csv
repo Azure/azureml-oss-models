@@ -1,0 +1,14 @@
+parse_string,error_category,
+'OSError: Can\'t load tokenizer',transformers
+'ValueError: Tokenizer class',transformers
+'ImportError:',transformers
+'TypeError: expected str, bytes or os.PathLike object, not NoneType',transformers
+'ModuleNotFoundError:',transformers
+'ValueError: Could not load model',transformers
+'TypeError: not a string',transformers
+'Not enough quota available for',azureml
+'(OperationDuplicationConflict) Conflict of operation',azureml
+'MmsOperation',azureml
+'Could not create endpoint',azureml
+'Code: FailedIdentityOperation',azureml
+'AMLComputeError: Deployment failed due to timeout while waiting for AML compute creation',azureml

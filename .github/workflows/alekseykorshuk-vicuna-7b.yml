@@ -7,8 +7,8 @@ env:
   test_model_name: alekseykorshuk-vicuna-7b
   test_sku_type: cpu
   test_trigger_next_model: true
-  test_queue: test-japanwest-0
-  test_set: huggingface-all
+  test_queue: test-northeurope-0
+  test_set: huggingface-rerun
   test_keep_looping: false
 
 jobs:

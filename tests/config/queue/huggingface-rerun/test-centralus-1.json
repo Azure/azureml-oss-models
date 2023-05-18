@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-centralus-1",
+    "models": [
+        "savasy-bert-base-turkish-sentiment-cased",
+        "deepset-bert-large-uncased-whole-word-masking-squad2"
+    ],
+    "workspace": "test-centralus",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

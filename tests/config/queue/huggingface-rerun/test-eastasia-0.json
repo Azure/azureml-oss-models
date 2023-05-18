@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-eastasia-0",
+    "models": [
+        "pierreguillou-t5-base-qa-squad-v1.1-portuguese",
+        "bhadresh-savani-distilbert-base-uncased-emotion"
+    ],
+    "workspace": "test-eastasia",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

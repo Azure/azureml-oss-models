@@ -1,0 +1,18 @@
+{
+   "bigscience-bloom-7b1-petals": {
+        "sku": "Standard_DS4_v2",
+        "status": "tbd"
+    },
+    "bigscience-bloomz-petals": {
+        "sku": "Standard_DS5_v2",
+        "status": "tbd"
+    },
+    "bigscience-bloom-petals": {
+        "sku": "Standard_DS5_v2",
+        "status": "tbd"
+    },
+    "bigscience-test-bloomd-6b3": {
+        "sku": "Standard_DS4_v2",
+        "status": "tbd"
+    }
+}

@@ -7,8 +7,8 @@ env:
   test_model_name: atharvamundada99-bert-large-question-answering-finetuned-legal
   test_sku_type: cpu
   test_trigger_next_model: true
-  test_queue: test-germanywestcentral-2
-  test_set: huggingface-all
+  test_queue: test-northcentralus-1
+  test_set: huggingface-rerun
   test_keep_looping: false
 
 jobs:

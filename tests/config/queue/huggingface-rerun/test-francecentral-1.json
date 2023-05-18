@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-francecentral-1",
+    "models": [
+        "ar4ikov-gpt2-650k-stable-diffusion-prompt-generator",
+        "bigscience-t0-3b"
+    ],
+    "workspace": "test-francecentral",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

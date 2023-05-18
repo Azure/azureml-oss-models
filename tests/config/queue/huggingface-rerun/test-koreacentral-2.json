@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-koreacentral-2",
+    "models": [
+        "allenai-wmt19-de-en-6-6-base",
+        "idea-ccnl-wenzhong2.0-gpt2-3.5b-chinese"
+    ],
+    "workspace": "test-koreacentral",
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace"
+}

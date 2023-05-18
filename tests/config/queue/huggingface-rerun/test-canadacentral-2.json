@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-canadacentral-2",
+    "models": [
+        "valhalla-s2t-mustc-multilinguial-medium",
+        "entropy-roberta-zinc-480m"
+    ],
+    "workspace": "test-canadacentral",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}

@@ -1,0 +1,11 @@
+{
+    "queue_name": "test-eastus2-2",
+    "models": [
+        "crumb-bloom-560m-rlhf-sd2-prompter-aesthetic",
+        "cardiffnlp-twitter-roberta-base-sentiment"
+    ],
+    "workspace": "test-eastus2",
+    "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
+    "resource_group": "huggingface-registry-test",
+    "registry": "HuggingFace"
+}
