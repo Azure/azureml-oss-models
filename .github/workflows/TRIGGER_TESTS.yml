@@ -22,6 +22,6 @@ jobs:
         ls -1
         for file in `ls -1`  
         do  
-          gh workflow run `cat $file | head -4 | tail -1 | sed 's/,//'`
+          gh workflow run `cat $file | head -4 | tail -1 | sed 's/,//' | sed 's/"//g'`
         done    
       working-directory: tests/config/queue
