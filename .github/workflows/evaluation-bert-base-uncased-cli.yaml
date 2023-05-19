@@ -1,4 +1,4 @@
-name: real-time-inference-bert-base-uncased-cli
+name: evaluation-bert-base-uncased-cli
 
 on:
   workflow_dispatch:
@@ -8,14 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/real-time-inference-bert-base-uncased-cli.yaml
+      - .github/workflows/evaluation-bert-base-uncased-cli.yaml
 
 env:
   model_name: bert-base-uncased
   SUBSCRIPTION_ID: c11df4e4-eb38-4e11-b3dd-e8874de77d0a
   RESOURCE_GROUP_NAME: huggingface-registry-test
   WORKSPACE_NAME: test-brazilsouth
-
 
 jobs:
   real-time-inference-bert-base-uncased_nb:
@@ -34,16 +33,13 @@ jobs:
       - name: setup-cli
         run: |
             az extension add -n ml -y
-        working-directory: cli/foundation-models/system/inference/fill-mask
+        working-directory: cli/foundation-models/system/evaluation/fill-mask
         continue-on-error: true
       - name: run fill-mask-online-endpoint.sh
         run: |
             ls -ltr
-            sed -i -e "s/<SUBSCRIPTION_ID>/$(echo "$SUBSCRIPTION_ID")/g" \
-                -e "s/<RESOURCE_GROUP>/$(echo "$RESOURCE_GROUP_NAME")/g" \
-                -e "s/<WORKSPACE_NAME>/$(echo "$WORKSPACE_NAME")/g" \
-                fill-mask-online-endpoint.sh
-            cat fill-mask-online-endpoint.sh
-            echo "Verify if ws details got updated"
-            bash fill-mask-online-endpoint.sh
-        working-directory: cli/foundation-models/system/inference/fill-mask
+            az ml job create --subscription $SUBSCRIPTION_ID \
+              -g $RESOURCE_GROUP_NAME \
+              -w WORKSPACE_NAME \
+              -f fill-mask-pipeline.yml
+        working-directory: cli/foundation-models/system/evaluation/fill-mask
