@@ -139,12 +139,10 @@ def create_badge(results_per_model, status, clock_time):
     lines.append(f"### Summary\n")
     lines.append(f"🚀Total|✅Success|❌Failure|❔Unknown|🧪Not Tested|🕰️Total Duration|⏱️Clock duration")
     lines.append(f"-----|-------|-------|-------|----------|----------------|-----------------")
-    lines.append(f"{status['total']}|{status['success']}|{status['failure']}|{status['unknown']}|{status['not_tested']}|{test_duration_str}|{clock_time_str}\n")
+    lines.append(f"{status['total']}|{status['success']}|{status['failure']}|{status['unknown']}|{status['not_tested']}|{test_duration_str}|{clock_time_str}")
     # print all percentages accurate to 2 decimal places
-    lines.append(f"{round(status['total'] / status['total'] * 100, 2)}|{round(status['success'] / status['total'] * 100, 2)}|{round(status['failure'] / status['total'] * 100, 2)}|{round(status['unknown'] / status['total'] * 100, 2)}|{round(status['not_tested'] / status['total'] * 100, 2)}|{round(status['total_duration'] / clock_time * 100, 2)}|100\n")
+    lines.append(f"{round(status['total'] / status['total'] * 100, 2)}|{round(status['success'] / status['total'] * 100, 2)}|{round(status['failure'] / status['total'] * 100, 2)}|{round(status['unknown'] / status['total'] * 100, 2)}|{round(status['not_tested'] / status['total'] * 100, 2)}||\n")
     
-                    
-                    
     labels = ["Success", "Failure", "Unknown", "Not Tested"]
     for label in labels:
         lines.append(f"### {label}\n")
