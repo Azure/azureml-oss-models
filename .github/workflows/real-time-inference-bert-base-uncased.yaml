@@ -28,6 +28,8 @@ jobs:
           python-version: "3.8"
       - name: pip install notebook reqs
         run: pip install -r sdk/python/dev-requirements.txt
+      - name: pip-install-datasets
+        run: pip install datasets
       - name: azure login
         uses: azure/login@v1
         with:
