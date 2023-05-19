@@ -1,0 +1,38 @@
+name: real-time-inference-bert-base-uncased-cli
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "31 10/12 * * *"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/real-time-inference-bert-base-uncased-cli.yaml
+
+env:
+  model_name: bert-base-uncased
+
+jobs:
+  real-time-inference-bert-base-uncased_nb:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Azure/azureml-examples PUBLIC repository
+        uses: actions/checkout@v2
+        with:
+          owner: 'Azure'
+          repository: 'Azure/azureml-examples'
+          ref: main
+      - name: azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{secrets.AZ_CRED}}
+      - name: setup-cli
+        run: |
+            az extension add -n ml -y
+        working-directory: cli
+        continue-on-error: true
+      - name: run foundation-models/system/inference/fill-mask/fill-mask-online-endpoint.sh
+        run: |
+            bash fill-mask-online-endpoint.sh
+        working-directory: run foundation-models/system/inference/fill-mask/
