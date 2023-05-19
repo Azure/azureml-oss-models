@@ -33,7 +33,14 @@ jobs:
         working-directory: cli/foundation-models/system/inference/fill-mask
         continue-on-error: true
       - name: run fill-mask-online-endpoint.sh
+        env:
+          SUBSCRIPTION_ID: c11df4e4-eb38-4e11-b3dd-e8874de77d0a
+          RESOURCE_GROUP_NAME: huggingface-registry-test
+          WORKSPACE_NAME: test-brazilsouth
         run: |
             ls -ltr
+            sed -i -e "s/<SUBSCRIPTION_ID>/$(echo "$SUBSCRIPTION_ID")/g" \
+                -e "s/<RESOURCE_GROUP>/$(echo "$RESOURCE_GROUP_NAME")/g" \
+                -e "s/<WORKSPACE_NAME>/$(echo "$WORKSPACE_NAME")/g" \
             bash fill-mask-online-endpoint.sh
         working-directory: cli/foundation-models/system/inference/fill-mask
