@@ -1,8 +1,7 @@
 {
     "queue_name": "test-canadacentral-0",
     "models": [
-        "deep-learning-analytics-wikihow-t5-small",
-        "cointegrated-rubert-tiny-toxicity"
+        "neulab-codebert-cpp"
     ],
     "workspace": "test-canadacentral",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

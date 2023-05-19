@@ -1,8 +1,7 @@
 {
     "queue_name": "test-centralindia-2",
     "models": [
-        "unicamp-dl-translation-en-pt-t5",
-        "gronlp-bert-base-dutch-cased"
+        "valhalla-t5-base-e2e-qg"
     ],
     "workspace": "test-centralindia",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

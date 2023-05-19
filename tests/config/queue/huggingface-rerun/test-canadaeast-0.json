@@ -1,8 +1,7 @@
 {
     "queue_name": "test-canadaeast-0",
     "models": [
-        "zhihan1996-dna-bert-3",
-        "philschmid-distilbart-cnn-12-6-samsum"
+        "sociocom-medner-cr-ja"
     ],
     "workspace": "test-canadaeast",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

@@ -1,8 +1,7 @@
 {
     "queue_name": "test-canadaeast-2",
     "models": [
-        "ck46-t5-base-hotpot-qa-qg",
-        "kwoncho-ko-sroberta-multitask-suspicious"
+        "cl-tohoku-bert-large-japanese"
     ],
     "workspace": "test-canadaeast",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

@@ -1,8 +1,7 @@
 {
     "queue_name": "test-australiasoutheast-2",
     "models": [
-        "nytk-puli-gpt-2",
-        "snrspeaks-t5-one-line-summary"
+        "valhalla-s2t-mustc-multilinguial-medium"
     ],
     "workspace": "test-australiasoutheast",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

@@ -1,8 +1,7 @@
 {
     "queue_name": "test-eastasia-1",
     "models": [
-        "michaelrglass-albert-base-rci-wikisql-col",
-        "helsinki-nlp-opus-mt-en-es"
+        "google-t5-large-lm-adapt"
     ],
     "workspace": "test-eastasia",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

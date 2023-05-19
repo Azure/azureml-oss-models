@@ -1,0 +1,101 @@
+{
+    "test-australiaeast": {
+        "0": [
+            "roberta-large-openai-detector"
+        ],
+        "1": [
+            "eleutherai-polyglot-ko-3.8b"
+        ],
+        "2": [
+            "cross-encoder-quora-distilroberta-base"
+        ]
+    },
+    "test-australiasoutheast": {
+        "0": [
+            "ck46-t5-base-hotpot-qa-qg"
+        ],
+        "1": [
+            "zhihan1996-dna-bert-3"
+        ],
+        "2": [
+            "valhalla-s2t-mustc-multilinguial-medium"
+        ]
+    },
+    "test-brazilsouth": {
+        "0": [
+            "uer-gpt2-distil-chinese-cluecorpussmall"
+        ],
+        "1": [
+            "ilyagusev-fred-t5-ru-turbo-alpaca"
+        ],
+        "2": [
+            "decapoda-research-llama-7b-hf"
+        ]
+    },
+    "test-canadacentral": {
+        "0": [
+            "neulab-codebert-cpp"
+        ],
+        "1": [
+            "cl-tohoku-bert-base-japanese-char-v2"
+        ],
+        "2": [
+            "cl-tohoku-bert-base-japanese-v2"
+        ]
+    },
+    "test-canadaeast": {
+        "0": [
+            "sociocom-medner-cr-ja"
+        ],
+        "1": [
+            "uclanlp-visualbert-vqa"
+        ],
+        "2": [
+            "cl-tohoku-bert-large-japanese"
+        ]
+    },
+    "test-centralindia": {
+        "0": [
+            "hz53-bert-base-uncased-cb"
+        ],
+        "1": [
+            "jarvisx17-japanese-sentiment-analysis"
+        ],
+        "2": [
+            "valhalla-t5-base-e2e-qg"
+        ]
+    },
+    "test-centralus": {
+        "0": [
+            "mrm8488-t5-base-finetuned-span-sentiment-extraction"
+        ],
+        "1": [
+            "helsinki-nlp-opus-mt-eu-en"
+        ],
+        "2": [
+            "pysentimiento-roberta-es-sentiment"
+        ]
+    },
+    "test-eastasia": {
+        "0": [
+            "clueai-promptclue-base-v1-5"
+        ],
+        "1": [
+            "google-t5-large-lm-adapt"
+        ],
+        "2": [
+            "rinna-japanese-roberta-base"
+        ]
+    },
+    "test-eastus2": {
+        "0": [
+            "mrm8488-t5-base-finetuned-question-generation-ap"
+        ],
+        "1": [
+            "vinai-bertweet-base"
+        ],
+        "2": [
+            "google-flan-t5-large"
+        ]
+    }
+}

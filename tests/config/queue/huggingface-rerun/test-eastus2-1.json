@@ -1,8 +1,7 @@
 {
     "queue_name": "test-eastus2-1",
     "models": [
-        "helsinki-nlp-opus-mt-es-it",
-        "bigscience-bloom-560m"
+        "vinai-bertweet-base"
     ],
     "workspace": "test-eastus2",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

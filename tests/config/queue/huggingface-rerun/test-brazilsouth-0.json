@@ -1,8 +1,7 @@
 {
     "queue_name": "test-brazilsouth-0",
     "models": [
-        "uer-gpt2-distil-chinese-cluecorpussmall",
-        "neuralmind-bert-large-portuguese-cased"
+        "uer-gpt2-distil-chinese-cluecorpussmall"
     ],
     "workspace": "test-brazilsouth",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

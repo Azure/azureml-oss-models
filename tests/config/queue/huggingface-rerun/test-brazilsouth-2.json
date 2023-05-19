@@ -1,8 +1,7 @@
 {
     "queue_name": "test-brazilsouth-2",
     "models": [
-        "helsinki-nlp-opus-mt-tc-big-he-en",
-        "alexjercan-codet5-base-buggy-error-description"
+        "decapoda-research-llama-7b-hf"
     ],
     "workspace": "test-brazilsouth",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

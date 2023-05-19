@@ -1,8 +1,7 @@
 {
     "queue_name": "test-australiaeast-2",
     "models": [
-        "ilyagusev-fred-t5-ru-turbo-alpaca",
-        "nferruz-protgpt2"
+        "cross-encoder-quora-distilroberta-base"
     ],
     "workspace": "test-australiaeast",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

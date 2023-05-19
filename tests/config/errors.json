@@ -1,46 +1,46 @@
 [
   {
-    "parse_string": "'OSError:'",
+    "parse_string": "OSError:",
     "error_category": "transformers"
   },
   {
-    "parse_string": "'ValueError:'",
+    "parse_string": "ValueError:",
     "error_category": "transformers"
   },
   {
-    "parse_string": "'ImportError:'",
+    "parse_string": "ImportError:",
     "error_category": "transformers"
   },
   {
-    "parse_string": "'TypeError:'",
+    "parse_string": "TypeError:",
     "error_category": "transformers"
   },
   {
-    "parse_string": "'ModuleNotFoundError:'",
+    "parse_string": "ModuleNotFoundError:",
     "error_category": "transformers"
   },
   {
-    "parse_string": "'Not enough quota'",
+    "parse_string": "Not enough quota",
     "error_category": "azureml"
   },
   {
-    "parse_string": "'OperationDuplicationConflict'",
+    "parse_string": "OperationDuplicationConflict",
     "error_category": "azureml"
   },
   {
-    "parse_string": "'MmsOperation'",
+    "parse_string": "MmsOperation",
     "error_category": "azureml"
   },
   {
-    "parse_string": "'Could not create endpoint'",
+    "parse_string": "Could not create endpoint",
     "error_category": "azureml"
   },
   {
-    "parse_string": "'Code: FailedIdentityOperation'",
+    "parse_string": "Code: FailedIdentityOperation",
     "error_category": "azureml"
   },
   {
-    "parse_string": "'AMLComputeError:'",
+    "parse_string": "AMLComputeError:",
     "error_category": "azureml"
   }
 ]

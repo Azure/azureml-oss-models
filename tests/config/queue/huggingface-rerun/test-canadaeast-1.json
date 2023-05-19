@@ -1,8 +1,7 @@
 {
     "queue_name": "test-canadaeast-1",
     "models": [
-        "sonnenblume-bert-base-uncased-ancient-greek-v3",
-        "kwoncho-ko-sroberta-multitask-suspicious"
+        "uclanlp-visualbert-vqa"
     ],
     "workspace": "test-canadaeast",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

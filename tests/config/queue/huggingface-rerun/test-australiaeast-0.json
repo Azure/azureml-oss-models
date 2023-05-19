@@ -1,8 +1,7 @@
 {
     "queue_name": "test-australiaeast-0",
     "models": [
-        "turkunlp-gpt3-finnish-small",
-        "nlpaueb-bert-base-greek-uncased-v1"
+        "roberta-large-openai-detector"
     ],
     "workspace": "test-australiaeast",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

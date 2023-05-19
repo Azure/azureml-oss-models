@@ -7,7 +7,7 @@ env:
   test_model_name: ilyagusev-fred-t5-ru-turbo-alpaca
   test_sku_type: cpu
   test_trigger_next_model: true
-  test_queue: test-australiaeast-2
+  test_queue: test-brazilsouth-1
   test_set: huggingface-rerun
   test_keep_looping: false
 

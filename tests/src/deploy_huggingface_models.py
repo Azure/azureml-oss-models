@@ -155,7 +155,7 @@ def create_online_endpoint(workspace_ml_client, endpoint):
     except Exception as e:
         print (f"::error:: Could not create endpoint: \n")
         print (f"{e}\n\n check logs:\n\n")
-        prase_logs(e)
+        prase_logs(str(e))
         exit (1)
 
     print(workspace_ml_client.online_endpoints.get(name=endpoint.name))
@@ -175,7 +175,7 @@ def create_online_deployment(workspace_ml_client, endpoint, instance_type, lates
     except Exception as e:
         print (f"::error:: Could not create deployment\n")
         print (f"{e}\n\n check logs:\n\n")
-        prase_logs(e)
+        prase_logs(str(e))
         get_online_endpoint_logs(workspace_ml_client, endpoint.name)
         workspace_ml_client.online_endpoints.begin_delete(name=endpoint.name).wait()
         exit (1)
@@ -244,7 +244,7 @@ def prase_logs(logs):
         for error in error_messages:
             # if error is found in line, print error message
             if error['parse_string'] in line:
-                print (f"::error category - {error_messages['error_category']}:: {line}")
+                print (f"::{error_messages['error_category']} error:: - {line}")
 
 def get_online_endpoint_logs(workspace_ml_client, online_endpoint_name):
     print("Deployment logs: \n\n")

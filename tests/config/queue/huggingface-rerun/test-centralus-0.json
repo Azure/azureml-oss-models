@@ -1,8 +1,7 @@
 {
     "queue_name": "test-centralus-0",
     "models": [
-        "potsawee-t5-large-generation-squad-questionanswer",
-        "tuner007-pegasus-paraphrase"
+        "mrm8488-t5-base-finetuned-span-sentiment-extraction"
     ],
     "workspace": "test-centralus",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",

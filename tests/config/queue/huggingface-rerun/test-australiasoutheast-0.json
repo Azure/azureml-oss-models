@@ -1,8 +1,7 @@
 {
     "queue_name": "test-australiasoutheast-0",
     "models": [
-        "cl-tohoku-bert-base-japanese-char-whole-word-masking",
-        "nferruz-protgpt2"
+        "ck46-t5-base-hotpot-qa-qg"
     ],
     "workspace": "test-australiasoutheast",
     "subscription": "c11df4e4-eb38-4e11-b3dd-e8874de77d0a",
