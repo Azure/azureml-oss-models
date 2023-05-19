@@ -1,17 +1,13 @@
 ### Summary
 
 🚀Total|✅Success|❌Failure|❔Unknown|🧪Not Tested|🕰️Total Duration|⏱️Clock duration
-
------|-------|-------|-------|----------|--------------
-
+-----|-------|-------|-------|----------|----------------|-----------------
 1536|1468|62|0|6|537h 8m|11h 40m
 
 ### Success
 
 |Model|Last tested at|
-
 |-----|--------------|
-
 bert-large-uncased|[![18 May 2023 23:47:38](https://github.com/Azure/azureml-oss-models/actions/workflows/bert-large-uncased.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/bert-large-uncased.yml)
 milanlproc-feel-it-italian-emotion|[![18 May 2023 23:47:12](https://github.com/Azure/azureml-oss-models/actions/workflows/milanlproc-feel-it-italian-emotion.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/milanlproc-feel-it-italian-emotion.yml)
 castorini-monot5-base-msmarco-10k|[![18 May 2023 23:44:11](https://github.com/Azure/azureml-oss-models/actions/workflows/castorini-monot5-base-msmarco-10k.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/castorini-monot5-base-msmarco-10k.yml)
@@ -1483,9 +1479,7 @@ shobhank-iiitdwd-bert-summary|[![18 May 2023 12:56:32](https://github.com/Azure/
 ### Failure
 
 |Model|Last tested at|
-
 |-----|--------------|
-
 bigcode-santacoder|[![19 May 2023 00:15:38](https://github.com/Azure/azureml-oss-models/actions/workflows/bigcode-santacoder.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/bigcode-santacoder.yml)
 bigscience-bloom-petals|[![18 May 2023 23:33:55](https://github.com/Azure/azureml-oss-models/actions/workflows/bigscience-bloom-petals.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/bigscience-bloom-petals.yml)
 bigscience-test-bloomd-6b3|[![18 May 2023 23:31:20](https://github.com/Azure/azureml-oss-models/actions/workflows/bigscience-test-bloomd-6b3.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/bigscience-test-bloomd-6b3.yml)
@@ -1551,15 +1545,11 @@ curiousily-layoutlmv3-financial-document-classification|[![18 May 2023 12:55:01]
 ### Unknown
 
 |Model|Last tested at|
-
 |-----|--------------|
-
 ### Not Tested
 
 |Model|Last tested at|
-
 |-----|--------------|
-
 clueai-promptclue-base-v1-5|[![No status](https://github.com/Azure/azureml-oss-models/actions/workflows/clueai-promptclue-base-v1-5.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/clueai-promptclue-base-v1-5.yml)
 google-t5-large-lm-adapt|[![No status](https://github.com/Azure/azureml-oss-models/actions/workflows/google-t5-large-lm-adapt.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/google-t5-large-lm-adapt.yml)
 rinna-japanese-roberta-base|[![No status](https://github.com/Azure/azureml-oss-models/actions/workflows/rinna-japanese-roberta-base.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/rinna-japanese-roberta-base.yml)
