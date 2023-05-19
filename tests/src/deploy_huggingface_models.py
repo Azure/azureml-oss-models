@@ -57,7 +57,7 @@ def get_test_queue():
 # this is useful if you want to force a specific sku for a model   
 def get_sku_override():
     try:
-        with open('../config/sku-override/{test_set}.json') as json_file:
+        with open(f'../config/sku-override/{test_set}.json') as json_file:
             return json.load(json_file)
     except Exception as e:
         print (f"::warning:: Could not find sku-override file: \n{e}")
@@ -244,7 +244,7 @@ def prase_logs(logs):
         for error in error_messages:
             # if error is found in line, print error message
             if error['parse_string'] in line:
-                print (f"::{error_messages['error_category']} error:: - {line}")
+                print (f"::error:: {error_messages['error_category']}: {line}")
 
 def get_online_endpoint_logs(workspace_ml_client, online_endpoint_name):
     print("Deployment logs: \n\n")
@@ -287,6 +287,7 @@ def main():
     print (f"test_registry: queue['registry']")
     print (f"test_trigger_next_model: {test_trigger_next_model}")
     print (f"test_queue: {test_queue}")
+    print (f"test_set: {test_set}")
 
 
     try:
