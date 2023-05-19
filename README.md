@@ -1,14 +1,11 @@
-# Project
+# Foundation Models in Azure Machine Learning
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repo runs tests for foundation models availabel in the model catalog in the Azure Machine Learning studio.
 
-As the maintainer of this project, please make a few updates:
+### Dashboards 
+Collection | Online Inference 
+HuggingFace | [go to dashboard](./dashboard/HuggingFace)
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
 
 ## Contributing
 
