@@ -30,10 +30,10 @@ jobs:
       - name: setup-cli
         run: |
             az extension add -n ml -y
-        working-directory: cli
+        working-directory: cli/foundation-models/system/inference/fill-mask
         continue-on-error: true
       - name: run fill-mask-online-endpoint.sh
         run: |
-            ls -l
+            ls -ltr
             bash fill-mask-online-endpoint.sh
-        working-directory: sdk/python/foundation-models/system/inference/fill-mask
+        working-directory: cli/foundation-models/system/inference/fill-mask
