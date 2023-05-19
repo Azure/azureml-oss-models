@@ -14,7 +14,7 @@ env:
   model_name: bert-base-uncased
 
 jobs:
-  prompthero-openjourney:
+  real-time-inference-bert-base-uncased:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
@@ -57,7 +57,7 @@ jobs:
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "import_model_into_registry.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "fill-mask-online-endpoint.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
             papermill -k python fill-mask-online-endpoint.ipynb fill-mask-online-endpoint.output.ipynb -p model_name "${{ env.model_name }}"
         working-directory: sdk/python/foundation-models/system/inference/fill-mask
