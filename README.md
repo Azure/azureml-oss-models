@@ -4,6 +4,7 @@ This repo runs tests for foundation models availabel in the model catalog in the
 
 ### Dashboards 
 Collection | Online Inference 
+--|--
 HuggingFace | [go to dashboard](./dashboard/HuggingFace)
 
 
