@@ -136,8 +136,8 @@ def create_badge(results_per_model, status, clock_time):
     clock_time_str = f"{int(clock_time / 60)}h {int(clock_time % 60)}m"
     # print status as markdown table
     lines.append(f"### Summary\n")
-    lines.append(f"🚀Total|✅Success|❌Failure|❔Unknown|🧪Not Tested|🕰️Total Duration|⏱️Clock duration\n")
-    lines.append(f"-----|-------|-------|-------|----------|--------------\n")
+    lines.append(f"🚀Total|✅Success|❌Failure|❔Unknown|🧪Not Tested|🕰️Total Duration|⏱️Clock duration")
+    lines.append(f"-----|-------|-------|-------|----------|----------------|-----------------")
     lines.append(f"{status['total']}|{status['success']}|{status['failure']}|{status['unknown']}|{status['not_tested']}|{test_duration_str}|{clock_time_str}\n")
    
     labels = ["Success", "Failure", "Unknown", "Not Tested"]
@@ -145,8 +145,8 @@ def create_badge(results_per_model, status, clock_time):
         lines.append(f"### {label}\n")
         # covert label to lowercase and replace space with underscore
         lower_label = label.lower().replace(" ", "_")
-        lines.append("|Model|Last tested at|\n")
-        lines.append("|-----|--------------|\n")
+        lines.append("|Model|Last tested at|")
+        lines.append("|-----|--------------|")
         for model in results_per_model:
             if results_per_model[model][lower_label] == 1:
                 if results_per_model[model]['last_tested'] is not None:
