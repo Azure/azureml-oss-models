@@ -15,8 +15,7 @@ from azure.ai.ml.entities import (
 import json
 import os
 
-# constants
-check_override = True
+
 
 def get_error_messages():
     # load ../config/errors.json into a dictionary
@@ -263,6 +262,9 @@ def delete_online_endpoint(workspace_ml_client, online_endpoint_name):
 
 
 def main():
+
+    # constants
+    check_override = True
 
     # if any of the above are not set, exit with error
     if test_model_name is None or test_sku_type is None or test_queue is None or test_set is None or test_trigger_next_model is None or test_keep_looping is None:
