@@ -1,0 +1,8 @@
+{
+  "inputs": {
+      "input_string": ["My name is John and I live in Seattle", "Berlin is the capital of Germany."]
+  },
+  "parameters": {
+      "task_type": "translation_en_to_fr"
+  }
+}
