@@ -19,6 +19,9 @@ jobs:
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
         uses: actions/checkout@v2
+        with:
+          owner: 'Azure'
+          repository: 'Azure/azureml-examples'
       - name: setup python
         uses: actions/setup-python@v2
         with:
