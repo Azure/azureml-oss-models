@@ -148,8 +148,8 @@ def create_badge(results_per_model, status, clock_time):
         lines.append(f"### {label}\n")
         # covert label to lowercase and replace space with underscore
         lower_label = label.lower().replace(" ", "_")
-        lines.append("|Model|Last tested at|Status|")
-        lines.append("|-----|--------------|-------|")
+        lines.append("|Model|Status|")
+        lines.append("|-----|-----|")
         for model in results_per_model:
             if results_per_model[model][lower_label] == 1:
                 if results_per_model[model]['last_tested'] is not None:
@@ -157,7 +157,7 @@ def create_badge(results_per_model, status, clock_time):
                     last_tested = datetime.strptime(results_per_model[model]['last_tested'], "%Y-%m-%dT%H:%M:%SZ").strftime("%d %b %Y %H:%M:%S")
                 else:
                     last_tested = "No status"
-                lines.append(f"{model}|{last_tested}|[![{model}](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml)")
+                lines.append(f"{model}|[![{model}](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml)")
 
 
     # write to markdown file
