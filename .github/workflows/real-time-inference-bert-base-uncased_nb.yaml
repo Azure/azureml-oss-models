@@ -14,7 +14,7 @@ env:
   model_name: bert-base-uncased
 
 jobs:
-  real-time-inference-bert-base-uncased:
+  real-time-inference-bert-base-uncased_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
