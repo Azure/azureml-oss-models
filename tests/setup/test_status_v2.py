@@ -143,25 +143,13 @@ def create_badge(results_per_model, status, clock_time):
     # print all percentages accurate to 2 decimal places
     lines.append(f"{round(status['total'] / status['total'] * 100, 2)}%|{round(status['success'] / status['total'] * 100, 2)}%|{round(status['failure'] / status['total'] * 100, 2)}%|{round(status['unknown'] / status['total'] * 100, 2)}%|{round(status['not_tested'] / status['total'] * 100, 2)}%||\n")
     
-    labels = ["Success", "Failure", "Unknown", "Not Tested"]
-    for label in labels:
-        lines.append(f"### {label}\n")
-        print (f"Generating badge for {label}:")
-        # covert label to lowercase and replace space with underscore
-        lower_label = label.lower().replace(" ", "_")
-        lines.append("|Model|Status|")
-        lines.append("|-----|-----|")
-        for model in results_per_model:
-            # print model to stdout if label is Failure or Unknown or Not Tested         
-            if results_per_model[model][lower_label] == 1:
-                if lower_label != "success":
-                    print (f"{model}")  
-                if results_per_model[model]['last_tested'] is not None:
-                # load last_tested as datetime object and format as DD MMM YYYY HH:MM:SS
-                    last_tested = datetime.strptime(results_per_model[model]['last_tested'], "%Y-%m-%dT%H:%M:%SZ").strftime("%d %b %Y %H:%M:%S")
-                else:
-                    last_tested = "No status"
-                lines.append(f"{model}|[![{model}](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml)")
+    lines.append("### Models\n")
+    
+    lines.append("|Model|Status|")
+    lines.append("|-----|-----|")
+    for model in results_per_model:
+        # print model to stdout if label is Failure or Unknown or Not Tested         
+        lines.append(f"{model}|[![{model}](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml)")
 
 
     # write to markdown file
