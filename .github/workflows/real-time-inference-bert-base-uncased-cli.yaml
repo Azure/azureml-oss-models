@@ -34,5 +34,6 @@ jobs:
         continue-on-error: true
       - name: run fill-mask-online-endpoint.sh
         run: |
+            ls -l
             bash fill-mask-online-endpoint.sh
         working-directory: sdk/python/foundation-models/system/inference/fill-mask
