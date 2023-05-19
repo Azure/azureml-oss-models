@@ -32,7 +32,7 @@ jobs:
             az extension add -n ml -y
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/inference/fill-mask/fill-mask-online-endpoint.sh
+      - name: run fill-mask-online-endpoint.sh
         run: |
             bash fill-mask-online-endpoint.sh
-        working-directory: run foundation-models/system/inference/fill-mask/
+        working-directory: sdk/python/foundation-models/system/inference/fill-mask
