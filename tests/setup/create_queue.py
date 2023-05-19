@@ -1,11 +1,5 @@
-
-
 from azure.ai.ml import MLClient
-from azure.identity import (
-    DefaultAzureCredential,
-    InteractiveBrowserCredential,
-    ClientSecretCredential,
-)
+from azure.identity import DefaultAzureCredential
 import time, sys
 from azure.ai.ml.entities import (
     ManagedOnlineEndpoint,
@@ -16,6 +10,7 @@ import json
 import os
 import argparse
 import sys
+from util import load_model_list_file, get_model_containers
 
 # constants
 LOG = True
@@ -74,65 +69,6 @@ def load_workspace_config():
     with open(args.workspace_list) as f:
         return json.load(f)
     
-# function to load model_list_file
-def load_model_list_file():
-    # if model_list_file is extention is json, load json file
-    if args.model_list_file.endswith(".json"):
-        with open(args.model_list_file) as f:
-            return json.load(f)
-    # read all other files as text files, assuming one model per line
-    with open(args.model_list_file) as f:
-        return f.read().splitlines()
-
-# function to query models from registry
-def get_model_containers():
-    counter=0
-    print (f"Getting models from registry {args.registry_name}")
-    models=[]
-    model_details={}
-    registry_ml_client = MLClient(credential, registry_name=args.registry_name)
-    model_containers=registry_ml_client.models.list()
-    
-    for model_container in model_containers:
-        # if model_container.name is in templates, skip
-        if model_container.name in templates:
-            continue
-
-        # bug - registry_ml_client.models.list() is not supposed to return archived models
-        # workaround to check if model is archived - get all versions and check if count is 0 
-        model_versions=registry_ml_client.models.list(name=model_container.name)
-        model_version_count=0
-        # can't just check len(model_versions) because it is a iterator
-        latest_model=None
-        for model in model_versions:
-            model_version_count = model_version_count + 1
-            latest_model=model
-        if model_version_count == 0:
-            continue
-        models.append(model_container.name)
-        model_details[model_container.name] = latest_model
-        # print progress
-        counter=counter+1
-        sys.stdout.write(f'{counter}\r')
-        sys.stdout.flush()
-    print (f"\nFound {counter} models in registry")
-
-    if LOG:
-        # create log_dir if it does not exist
-        if not os.path.exists(args.log_dir):
-            os.makedirs(args.log_dir)
-        # create get_model_containers directory under log_dir if it does not exist
-        if not os.path.exists(f"{args.log_dir}/get_model_containers"):
-            os.makedirs(f"{args.log_dir}/get_model_containers")
-        # generate filename as DDMMMYYYY-HHMMSS.json
-        timestamp = time.strftime("%d%b%Y-%H%M%S.json")
-        # write models list to file
-        with open(f"{args.log_dir}/get_model_containers/list_{timestamp}", 'w') as f:
-            json.dump(models, f, indent=4)    
-        with open(f"{args.log_dir}/get_model_containers/details_{timestamp}", 'w') as f:
-            json.dump(model_details, f, indent=4)   
-    return models
-
 # function to assign models to queues
 # assign each model from models to a thread per workspace in a round robin fashion by appending to a list called 'models' in the queue dictionary
 def assign_models_to_queues(models, workspace_list):
@@ -248,9 +184,9 @@ def write_single_workflow_file(model, q, secret_name):
 def main():
     # get list of models from registry
     if args.mode == "registry":
-        models = get_model_containers()
+        models = get_model_containers(args.registry_name)
     elif args.mode == "file":
-        models = load_model_list_file()
+        models = load_model_list_file(args.model_list_file)
     else:
         print (f"::error Invalid mode {args.mode}")
         exit (1)

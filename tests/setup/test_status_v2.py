@@ -2,41 +2,41 @@ import os
 import json
 import requests
 from datetime import datetime
+from util import load_model_list_file, get_model_containers
+from azure.ai.ml import MLClient
+from azure.identity import DefaultAzureCredential
 
 import argparse
 # parameter to get models list from file
 parser = argparse.ArgumentParser()
-parser.add_argument("--model_list_file", type=str, default="../logs/get_model_containers/17May2023-231031.json")
+parser.add_argument("--model_list_file", type=str, default="../logs/get_model_containers/HuggingFace/19May2023-011801.json")
 # parameter to get github workflows from file
 parser.add_argument("--github_workflows_file", type=str, default="../logs/get_github_workflows/18May2023-211807.json")
 # mode parameter to get workflow status from api or file
-parser.add_argument("--mode", type=str, default="api")
-# parameter to get markfown file name
+parser.add_argument("--mode_workflow", type=str, default="file")
+# mode_model parameter to get model status from api or file
+parser.add_argument("--mode_model", type=str, default="file")
+# parameter to get markdown file name
 parser.add_argument("--markdown_file", type=str, default="../../dashboard/HuggingFace/README.md")
+# parameter to get registry name
+parser.add_argument("--registry_name", type=str, default="HuggingFace")
 args = parser.parse_args()
 
 # constants
-RUN_API="https://api.github.com/repos/Azure/azureml-oss-models/actions/runs"
+
+# move this to config file later
+templates=['transformers-cpu-small', 'transformers-cpu-medium', 'transformers-cpu-large','transformers-cpu-extra-large', 'transformers-gpu-medium']
+
 
 def get_github_token():
     # fetch the github token from `gh auth token` command
     return os.popen("gh auth token").read().rstrip()
 
 
-# function to load model_list_file
-def load_model_list_file():
-    # if model_list_file is extention is json, load json file
-    if args.model_list_file.endswith(".json"):
-        with open(args.model_list_file) as f:
-            return json.load(f)
-    # read all other files as text files, assuming one model per line
-    with open(args.model_list_file) as f:
-        return f.read().splitlines()
-
-# function to get the github workflows using github rest api
-
 def get_github_workflows(token):
+    RUN_API="https://api.github.com/repos/Azure/azureml-oss-models/actions/runs"
     print (f"Getting github workflows from {RUN_API}")
+    
     total_pages = None
     current_page = 1
     per_page = 100
@@ -80,6 +80,8 @@ def calculate_test_status(runs, models):
     min_time = max_time = runs[0]['updated_at']
     for run in runs:
         model = run['name']
+        if model not in models:
+            continue
         status = run['status']
         conclusion = run['conclusion']
         if model not in results_per_model:
@@ -107,7 +109,6 @@ def calculate_test_status(runs, models):
         if model not in results_per_model:
             results_per_model[model] = {"success": 0, "failure": 0, "unknown": 0,"not_tested": 1, "duration": 0, "last_tested": None}
     # dump results_per_model as json to stdout
-    print (json.dumps(results_per_model['bert-base-cased'], indent=4))
     # load max_time and min_time as datetime objects and assign the difference to clock_time in minutes
     max_time = datetime.strptime(max_time, "%Y-%m-%dT%H:%M:%SZ")
     min_time = datetime.strptime(min_time, "%Y-%m-%dT%H:%M:%SZ")
@@ -117,7 +118,7 @@ def calculate_test_status(runs, models):
 
 def summarize_test_status(results_per_model):
     status = {"total": 0, "success": 0, "failure": 0, "unknown": 0, "not_tested": 0, "total_duration": 0}
-    print (json.dumps(status, indent=4))
+    #print (json.dumps(status, indent=4))
     for model in results_per_model:
         status["total"] += 1
         status["success"] += results_per_model[model]["success"]
@@ -139,14 +140,18 @@ def create_badge(results_per_model, status, clock_time):
     lines.append(f"🚀Total|✅Success|❌Failure|❔Unknown|🧪Not Tested|🕰️Total Duration|⏱️Clock duration")
     lines.append(f"-----|-------|-------|-------|----------|----------------|-----------------")
     lines.append(f"{status['total']}|{status['success']}|{status['failure']}|{status['unknown']}|{status['not_tested']}|{test_duration_str}|{clock_time_str}\n")
-   
+    # print all percentages accurate to 2 decimal places
+    lines.append(f"{round(status['total'] / status['total'] * 100, 2)}|{round(status['success'] / status['total'] * 100, 2)}|{round(status['failure'] / status['total'] * 100, 2)}|{round(status['unknown'] / status['total'] * 100, 2)}|{round(status['not_tested'] / status['total'] * 100, 2)}|{round(status['total_duration'] / clock_time * 100, 2)}|100\n")
+    
+                    
+                    
     labels = ["Success", "Failure", "Unknown", "Not Tested"]
     for label in labels:
         lines.append(f"### {label}\n")
         # covert label to lowercase and replace space with underscore
         lower_label = label.lower().replace(" ", "_")
-        lines.append("|Model|Last tested at|")
-        lines.append("|-----|--------------|")
+        lines.append("|Model|Last tested at|Status|")
+        lines.append("|-----|--------------|-------|")
         for model in results_per_model:
             if results_per_model[model][lower_label] == 1:
                 if results_per_model[model]['last_tested'] is not None:
@@ -154,30 +159,41 @@ def create_badge(results_per_model, status, clock_time):
                     last_tested = datetime.strptime(results_per_model[model]['last_tested'], "%Y-%m-%dT%H:%M:%SZ").strftime("%d %b %Y %H:%M:%S")
                 else:
                     last_tested = "No status"
-                lines.append(f"{model}|[![{last_tested}](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml)")
+                lines.append(f"{model}|{last_tested}|[![{model}](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml/badge.svg)](https://github.com/Azure/azureml-oss-models/actions/workflows/{model}.yml)")
 
 
     # write to markdown file
+    # count number of lines in markdown file
+    i=0
     print (f"Writing to {args.markdown_file}")
     with open(args.markdown_file, 'w') as f:
         for line in lines:
             f.write(line + "\n")
+            i = i + 1
+    print (f"Total lines written: {i}")    
+            
 
 def main():
-    # print mode
-    print (f"Mode: {args.mode}")
-    # if mode is api, get github workflows using github rest api
-    if args.mode == "api":
+    # if mode_workflow is api, get github workflows using github rest api
+    if args.mode_workflow == "api":
         runs = get_github_workflows(get_github_token())
-    elif args.mode == "file":
+    elif args.mode_workflow == "file":
     # else, load github workflows from file
         with open(args.github_workflows_file) as f:
             runs = json.load(f)
     else:
-        print (f"Error: Invalid mode {args.mode}")
+        print (f"Error: Invalid mode_workflow {args.mode_workflow}")
         exit(1)
-    models = load_model_list_file()
+    print (f"Total runs: {len(runs)}")
+    # if mode_model is api, get model containers using azure ml sdk
+    if args.mode_model == "api":
+        models = get_model_containers(args.registry_name, templates)
+    elif args.mode_model == "file":
+    # else, load model containers from file
+        models = load_model_list_file(args.model_list_file)
+    print (f"Total models: {len(models)}")
     results_per_model, clock_time = calculate_test_status(runs, models)
+    print (f"Total results: {len(results_per_model)}")
     # print
     status = summarize_test_status(results_per_model)
     # dump status to STDOUT
