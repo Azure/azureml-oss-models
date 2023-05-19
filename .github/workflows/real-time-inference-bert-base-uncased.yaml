@@ -22,7 +22,7 @@ jobs:
         with:
           owner: 'Azure'
           repository: 'Azure/azureml-examples'
-          ref: 'hrishikesh/model-import-workflows'
+          ref: 'hrishikesh/inference_notebook'
       - name: setup python
         uses: actions/setup-python@v2
         with:
