@@ -3,8 +3,8 @@
 This repo runs tests for foundation models availabel in the model catalog in the Azure Machine Learning studio.
 
 ### Dashboards 
-Collection | Online Inference | Batch inference | Evaluation | Finetuning
---|--|--|--|
+Collection | Online Inference | Batch inference | Evaluation | Finetuning |
+--|--|--|--|--|
 AzureML curated models | coming soon | coming soon | coming soon | coming soon 
 HuggingFace | [go to dashboard](./dashboard/HuggingFace) |
 
