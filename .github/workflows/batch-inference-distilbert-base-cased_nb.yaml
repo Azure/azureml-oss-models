@@ -1,4 +1,4 @@
-name: <inference-type>-inference-distilbert-base-cased_nb
+name: batch-inference-distilbert-base-cased_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-distilbert-base-cased_nb.yaml
+      - .github/workflows/batch-inference-distilbert-base-cased_nb.yaml
 
 env:
   model_name: distilbert-base-cased
   model_version: 5
 jobs:
-  <inference-type>-inference-distilbert-base-cased_nb:
+  batch-inference-distilbert-base-cased_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

@@ -1,4 +1,4 @@
-name: <inference-type>-inference-deepset-roberta-base-squad2_nb
+name: batch-inference-deepset-roberta-base-squad2_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-deepset-roberta-base-squad2_nb.yaml
+      - .github/workflows/batch-inference-deepset-roberta-base-squad2_nb.yaml
 
 env:
   model_name: deepset-roberta-base-squad2
   model_version: 4
 jobs:
-  <inference-type>-inference-deepset-roberta-base-squad2_nb:
+  batch-inference-deepset-roberta-base-squad2_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

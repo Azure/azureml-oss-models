@@ -1,4 +1,4 @@
-name: <inference-type>-inference-sshleifer-distilbart-cnn-12-6_nb
+name: batch-inference-sshleifer-distilbart-cnn-12-6_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-sshleifer-distilbart-cnn-12-6_nb.yaml
+      - .github/workflows/batch-inference-sshleifer-distilbart-cnn-12-6_nb.yaml
 
 env:
   model_name: sshleifer-distilbart-cnn-12-6
   model_version: 4
 jobs:
-  <inference-type>-inference-sshleifer-distilbart-cnn-12-6_nb:
+  batch-inference-sshleifer-distilbart-cnn-12-6_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

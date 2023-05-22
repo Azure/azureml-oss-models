@@ -1,4 +1,4 @@
-name: <inference-type>-inference-finiteautomata-bertweet-base-sentiment-analysis_nb
+name: batch-inference-finiteautomata-bertweet-base-sentiment-analysis_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-finiteautomata-bertweet-base-sentiment-analysis_nb.yaml
+      - .github/workflows/batch-inference-finiteautomata-bertweet-base-sentiment-analysis_nb.yaml
 
 env:
   model_name: finiteautomata-bertweet-base-sentiment-analysis
   model_version: 4
 jobs:
-  <inference-type>-inference-finiteautomata-bertweet-base-sentiment-analysis_nb:
+  batch-inference-finiteautomata-bertweet-base-sentiment-analysis_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

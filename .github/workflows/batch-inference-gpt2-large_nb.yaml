@@ -1,4 +1,4 @@
-name: <inference-type>-inference-gpt2-large_nb
+name: batch-inference-gpt2-large_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-gpt2-large_nb.yaml
+      - .github/workflows/batch-inference-gpt2-large_nb.yaml
 
 env:
   model_name: gpt2-large
   model_version: 4
 jobs:
-  <inference-type>-inference-gpt2-large_nb:
+  batch-inference-gpt2-large_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

@@ -1,4 +1,4 @@
-name: <inference-type>-inference-t5-base_nb
+name: batch-inference-t5-base_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-t5-base_nb.yaml
+      - .github/workflows/batch-inference-t5-base_nb.yaml
 
 env:
   model_name: t5-base
   model_version: 4
 jobs:
-  <inference-type>-inference-t5-base_nb:
+  batch-inference-t5-base_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

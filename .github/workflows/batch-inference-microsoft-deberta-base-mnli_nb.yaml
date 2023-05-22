@@ -1,4 +1,4 @@
-name: <inference-type>-inference-microsoft-deberta-base-mnli_nb
+name: batch-inference-microsoft-deberta-base-mnli_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-microsoft-deberta-base-mnli_nb.yaml
+      - .github/workflows/batch-inference-microsoft-deberta-base-mnli_nb.yaml
 
 env:
   model_name: microsoft-deberta-base-mnli
   model_version: 4
 jobs:
-  <inference-type>-inference-microsoft-deberta-base-mnli_nb:
+  batch-inference-microsoft-deberta-base-mnli_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

@@ -1,4 +1,4 @@
-name: <inference-type>-inference-gpt2-medium_nb
+name: batch-inference-gpt2-medium_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-gpt2-medium_nb.yaml
+      - .github/workflows/batch-inference-gpt2-medium_nb.yaml
 
 env:
   model_name: gpt2-medium
   model_version: 4
 jobs:
-  <inference-type>-inference-gpt2-medium_nb:
+  batch-inference-gpt2-medium_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

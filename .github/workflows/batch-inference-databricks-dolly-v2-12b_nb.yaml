@@ -1,4 +1,4 @@
-name: <inference-type>-inference-databricks-dolly-v2-12b_nb
+name: batch-inference-databricks-dolly-v2-12b_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-databricks-dolly-v2-12b_nb.yaml
+      - .github/workflows/batch-inference-databricks-dolly-v2-12b_nb.yaml
 
 env:
   model_name: databricks-dolly-v2-12b
   model_version: 2
 jobs:
-  <inference-type>-inference-databricks-dolly-v2-12b_nb:
+  batch-inference-databricks-dolly-v2-12b_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

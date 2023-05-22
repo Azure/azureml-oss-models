@@ -1,4 +1,4 @@
-name: <inference-type>-inference-bert-large-uncased_nb
+name: real-time-inference-bert-large-uncased_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-bert-large-uncased_nb.yaml
+      - .github/workflows/real-time-inference-bert-large-uncased_nb.yaml
 
 env:
   model_name: bert-large-uncased
   model_version: 5
 jobs:
-  <inference-type>-inference-bert-large-uncased_nb:
+  real-time-inference-bert-large-uncased_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

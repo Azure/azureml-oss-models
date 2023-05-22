@@ -1,4 +1,4 @@
-name: real-time-inference-gpt2-medium_nb
+name: evaluation-question-answering_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,10 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/real-time-inference-gpt2-medium_nb.yaml
+      - .github/workflows/evaluation-question-answering_nb.yaml
 
-env:
-  model_name: gpt2-medium
-  model_version: 4
 jobs:
-  real-time-inference-gpt2-medium_nb:
+  evaluation-question-answering_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
@@ -55,18 +52,18 @@ jobs:
             bash setup.sh
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/inference/text-generation/text-generation-online-endpoint.ipynb
+      - name: run foundation-models/system/evaluation/question-answering/question-answering.ipynb.ipynb
         run: |
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "text-generation-online-endpoint.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "question-answering.ipynb.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python text-generation-online-endpoint.ipynb text-generation-online-endpoint.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
-        working-directory: sdk/python/foundation-models/system/inference/text-generation
+            papermill -k python question-answering.ipynb.ipynb question-answering.ipynb.output.ipynb
+        working-directory: sdk/python/foundation-models/system/evaluation/question-answering
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: text-generation-online-endpoint
-          path: sdk/python/foundation-models/system/inference/text-generation
+          name: question-answering.ipynb
+          path: sdk/python/foundation-models/system/evaluation/question-answering

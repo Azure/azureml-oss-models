@@ -1,4 +1,4 @@
-name: <inference-type>-inference-facebook-bart-large-cnn_nb
+name: real-time-inference-facebook-bart-large-cnn_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-facebook-bart-large-cnn_nb.yaml
+      - .github/workflows/real-time-inference-facebook-bart-large-cnn_nb.yaml
 
 env:
   model_name: facebook-bart-large-cnn
   model_version: 4
 jobs:
-  <inference-type>-inference-facebook-bart-large-cnn_nb:
+  real-time-inference-facebook-bart-large-cnn_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

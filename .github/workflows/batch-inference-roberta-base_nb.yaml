@@ -1,4 +1,4 @@
-name: <inference-type>-inference-roberta-base_nb
+name: batch-inference-roberta-base_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-roberta-base_nb.yaml
+      - .github/workflows/batch-inference-roberta-base_nb.yaml
 
 env:
   model_name: roberta-base
   model_version: 5
 jobs:
-  <inference-type>-inference-roberta-base_nb:
+  batch-inference-roberta-base_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
