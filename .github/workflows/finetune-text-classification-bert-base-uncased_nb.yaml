@@ -1,0 +1,72 @@
+name: finetune-text-classification-bert-base-uncased_nb.yaml
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "31 10/12 * * *"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/finetune-text-classification-bert-base-uncased_nb.yaml
+
+env:
+  model_name: bert-base-uncased
+
+jobs:
+  finetune-text-classification-bert-base-uncased_nb:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Azure/azureml-examples PUBLIC repository
+        uses: actions/checkout@v2
+        with:
+          owner: 'Azure'
+          repository: 'Azure/azureml-examples'
+          ref: 'hrishikesh/sample_workflow_bbu'
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: pip install notebook reqs
+        run: pip install -r sdk/python/dev-requirements.txt
+      - name: pip-install-datasets
+        run: pip install datasets
+      - name: azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{secrets.AZ_SYSTEM}}
+      - name: bootstrap resources
+        run: |
+            echo '${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}';
+            bash bootstrap.sh
+        working-directory: infra
+        continue-on-error: false
+      - name: setup SDK
+        run: |
+            source "${{ github.workspace }}/infra/sdk_helpers.sh";
+            source "${{ github.workspace }}/infra/init_environment.sh";
+            bash setup.sh
+        working-directory: sdk/python
+        continue-on-error: true
+      - name: setup-cli
+        run: |
+            source "${{ github.workspace }}/infra/sdk_helpers.sh";
+            source "${{ github.workspace }}/infra/init_environment.sh";
+            bash setup.sh
+        working-directory: cli
+        continue-on-error: true
+      - name: run foundation-models/system/finetune/text-classification/emotion-detection.ipynb
+        run: |
+            source "${{ github.workspace }}/infra/sdk_helpers.sh";
+            source "${{ github.workspace }}/infra/init_environment.sh";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "emotion-detection.ipynb";
+            [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
+            papermill -k python emotion-detection.ipynb emotion-detection.output.ipynb -p model_name "${{ env.model_name }}"
+        working-directory: sdk/python/foundation-models/system/finetune/text-classification
+      - name: upload notebook's working folder as an artifact
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: emotion-detection.ipynb
+          path: sdk/python/foundation-models/system/finetune/text-classification

@@ -1,0 +1,27 @@
+name: TRIGGER_TESTS
+
+on: 
+  workflow_dispatch:
+    inputs:
+      test_set:
+        description: 'Test set to run'
+        default: huggingface-rerun
+
+jobs:
+  start-tests-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check-out-repo-step
+      uses: actions/checkout@v2
+    - name: start-tests-step
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        cd ${{ inputs.test_set }}
+        pwd
+        ls -1
+        for file in `ls -1`  
+        do  
+          gh workflow run `cat $file | head -4 | tail -1 | sed 's/,//' | sed 's/"//g'`
+        done    
+      working-directory: tests/config/queue
