@@ -1,4 +1,4 @@
-name: <inference-type>-inference-bert-base-uncased_nb
+name: finetuning-text-classification-distilbert-base-uncased_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-bert-base-uncased_nb.yaml
+      - .github/workflows/finetuning-text-classification-distilbert-base-uncased_nb.yaml
 
 env:
-  model_name: bert-base-uncased
+  model_name: distilbert-base-uncased
   model_version: 5
 jobs:
-  <inference-type>-inference-bert-base-uncased_nb:
+  finetuning-text-classification-distilbert-base-uncased_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
@@ -55,18 +55,18 @@ jobs:
             bash setup.sh
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/inference/fill-mask/fill-mask-online-endpoint.ipynb.ipynb
+      - name: run foundation-models/system/finetune/text-classification/emotion-detection.ipynb.ipynb
         run: |
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "fill-mask-online-endpoint.ipynb.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "emotion-detection.ipynb.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python fill-mask-online-endpoint.ipynb.ipynb fill-mask-online-endpoint.ipynb.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
-        working-directory: sdk/python/foundation-models/system/inference/fill-mask
+            papermill -k python emotion-detection.ipynb.ipynb emotion-detection.ipynb.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
+        working-directory: sdk/python/foundation-models/system/finetune/text-classification
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: fill-mask-online-endpoint.ipynb
-          path: sdk/python/foundation-models/system/inference/fill-mask
+          name: emotion-detection.ipynb
+          path: sdk/python/foundation-models/system/finetune/text-classification

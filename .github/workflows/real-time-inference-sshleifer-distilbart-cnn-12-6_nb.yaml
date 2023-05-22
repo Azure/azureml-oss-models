@@ -1,4 +1,4 @@
-name: <inference-type>-inference-bert-base-uncased_nb
+name: <inference-type>-inference-sshleifer-distilbart-cnn-12-6_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/<inference-type>-inference-bert-base-uncased_nb.yaml
+      - .github/workflows/<inference-type>-inference-sshleifer-distilbart-cnn-12-6_nb.yaml
 
 env:
-  model_name: bert-base-uncased
-  model_version: 5
+  model_name: sshleifer-distilbart-cnn-12-6
+  model_version: 4
 jobs:
-  <inference-type>-inference-bert-base-uncased_nb:
+  <inference-type>-inference-sshleifer-distilbart-cnn-12-6_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
@@ -55,18 +55,18 @@ jobs:
             bash setup.sh
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/inference/fill-mask/fill-mask-online-endpoint.ipynb.ipynb
+      - name: run foundation-models/system/inference/summarization/summarization-online-endpoint.ipynb
         run: |
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "fill-mask-online-endpoint.ipynb.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "summarization-online-endpoint.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python fill-mask-online-endpoint.ipynb.ipynb fill-mask-online-endpoint.ipynb.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
-        working-directory: sdk/python/foundation-models/system/inference/fill-mask
+            papermill -k python summarization-online-endpoint.ipynb summarization-online-endpoint.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
+        working-directory: sdk/python/foundation-models/system/inference/summarization
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: fill-mask-online-endpoint.ipynb
-          path: sdk/python/foundation-models/system/inference/fill-mask
+          name: summarization-online-endpoint
+          path: sdk/python/foundation-models/system/inference/summarization
