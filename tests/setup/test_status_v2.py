@@ -13,7 +13,7 @@ parser.add_argument("--model_list_file", type=str, default="../logs/get_model_co
 # parameter to get github workflows from file
 parser.add_argument("--github_workflows_file", type=str, default="../logs/get_github_workflows/18May2023-211807.json")
 # mode parameter to get workflow status from api or file
-parser.add_argument("--mode_workflow", type=str, default="file")
+parser.add_argument("--mode_workflow", type=str, default="api")
 # mode_model parameter to get model status from api or file
 parser.add_argument("--mode_model", type=str, default="file")
 # parameter to get markdown file name
