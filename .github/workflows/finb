@@ -1,4 +1,4 @@
-name: finetuning-text-classification-microsoft-deberta-xlarge_nb
+name: ft-classification
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/finetuning-text-classification-microsoft-deberta-xlarge_nb.yaml
+      - .github/workflows/finb.yaml
 
 env:
   model_name: microsoft-deberta-xlarge
   model_version: 5
 jobs:
-  finetuning-text-classification-microsoft-deberta-xlarge_nb:
+  finetuning-text:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
