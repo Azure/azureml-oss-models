@@ -29,7 +29,7 @@ jobs:
       - name: azure login
         uses: azure/login@v1
         with:
-          creds: ${{secrets.AZ_CRED}}
+          creds: ${{secrets.AZ_SYSTEM}}
       - name: setup-cli
         run: |
             az extension add -n ml -y
