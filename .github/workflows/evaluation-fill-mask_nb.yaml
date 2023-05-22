@@ -52,18 +52,18 @@ jobs:
             bash setup.sh
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/evaluation/fill-mask/fill-mask.ipynb.ipynb
+      - name: run foundation-models/system/evaluation/fill-mask/fill-mask.ipynb
         run: |
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "fill-mask.ipynb.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "fill-mask.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python fill-mask.ipynb.ipynb fill-mask.ipynb.output.ipynb
+            papermill -k python fill-mask.ipynb fill-mask.output.ipynb
         working-directory: sdk/python/foundation-models/system/evaluation/fill-mask
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: fill-mask.ipynb
+          name: fill-mask
           path: sdk/python/foundation-models/system/evaluation/fill-mask

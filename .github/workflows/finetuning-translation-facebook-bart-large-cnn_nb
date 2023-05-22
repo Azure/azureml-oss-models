@@ -55,18 +55,18 @@ jobs:
             bash setup.sh
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/finetune/translation/translation.ipynb.ipynb
+      - name: run foundation-models/system/finetune/translation/translation.ipynb
         run: |
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "translation.ipynb.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "translation.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python translation.ipynb.ipynb translation.ipynb.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
+            papermill -k python translation.ipynb translation.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
         working-directory: sdk/python/foundation-models/system/finetune/translation
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: translation.ipynb
+          name: translation
           path: sdk/python/foundation-models/system/finetune/translation

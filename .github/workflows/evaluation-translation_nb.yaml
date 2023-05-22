@@ -52,18 +52,18 @@ jobs:
             bash setup.sh
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/evaluation/translation/translation-romanian-to-english.ipynb.ipynb
+      - name: run foundation-models/system/evaluation/translation/translation-romanian-to-english.ipynb
         run: |
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "translation-romanian-to-english.ipynb.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "translation-romanian-to-english.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python translation-romanian-to-english.ipynb.ipynb translation-romanian-to-english.ipynb.output.ipynb
+            papermill -k python translation-romanian-to-english.ipynb translation-romanian-to-english.output.ipynb
         working-directory: sdk/python/foundation-models/system/evaluation/translation
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: translation-romanian-to-english.ipynb
+          name: translation-romanian-to-english
           path: sdk/python/foundation-models/system/evaluation/translation

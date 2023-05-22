@@ -52,18 +52,18 @@ jobs:
             bash setup.sh
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/evaluation/summarization/abstractive-and-extractive-summarization.ipynb.ipynb
+      - name: run foundation-models/system/evaluation/summarization/abstractive-and-extractive-summarization.ipynb
         run: |
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "abstractive-and-extractive-summarization.ipynb.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "abstractive-and-extractive-summarization.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python abstractive-and-extractive-summarization.ipynb.ipynb abstractive-and-extractive-summarization.ipynb.output.ipynb
+            papermill -k python abstractive-and-extractive-summarization.ipynb abstractive-and-extractive-summarization.output.ipynb
         working-directory: sdk/python/foundation-models/system/evaluation/summarization
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: abstractive-and-extractive-summarization.ipynb
+          name: abstractive-and-extractive-summarization
           path: sdk/python/foundation-models/system/evaluation/summarization

@@ -5,7 +5,7 @@ from azure.ai.ml import MLClient
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 
 inference_task_type_dict = {
-    "fill-mask": {"real-time": "fill-mask-online-endpoint.ipynb", "batch": "fill-mask-batch-endpoint.ipynb"},
+    "fill-mask": {"real-time": "fill-mask-online-endpoint", "batch": "fill-mask-batch-endpoint"},
     "automatic-speech-recognition" : {"real-time": "asr-online-endpoint", "batch": "asr-batch-endpoint"},
     "question-answering": {"real-time": "question-answering-online-endpoint", "batch": "question-answering-batch-endpoint"},
     "summarization":{"real-time": "summarization-online-endpoint", "batch": "summarization-batch-endpoint"},
@@ -16,21 +16,21 @@ inference_task_type_dict = {
 }
 
 evaluation_task_dict = {
-    "fill-mask": "fill-mask.ipynb",
-    "question-answering": "question-answering.ipynb",
-    "summarization":"abstractive-and-extractive-summarization.ipynb",
-    "text-classification": "entailment-contradiction.ipynb",
-    "text-generation": "text-generation.ipynb",
-    "token-classification": "news-articles-entity-recognition.ipynb",
-    "translation": "translation-romanian-to-english.ipynb"
+    "fill-mask": "fill-mask",
+    "question-answering": "question-answering",
+    "summarization":"abstractive-and-extractive-summarization",
+    "text-classification": "entailment-contradiction",
+    "text-generation": "text-generation",
+    "token-classification": "news-articles-entity-recognition",
+    "translation": "translation-romanian-to-english"
 }
 
 ft_task_dict = {
-    "question-answering": "extractive-qa.ipynb",
-    "summarization":"news-summary.ipynb",
-    "text-classification": "emotion-detection.ipynb",
-    "token-classification": "token-classification.ipynb",
-    "translation": "translation.ipynb"  
+    "question-answering": "extractive-qa",
+    "summarization":"news-summary",
+    "text-classification": "emotion-detection",
+    "token-classification": "token-classification",
+    "translation": "translation"  
 }
 
 try:

@@ -52,18 +52,18 @@ jobs:
             bash setup.sh
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/evaluation/text-generation/text-generation.ipynb.ipynb
+      - name: run foundation-models/system/evaluation/text-generation/text-generation.ipynb
         run: |
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "text-generation.ipynb.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "text-generation.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python text-generation.ipynb.ipynb text-generation.ipynb.output.ipynb
+            papermill -k python text-generation.ipynb text-generation.output.ipynb
         working-directory: sdk/python/foundation-models/system/evaluation/text-generation
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: text-generation.ipynb
+          name: text-generation
           path: sdk/python/foundation-models/system/evaluation/text-generation
