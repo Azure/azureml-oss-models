@@ -12,7 +12,7 @@ on:
 
 env:
   model_name: bert-base-cased
-  model_version: 5
+  model_version: 4
 jobs:
   real-time-inference-bert-base-cased_nb:
     runs-on: ubuntu-latest

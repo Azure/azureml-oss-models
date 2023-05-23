@@ -1,4 +1,4 @@
-name: finetuning-token-classification-bert-base-cased_nb
+name: finetuning-token-classification-Jean-Baptiste-camembert-ner_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/finetuning-token-classification-bert-base-cased_nb.yaml
+      - .github/workflows/finetuning-token-classification-Jean-Baptiste-camembert-ner_nb.yaml
 
 env:
-  model_name: bert-base-cased
+  model_name: Jean-Baptiste-camembert-ner
   model_version: 4
 jobs:
-  finetuning-token-classification-bert-base-cased_nb:
+  finetuning-token-classification-Jean-Baptiste-camembert-ner_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository

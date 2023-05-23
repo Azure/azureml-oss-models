@@ -12,7 +12,7 @@ on:
 
 env:
   model_name: microsoft-deberta-xlarge
-  model_version: 5
+  model_version: 4
 jobs:
   finetuning-token-classification-microsoft-deberta-xlarge_nb:
     runs-on: ubuntu-latest

@@ -12,7 +12,7 @@ on:
 
 env:
   model_name: roberta-large
-  model_version: 5
+  model_version: 4
 jobs:
   finetuning-token-classification-roberta-large_nb:
     runs-on: ubuntu-latest

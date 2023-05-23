@@ -12,7 +12,7 @@ on:
 
 env:
   model_name: distilroberta-base
-  model_version: 5
+  model_version: 4
 jobs:
   batch-inference-distilroberta-base_nb:
     runs-on: ubuntu-latest

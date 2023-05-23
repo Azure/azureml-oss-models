@@ -12,7 +12,7 @@ on:
 
 env:
   model_name: camembert-base
-  model_version: 5
+  model_version: 4
 jobs:
   finetuning-text-classification-camembert-base_nb:
     runs-on: ubuntu-latest

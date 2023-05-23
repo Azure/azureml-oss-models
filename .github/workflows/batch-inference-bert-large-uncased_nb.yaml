@@ -12,7 +12,7 @@ on:
 
 env:
   model_name: bert-large-uncased
-  model_version: 5
+  model_version: 4
 jobs:
   batch-inference-bert-large-uncased_nb:
     runs-on: ubuntu-latest

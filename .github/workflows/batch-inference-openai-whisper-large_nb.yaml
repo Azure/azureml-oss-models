@@ -1,4 +1,4 @@
-name: finetuning-token-classification-bert-base-cased_nb
+name: batch-inference-openai-whisper-large_nb
 
 on:
   workflow_dispatch:
@@ -8,13 +8,13 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/finetuning-token-classification-bert-base-cased_nb.yaml
+      - .github/workflows/batch-inference-openai-whisper-large_nb.yaml
 
 env:
-  model_name: bert-base-cased
+  model_name: openai-whisper-large
   model_version: 4
 jobs:
-  finetuning-token-classification-bert-base-cased_nb:
+  batch-inference-openai-whisper-large_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
@@ -55,18 +55,18 @@ jobs:
             bash setup.sh
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/finetune/token-classification/token-classification.ipynb
+      - name: run foundation-models/system/inference/automatic-speech-recognition/asr-batch-endpoint.ipynb
         run: |
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "token-classification.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "asr-batch-endpoint.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python token-classification.ipynb token-classification.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
-        working-directory: sdk/python/foundation-models/system/finetune/token-classification
+            papermill -k python asr-batch-endpoint.ipynb asr-batch-endpoint.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
+        working-directory: sdk/python/foundation-models/system/inference/automatic-speech-recognition
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: token-classification
-          path: sdk/python/foundation-models/system/finetune/token-classification
+          name: asr-batch-endpoint
+          path: sdk/python/foundation-models/system/inference/automatic-speech-recognition

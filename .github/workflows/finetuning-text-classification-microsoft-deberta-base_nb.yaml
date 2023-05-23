@@ -12,7 +12,7 @@ on:
 
 env:
   model_name: microsoft-deberta-base
-  model_version: 5
+  model_version: 4
 jobs:
   finetuning-text-classification-microsoft-deberta-base_nb:
     runs-on: ubuntu-latest

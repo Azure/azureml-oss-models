@@ -12,7 +12,7 @@ on:
 
 env:
   model_name: bert-base-uncased
-  model_version: 5
+  model_version: 4
 jobs:
   finetuning-question-answering-bert-base-uncased_nb:
     runs-on: ubuntu-latest

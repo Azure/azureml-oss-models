@@ -12,7 +12,7 @@ on:
 
 env:
   model_name: databricks-dolly-v2-12b
-  model_version: 2
+  model_version: 1
 jobs:
   real-time-inference-databricks-dolly-v2-12b_nb:
     runs-on: ubuntu-latest
