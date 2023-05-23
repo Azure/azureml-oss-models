@@ -1,0 +1,5 @@
+{
+  "inputs": {
+      "input_string": ["Today was an amazing day!", "It was an unfortunate series of events."]
+  }
+}
