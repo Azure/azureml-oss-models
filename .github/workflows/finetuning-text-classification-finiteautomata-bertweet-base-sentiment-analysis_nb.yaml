@@ -2,13 +2,6 @@ name: finetuning-text-classification-finiteautomata-bertweet-base-sentiment-anal
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "31 10/12 * * *"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - .github/workflows/finetuning-text-classification-finiteautomata-bertweet-base-sentiment-analysis_nb.yaml
 
 env:
   model_name: finiteautomata-bertweet-base-sentiment-analysis

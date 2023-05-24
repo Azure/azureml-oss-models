@@ -2,13 +2,6 @@ name: real-time-inference-microsoft-deberta-large_nb
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "31 10/12 * * *"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - .github/workflows/real-time-inference-microsoft-deberta-large_nb.yaml
 
 env:
   model_name: microsoft-deberta-large

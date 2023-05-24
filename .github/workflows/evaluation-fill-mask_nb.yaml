@@ -2,13 +2,6 @@ name: evaluation-fill-mask_nb
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "31 10/12 * * *"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - .github/workflows/evaluation-fill-mask_nb.yaml
 
 jobs:
   evaluation-fill-mask_nb:

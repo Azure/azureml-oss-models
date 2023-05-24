@@ -2,13 +2,6 @@ name: evaluation-summarization_nb
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "31 10/12 * * *"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - .github/workflows/evaluation-summarization_nb.yaml
 
 jobs:
   evaluation-summarization_nb:

@@ -2,13 +2,6 @@ name: finetuning-text-classification-distilbert-base-uncased-finetuned-sst-2-eng
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "31 10/12 * * *"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - .github/workflows/finetuning-text-classification-distilbert-base-uncased-finetuned-sst-2-english_nb.yaml
 
 env:
   model_name: distilbert-base-uncased-finetuned-sst-2-english
