@@ -1,14 +1,14 @@
-name: evaluation-<model_name>-text-classification_nb
+name: evaluation-bert-base-cased-fill-mask_nb
 
 on:
   workflow_dispatch:
 
 env:
-  model_name: <model_name>
-  model_version: <model_version>
+  model_name: bert-base-cased
+  model_version: 4
 
 jobs:
-  evaluation-<model_name>-text-classification_nb:
+  evaluation-bert-base-cased-fill-mask_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
@@ -49,18 +49,18 @@ jobs:
             bash setup.sh
         working-directory: cli
         continue-on-error: true
-      - name: run foundation-models/system/evaluation/text-classification/entailment-contradiction.ipynb
+      - name: run foundation-models/system/evaluation/fill-mask/fill-mask.ipynb
         run: |
             source "${{ github.workspace }}/infra/sdk_helpers.sh";
             source "${{ github.workspace }}/infra/init_environment.sh";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
-            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "entailment-contradiction.ipynb";
+            bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "fill-mask.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python entailment-contradiction.ipynb entailment-contradiction.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
-        working-directory: sdk/python/foundation-models/system/evaluation/text-classification
+            papermill -k python fill-mask.ipynb fill-mask.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
+        working-directory: sdk/python/foundation-models/system/evaluation/fill-mask
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: entailment-contradiction
-          path: sdk/python/foundation-models/system/evaluation/text-classification
+          name: fill-mask
+          path: sdk/python/foundation-models/system/evaluation/fill-mask
