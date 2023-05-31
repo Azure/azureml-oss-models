@@ -1,0 +1,19 @@
+name: self-hosted-runner-test-4
+
+on: 
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/self-hosted-runner-test-4.yaml
+jobs:
+  runner-test:
+    runs-on: self-hosted
+    steps:
+    - name: check-out-repo-step
+      uses: actions/checkout@v2
+    - name: azure-login-step
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZ_CRED}}
