@@ -9,7 +9,7 @@ on:
       - .github/workflows/self-hosted-runner-test.yaml
 jobs:
   runner-test:
-    runs-on: scale-test-ep
+    runs-on: self-hosted
     steps:
     - name: check-out-repo-step
       uses: actions/checkout@v2
