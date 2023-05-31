@@ -2,13 +2,6 @@ name: <inference-type>-inference-<model_name>_nb
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "31 10/12 * * *"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - .github/workflows/<inference-type>-inference-<model_name>_nb.yaml
 
 env:
   model_name: <model_name>

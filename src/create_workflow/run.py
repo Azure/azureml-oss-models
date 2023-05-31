@@ -3,6 +3,7 @@ import re
 import os
 from azure.ai.ml import MLClient
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
+import yaml 
 
 inference_task_type_dict = {
     "fill-mask": {"real-time": "fill-mask-online-endpoint", "batch": "fill-mask-batch-endpoint"},
@@ -72,20 +73,22 @@ def remove_existing_workflow(output_path):
         if file.startswith("import-"):
             os.remove(f"{output_path}/{file}")
 
-def generate_eval_workflow(task, template = 'workflow_templates/evaluation_workflow.yaml', output_path = "../../.github/workflows"):
+def generate_eval_workflow(model_name, model_version, task, template = 'workflow_templates/evaluation_workflow.yaml', output_path = "../../.github/workflows"):
     try:
         with open(template, "r") as f:
             template_content = f.read()
         notebook = evaluation_task_dict[task]
+        template_content = template_content.replace("<model_name>", model_name)
+        template_content = template_content.replace("<model_version>", model_version)
         template_content = template_content.replace("<notebook>", notebook)
         template_content = template_content.replace("<task>", task)   
 
-        output_file = f"{output_path}/evaluation-{task}_nb.yaml"
+        output_file = f"{output_path}/evaluation-{model_name}-{task}_nb.yaml"
         with open(output_file, "w") as f:
             f.write(template_content)
 
         print(f"Evaluation workflow written for {task}")
-    except exception as e:
+    except Exception as e:
         print(e)
         print("Not fetched notebook for evaluation task ", task)
 
@@ -102,11 +105,11 @@ def generate_finetune_workflow(model_name, model_version, fttask, template = 'wo
         template_content = template_content.replace("<notebook>", notebook)
         template_content = template_content.replace("<fttask>", fttask)
 
-        output_file = f"{output_path}/finetuning-{fttask}-{model_name}_nb"
+        output_file = f"{output_path}/finetuning-{fttask}-{model_name}_nb.yaml"
         with open(output_file, "w") as f:
             f.write(template_content)
         print(f"Finetune workflow written for {model_name} and {fttask}")
-    except exception as e:
+    except Exception as e:
         print(e)
         print("Not fetched notebook for finetune model_name, fttask", model_name, fttask)
 
@@ -139,10 +142,11 @@ def generate_workflow_files(dictionary):
 
     
     generate_inference_workflow(model_name, model_version, task)
-    generate_eval_workflow(task)
+    generate_eval_workflow(model_name, model_version, task)
 
-    for fttask in dictionary["finetuning-tasks"]:
-        generate_finetune_workflow(model_name, model_version, fttask)
+    if dictionary["finetuning-tasks"]:
+        for fttask in dictionary["finetuning-tasks"]:
+            generate_finetune_workflow(model_name, model_version, fttask)
 
 def create_md_table(data):
     table_header = "| Task | Model ID | Status |\n"
@@ -171,16 +175,19 @@ model_ids = get_directory_model_id(directory)
 data = []
 for model_id in model_ids:
     try:
-        version = get_latest_model_version(model_id)
-        model = registry_ml_client.models.get(name = model_id, version = version)
-        task = model.tags["task"]
-        finetuning_task = [x.strip() for x in  model.properties["finetuning-tasks"].split(',')]
+        with open(directory+f"/{model_id}/spec.yaml") as file:
+            model_data = yaml.safe_load(file)
+
+        finetuning_task = []
+        if "properties" in model_data and "finetuning-tasks" in model_data["properties"]:
+            finetuning_task = [x.strip() for x in  model_data["properties"].get("finetuning-tasks").split(',')]
         data.append({
-            "model_name":model_id,
-            "model_version":version,
-            "task":task,
+            "model_name":model_data["name"],
+            "model_version":str(model_data["version"]),
+            "task":model_data["tags"]["task"],
             "finetuning-tasks":finetuning_task
             })
+        # print(model.__dict__)
     except:
         print("failed getting model object for ", model_id)
 

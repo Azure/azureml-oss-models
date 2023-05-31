@@ -1,17 +1,14 @@
-name: evaluation-<task>_nb
+name: evaluation-<model_name>-<task>_nb
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "31 10/12 * * *"
-  pull_request:
-    branches:
-      - main
-    paths:
-      - .github/workflows/evaluation-<task>_nb.yaml
+
+env:
+  model_name: <model_name>
+  model_version: <model_version>
 
 jobs:
-  evaluation-<task>_nb:
+  evaluation-<model_name>-<task>_nb:
     runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
@@ -59,7 +56,7 @@ jobs:
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" generate_workspace_config "../../.azureml/config.json";
             bash "${{ github.workspace }}/infra/sdk_helpers.sh" replace_template_values "<notebook>.ipynb";
             [ -f "../../.azureml/config" ] && cat "../../.azureml/config";
-            papermill -k python <notebook>.ipynb <notebook>.output.ipynb
+            papermill -k python <notebook>.ipynb <notebook>.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
         working-directory: sdk/python/foundation-models/system/evaluation/<task>
       - name: upload notebook's working folder as an artifact
         if: ${{ always() }}
