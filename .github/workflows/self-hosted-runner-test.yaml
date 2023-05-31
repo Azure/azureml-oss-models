@@ -1,0 +1,17 @@
+name: workflow-test-selfhost
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  runner-test:
+    runs-on: scale-test-ep
+    steps:
+    - name: check-out-repo-step
+      uses: actions/checkout@v2
+    - name: azure-login-step
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZ_CRED}}
+    - name: pip-install-azure-ai-ml
+      run: pip install azure-ai-ml 
