@@ -25,5 +25,3 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{secrets.AZ_CRED}}
-    - name: pip-install-azure-ai-ml
-      run: pip install azure-ai-ml 
