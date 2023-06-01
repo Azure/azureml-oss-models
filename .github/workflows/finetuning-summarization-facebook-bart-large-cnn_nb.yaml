@@ -8,7 +8,7 @@ env:
   model_version: 4
 jobs:
   finetuning-summarization-facebook-bart-large-cnn_nb:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
         uses: actions/checkout@v2

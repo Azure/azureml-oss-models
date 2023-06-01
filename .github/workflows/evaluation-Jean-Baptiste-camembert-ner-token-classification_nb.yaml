@@ -9,7 +9,7 @@ env:
 
 jobs:
   evaluation-Jean-Baptiste-camembert-ner-token-classification_nb:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
         uses: actions/checkout@v2

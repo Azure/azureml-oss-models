@@ -9,7 +9,7 @@ env:
 
 jobs:
   evaluation-roberta-large-openai-detector-text-classification_nb:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
         uses: actions/checkout@v2

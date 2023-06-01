@@ -8,7 +8,7 @@ env:
   model_version: 1
 jobs:
   batch-inference-databricks-dolly-v2-12b_nb:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
         uses: actions/checkout@v2
