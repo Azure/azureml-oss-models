@@ -13,11 +13,6 @@ env:
 jobs:
   batch-inference-bert-base-cased_nb:
     runs-on: self-hosted
-    steps:
-      - name: setup python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.8"
       - name: pip install notebook reqs
         run: pip install -r sdk/python/dev-requirements.txt
       - name: pip-install-datasets
