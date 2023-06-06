@@ -21,7 +21,7 @@ jobs:
       - name: azure login
         uses: azure/login@v1
         with:
-          creds: ${{secrets.AZ_SYSTEM}}
+          creds: ${{secrets.AZ_MODEL_VALIDATION}}
       - name: run foundation-models/system/inference/fill-mask/fill-mask-batch-endpoint.ipynb
         run: |
             papermill -k python fill-mask-batch-endpoint.ipynb fill-mask-batch-endpoint.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
