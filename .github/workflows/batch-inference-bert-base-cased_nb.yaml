@@ -14,6 +14,12 @@ jobs:
   batch-inference-bert-base-cased_nb:
     runs-on: self-hosted
     steps:
+      - name: Clone Azure/azureml-examples PUBLIC repository
+        uses: actions/checkout@v2
+        with:
+          owner: 'Azure'
+          repository: 'Azure/azureml-examples'
+          ref: 'hrishikesh/sysreg-workflow'
       - name: pip install notebook reqs
         run: pip install -r sdk/python/dev-requirements.txt
       - name: pip-install-datasets
@@ -21,7 +27,7 @@ jobs:
       - name: azure login
         uses: azure/login@v1
         with:
-          creds: ${{secrets.AZ_CRED2}}
+          creds: ${{secrets.AZ_CRED}}
       - name: run foundation-models/system/inference/fill-mask/fill-mask-batch-endpoint.ipynb
         run: |
             papermill -k python fill-mask-batch-endpoint.ipynb fill-mask-batch-endpoint.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
