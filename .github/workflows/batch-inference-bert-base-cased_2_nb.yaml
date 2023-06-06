@@ -1,4 +1,4 @@
-name: batch-inference-bert-base-cased_nb
+name: batch-inference-bert-base-cased_2_nb
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - .github/workflows/batch-inference-bert-base-cased_nb.yaml
+      - .github/workflows/batch-inference-bert-base-cased_2_nb.yaml
 env:
   model_name: bert-base-cased
   model_version: 4
