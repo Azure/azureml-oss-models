@@ -12,7 +12,7 @@ env:
   model_version: 4
 jobs:
   batch-inference-bert-base-cased_nb:
-    runs-on: ubuntu-latests
+    runs-on: ubuntu-latest
     steps:
       - name: Clone Azure/azureml-examples PUBLIC repository
         uses: actions/checkout@v2
