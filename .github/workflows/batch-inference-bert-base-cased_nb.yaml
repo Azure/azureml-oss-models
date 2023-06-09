@@ -27,11 +27,6 @@ jobs:
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZ_CRED }}
-      - uses: azure/CLI@v1
-        with:
-          azcliversion: 2.0.72
-          inlineScript: |
-            az account list
       - name: run foundation-models/system/inference/fill-mask/fill-mask-batch-endpoint.ipynb
         run: |
             papermill -k python fill-mask-batch-endpoint.ipynb fill-mask-batch-endpoint.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
