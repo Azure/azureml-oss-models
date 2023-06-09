@@ -1,0 +1,39 @@
+name: batch-inference-bert-base-cased_nb
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/batch-inference-bert-base-cased_nb.yaml
+env:
+  model_name: bert-base-cased
+  model_version: 4
+jobs:
+  batch-inference-bert-base-cased_nb:
+    runs-on: self-hosted
+    steps:
+      - name: Clone Azure/azureml-examples PUBLIC repository
+        uses: actions/checkout@v2
+        with:
+          owner: 'Azure'
+          repository: 'Azure/azureml-examples'
+          ref: 'hrishikesh/sysreg-workflow'
+      - name: pip install notebook reqs
+        run: pip install -r sdk/python/dev-requirements.txt
+      - name: pip-install-datasets
+        run: pip install datasets azure-ai-ml azure-identity
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZ_CRED }}
+      - name: run foundation-models/system/inference/fill-mask/fill-mask-batch-endpoint.ipynb
+        run: |
+            papermill -k python fill-mask-batch-endpoint.ipynb fill-mask-batch-endpoint.output.ipynb -p model_name "${{ env.model_name }}" -p model_version "${{ env.model_version }}"
+        working-directory: sdk/python/foundation-models/system/inference/fill-mask
+      - name: upload notebook's working folder as an artifact
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: fill-mask-batch-endpoint
+          path: sdk/python/foundation-models/system/inference/fill-mask
