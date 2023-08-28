@@ -1,32 +1,50 @@
-name: <test_model_name>
+name: distl
 
 on: 
   workflow_dispatch:
 
 env:
-  test_model_name: <test_model_name>
-  test_sku_type: <test_sku_type>
-  test_trigger_next_model: <test_trigger_next_model>
-  test_queue: <test_queue>
-  test_set: <test_set>
-  test_keep_looping: <test_keep_looping>
+  test_model_name: distilbert-base-uncased
+  test_sku_type: cpu
+  test_trigger_next_model: true
+  test_queue: test-norwayeast-02
+  test_set: huggingface-all
+  test_keep_looping: false
 
 jobs:
   deploy-model-job:
     runs-on: ubuntu-latest
     steps:
     - name: check-out-repo-step
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: azure-login-step
       uses: azure/login@v1
       with:
-        creds: ${{secrets.<test_secret_name>}}
+        creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: pip-install-azure-ai-ml
-      run: pip install azure-ai-ml 
+      run: pip install azure-ai-ml
+    - name: pip-install-azureml-core
+      run: pip install azureml-core
+    - name: pip-install-azureml-mlflow
+      run: pip install azureml-mlflow
+    - name: pip-install-transformers
+      run: pip install transformers
+    - name: pip-install-transformers[torch]
+      run: pip install transformers[torch]
+    - name: pip-install-torchvision
+      run: pip install torchvision 
+    - name: pip-install-mlflow
+      run: pip install mlflow
+    - name: pip-install-python-box
+      run: pip install python-box 
+    - name: pip-install-sacremoses
+      run: pip install sacremoses
+    - name: pip-install-sentencepiece
+      run: pip install sentencepiece
     - name: deploy-model-step
       id: deploy-model-step
-      run: python deploy_huggingface_models.py
-      working-directory: tests/src
+      run: python generic_initial_automation.py
+      working-directory: tests/src/testing-automation
     - name: trigger-next-model-step
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

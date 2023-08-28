@@ -1,0 +1,7 @@
+Helsinki-NLP/opus-mt-en-mk
+Helsinki-NLP/opus-mt-en-ml
+Helsinki-NLP/opus-mt-en-run
+Helsinki-NLP/opus-mt-en-sq
+Helsinki-NLP/opus-mt-en-swc
+Helsinki-NLP/opus-mt-en-tn
+Geotrend/bert-base-en-fr-cased
