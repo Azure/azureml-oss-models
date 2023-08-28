@@ -1,0 +1,52 @@
+name: KoboldAI/fairseq-dense-13B
+
+on: 
+  workflow_dispatch:
+
+env:
+  test_model_name: KoboldAI/fairseq-dense-13B
+  test_sku_type: gpu
+  test_trigger_next_model: true
+  test_queue: test-northeurope-2
+  test_set: huggingface-all
+  test_keep_looping: false
+
+jobs:
+  deploy-model-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check-out-repo-step
+      uses: actions/checkout@v2
+    - name: azure-login-step
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+    - name: pip-install-azure-ai-ml
+      run: pip install azure-ai-ml
+    - name: pip-install-azureml-core
+      run: pip install azureml-core
+    - name: pip-install-azureml-mlflow
+      run: pip install azureml-mlflow
+    - name: pip-install-transformers
+      run: pip install transformers
+    - name: pip-install-transformers[torch]
+      run: pip install transformers[torch]
+    - name: pip-install-torchvision
+      run: pip install torchvision 
+    - name: pip-install-mlflow
+      run: pip install mlflow
+    - name: pip-install-python-box
+      run: pip install python-box 
+    - name: pip-install-sacremoses
+      run: pip install sacremoses
+    - name: pip-install-sentencepiece
+      run: pip install sentencepiece
+    - name: deploy-model-step
+      id: deploy-model-step
+      run: python generic_initial_automation.py
+      working-directory: tests/src/automation_for_constant_library
+    - name: trigger-next-model-step
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      if: ${{ env.test_trigger_next_model == 'true' && steps.deploy-model-step.outputs.NEXT_MODEL != '' && (success() || failure())}}
+      run: gh workflow run ${{ steps.deploy-model-step.outputs.NEXT_MODEL }} --ref ${{ github.ref_name }}
