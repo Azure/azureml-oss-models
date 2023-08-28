@@ -1,0 +1,11 @@
+{
+    "inputs": {
+      "past_user_inputs": [
+        "Which movie is the best ?"
+      ],
+      "generated_responses": [
+        "It's Die Hard for sure."
+      ],
+      "text": "Can you explain why ?"
+    }
+}
