@@ -1,27 +1,13 @@
 {
     "queue_name": "test-northeurope-2",
     "models": [
-        "ku-nlp-roberta-base-japanese-char-wwm",
-        "liamliang-demographics-gender",
-        "beomi-korean-hatespeech-multilabel",
-        "camembert-camembert-base",
-        "microsoft-git-base-vatex",
-        "facebook-esm2-t36-3b-ur50d",
-        "ckiplab-albert-tiny-chinese-pos",
-        "jackaduma-secbert",
-        "mariorossi-t5-base-finetuned-question-answering",
-        "amphora-finabsa",
-        "pinkmanlove-llama-7b-hf",
-        "helsinki-nlp-opus-mt-et-en",
-        "sociocom-medner-cr-ja",
-        "salesforce-codegen-350m-multi",
-        "helsinki-nlp-opus-mt-en-ar",
-        "helsinki-nlp-opus-mt-mul-en",
-        "helsinki-nlp-opus-mt-en-fr",
-        "bert-base-cased"
+        "KoboldAI/fairseq-dense-13B"       
     ],
     "workspace": "test-northeurope",
     "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
     "resource_group": "huggingface-registry-test1",
-    "registry": "HuggingFace"
+    "registry": "HuggingFace",
+    "environment": "automate-venv",
+    "compute": "Standard-E32s-v3",
+    "instance_type": "Standard_E32s_v3"
 }
