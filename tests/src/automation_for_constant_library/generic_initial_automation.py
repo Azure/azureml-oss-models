@@ -1,12 +1,9 @@
 from azureml.core import Workspace, Environment
-#from generic_model_download_and_register import Model
 from model_inference_and_deployment import ModelInferenceAndDeployemnt
-from create_pipeline import Pipeline
 from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
 from azure.ai.ml.entities import AmlCompute
 from azure.ai.ml import command
 from azure.ai.ml import MLClient, UserIdentityConfiguration
-from azure.ai.ml.dsl import pipeline
 import mlflow
 import json
 import os
