@@ -1,7 +1,8 @@
 name: KoboldAI/fairseq-dense-13B
 
 on: 
-  workflow_dispatch:
+  push:
+    branches: [ "sonata/HuggingFaceMigration" ]
 
 env:
   test_model_name: KoboldAI/fairseq-dense-13B
