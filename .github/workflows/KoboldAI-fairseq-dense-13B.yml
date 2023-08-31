@@ -1,8 +1,7 @@
 name: KoboldAI/fairseq-dense-13B
 
 on: 
-  push:
-    branches: [ "sonata/HuggingFaceMigration" ]
+  workflow_dispatch:
 
 env:
   test_model_name: KoboldAI/fairseq-dense-13B
@@ -14,10 +13,12 @@ env:
 
 jobs:
   deploy-model-job:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     - name: check-out-repo-step
       uses: actions/checkout@v2
+      with:     
+        ref: sonata/HuggingFaceMigration
     - name: azure-login-step
       uses: azure/login@v1
       with:
