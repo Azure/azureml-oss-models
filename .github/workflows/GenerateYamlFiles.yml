@@ -1,0 +1,77 @@
+name: GenerateYamlFiles
+
+on: 
+  workflow_dispatch:
+
+env:
+  test_model_name: GenerateYamlFiles
+  GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
+  # test_sku_type: cpu
+  # test_trigger_next_model: true
+  # test_queue: model_with_static_library
+  # test_set: huggingface-all
+  # test_keep_looping: false
+
+jobs:
+  deploy-model-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check-out-repo-step
+      uses: actions/checkout@v3
+      # uses: actions/checkout@a81bbbf8298c0fa03ea29cdc473d45769f953675
+      with:
+        # ref: main
+        lfs: true
+        repository: Konjarla-Vindya/son-azureml-oss-models
+        branh: main
+      #     git config global init.defaultBranch main
+        token: ${{ secrets.WORKFLOW_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+      #   path: son-azureml-oss-models
+    
+    # - name: Checkout private tools
+    #   uses: actions/checkout@v2
+    #   with:
+    #     # repository: Konjarla-Vindya/son-azureml-oss-models
+    #     token: ${{ secrets.WORKFLOW_TOKEN }} # `GH_PAT` is a secret that contains your PAT
+        # path: my-tools
+    - name: azure-login-step
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+    - name: pip-install-azure-ai-ml
+      run: pip install azure-ai-ml
+    - name: pip install pyyaml
+      run: pip install pyyaml
+    - name: jq
+      run: pip install jq
+    # - name: pip-install-azureml-core
+    #   run: pip install azureml-core
+    # - name: pip-install-azureml-mlflow
+    #   run: pip install azureml-mlflow
+    # - name: pip-install-transformers
+    #   run: pip install transformers
+    # - name: pip-install-transformers[torch]
+    #   run: pip install transformers[torch]
+    # - name: pip-install-torchvision
+    #   run: pip install torchvision
+    # - name: pip-install-mlflow
+    #   run: pip install mlflow
+    - name: pip-install-python-box
+      run: pip install python-box 
+    - name: deploy-model-step
+      id: deploy-model-step
+      run: python create_queue.py
+      working-directory: tests/setup
+    - name: Commit files
+      id: commit
+      run: | 
+        git config user.email "${{ secrets.USER_EMAIL }}"           
+        git config user.name "${{ secrets.USER_NAME }}"
+        git add --all
+        git commit -m --all          
+        git push
+    - name: trigger-next-model-step
+      env:
+        GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
+      if: ${{ env.test_trigger_next_model == 'true' && steps.deploy-model-step.outputs.NEXT_MODEL != '' && (success() || failure())}}
+      run: gh workflow run ${{ steps.deploy-model-step.outputs.NEXT_MODEL }} --ref ${{ github.ref_name }}
