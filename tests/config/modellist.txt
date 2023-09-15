@@ -1,0 +1,2 @@
+ALINEAR/albert-japanese-v2
+bert-base-cased
