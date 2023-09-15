@@ -45,7 +45,7 @@ jobs:
       run: pip install fugashi[unidic-lite]  
     - name: deploy-model-step
       id: deploy-model-step
-      run: python generic_initial_automation.py
+      run: python sys.py
       working-directory: tests/src/automation_for_constant_library
     - name: trigger-next-model-step
       env:
