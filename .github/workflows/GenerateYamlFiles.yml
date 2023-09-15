@@ -5,7 +5,7 @@ on:
 
 env:
   test_model_name: GenerateYamlFiles
-  GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
   # test_sku_type: cpu
   # test_trigger_next_model: true
   # test_queue: model_with_static_library
@@ -22,18 +22,10 @@ jobs:
       with:
         # ref: main
         lfs: true
-        repository: Konjarla-Vindya/son-azureml-oss-models
+        repository: Azure/azureml-oss-models
         branh: main
       #     git config global init.defaultBranch main
         token: ${{ secrets.WORKFLOW_TOKEN }} # `GH_PAT` is a secret that contains your PAT
-      #   path: son-azureml-oss-models
-    
-    # - name: Checkout private tools
-    #   uses: actions/checkout@v2
-    #   with:
-    #     # repository: Konjarla-Vindya/son-azureml-oss-models
-    #     token: ${{ secrets.WORKFLOW_TOKEN }} # `GH_PAT` is a secret that contains your PAT
-        # path: my-tools
     - name: azure-login-step
       uses: azure/login@v1
       with:
@@ -72,6 +64,6 @@ jobs:
         git push
     - name: trigger-next-model-step
       env:
-        GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
       if: ${{ env.test_trigger_next_model == 'true' && steps.deploy-model-step.outputs.NEXT_MODEL != '' && (success() || failure())}}
       run: gh workflow run ${{ steps.deploy-model-step.outputs.NEXT_MODEL }} --ref ${{ github.ref_name }}
