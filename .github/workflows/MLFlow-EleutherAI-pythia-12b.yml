@@ -1,13 +1,13 @@
-name: MLFlow-ALINEAR/albert-japanese-v2
+name: MLFlow-EleutherAI/pythia-12b
 
 on: 
   workflow_dispatch:
 
 env:
-  test_model_name: ALINEAR/albert-japanese-v2
+  test_model_name: EleutherAI/pythia-12b
   test_sku_type: cpu
   test_trigger_next_model: true
-  test_queue: test-northcentralus-2
+  test_queue: test-northcentralus-0
   test_set: huggingface-all
   test_keep_looping: false
 

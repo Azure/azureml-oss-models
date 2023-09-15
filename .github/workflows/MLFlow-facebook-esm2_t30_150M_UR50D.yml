@@ -1,10 +1,10 @@
-name: MLFlow-ALINEAR/albert-japanese-v2
+name: MLFlow-facebook/esm2_t30_150M_UR50D
 
 on: 
   workflow_dispatch:
 
 env:
-  test_model_name: ALINEAR/albert-japanese-v2
+  test_model_name: facebook/esm2_t30_150M_UR50D
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-northcentralus-2
