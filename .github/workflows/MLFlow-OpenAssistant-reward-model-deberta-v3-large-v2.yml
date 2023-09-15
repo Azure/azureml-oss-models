@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: -OpenAssistant/reward-model-deberta-v3-large-v2
+  test_model_name: OpenAssistant/reward-model-deberta-v3-large-v2
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-eastus-1

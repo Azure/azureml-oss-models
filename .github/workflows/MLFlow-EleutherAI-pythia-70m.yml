@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: -EleutherAI/pythia-70m
+  test_model_name: EleutherAI/pythia-70m
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-eastus-1

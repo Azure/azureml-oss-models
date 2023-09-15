@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: -bhadresh-savani/bert-base-go-emotion
+  test_model_name: bhadresh-savani/bert-base-go-emotion
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-eastus-3
