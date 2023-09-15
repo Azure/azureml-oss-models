@@ -1,0 +1,10 @@
+{
+    "test-eastus": {
+        "0": [
+            "MLFlow-test1"
+        ],
+        "1": [
+            "MLFlow-ttest2"
+        ]
+    }
+}
