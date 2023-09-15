@@ -1,0 +1,54 @@
+name: MLFlow-nghuyong/ernie-3.0-base-zh
+
+on: 
+  workflow_dispatch:
+
+env:
+  test_model_name: nghuyong/ernie-3.0-base-zh
+  test_sku_type: cpu
+  test_trigger_next_model: true
+  test_queue: test-japaneast-0
+  test_set: huggingface-all
+  test_keep_looping: false
+
+jobs:
+  deploy-model-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check-out-repo-step
+      uses: actions/checkout@v3
+    - name: azure-login-step
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZ_CRED}}
+    - name: pip-install-azure-ai-ml
+      run: pip install azure-ai-ml
+    - name: pip-install-azureml-core
+      run: pip install azureml-core
+    - name: pip-install-azureml-mlflow
+      run: pip install azureml-mlflow==1.53.0
+    - name: pip-install-transformers
+      run: pip install transformers
+    - name: pip-install-transformers[torch]
+      run: pip install transformers[torch]
+    - name: pip-install-torchvision
+      run: pip install torchvision 
+    - name: pip-install-mlflow
+      run: pip install mlflow
+    - name: pip-install-python-box
+      run: pip install python-box 
+    - name: pip-install-sacremoses
+      run: pip install sacremoses
+    - name: pip-install-sentencepiece
+      run: pip install sentencepiece
+    - name: pip-install-fugashi[unidic-lite]
+      run: pip install fugashi[unidic-lite]  
+    - name: deploy-model-step
+      id: deploy-model-step
+      run: python generic_initial_automation.py
+      working-directory: tests/src/automation_for_constant_library
+    - name: trigger-next-model-step
+      env:
+        GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
+      if: ${{ env.test_trigger_next_model == 'true' && steps.deploy-model-step.outputs.NEXT_MODEL != '' && (success() || failure())}}
+      run: gh workflow run ${{ steps.deploy-model-step.outputs.NEXT_MODEL }} --ref ${{ github.ref_name }}
