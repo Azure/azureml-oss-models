@@ -1,7 +1,8 @@
 {
     "queue_name": "test-southcentralus-0",
     "models": [
-        "MLFlow-test1"
+        "MLFlow-test1",
+        "MLFlow-ttest2"
     ],
     "workspace": "test-southcentralus",
     "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
