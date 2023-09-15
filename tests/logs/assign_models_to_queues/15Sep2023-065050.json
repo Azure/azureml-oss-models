@@ -1,0 +1,10 @@
+{
+    "test-southcentralus": {
+        "0": [
+            "MLFlow-ALINEAR/albert-japanese-v2"
+        ],
+        "1": [
+            "MLFlow-bert-base-cased"
+        ]
+    }
+}

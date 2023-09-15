@@ -1,26 +1,13 @@
 {
     "queue_name": "test-southcentralus-0",
     "models": [
-        "emelnov-t5-title-g-b",
-        "alisawuffles-roberta-large-wanli",
-        "alexandrainst-da-hatespeech-detection-small",
-        "czearing-article-title-generator",
-        "suva-uptag-keyphrase-model",
-        "monologg-distilkobert",
-        "ubc-nlp-marbert",
-        "kykim-albert-kor-base",
-        "michiyasunaga-linkbert-large",
-        "kblab-bert-base-swedish-lowermix-reallysimple-ner",
-        "nreimers-mminilmv2-l12-h384-distilled-from-xlmr-large",
-        "elkulako-cryptobert",
-        "fabiochiu-t5-small-medium-title-generation",
-        "facebook-wmt19-en-de",
-        "salesforce-codet5-base-multi-sum",
-        "hfl-chinese-roberta-wwm-ext",
-        "oliverguhr-fullstop-punctuation-multilang-large"
+        "MLFlow-ALINEAR/albert-japanese-v2"
     ],
     "workspace": "test-southcentralus",
-    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
-    "resource_group": "huggingface-registry-test22",
-    "registry": "HuggingFace"
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace",
+    "environment": "automate-venv",
+    "compute": "Standard-E64s-v3",
+    "instance_type": "Standard_E64s_v3"
 }

@@ -1,26 +1,13 @@
 {
     "queue_name": "test-southcentralus-1",
     "models": [
-        "vietai-vit5-base",
-        "jjzha-jobbert-skill-extraction",
-        "helsinki-nlp-opus-mt-hr-sv",
-        "rifky-indobert-indolem-uncased-qa",
-        "helsinki-nlp-opus-mt-en-hu",
-        "aekupor-probing",
-        "transformersbook-pegasus-samsum",
-        "nlpaueb-bert-base-uncased-contracts",
-        "avishvj-biobert-protein-ner",
-        "alirezamsh-small100",
-        "bvanaken-clinical-assertion-negation-bert",
-        "rinna-japanese-gpt-1b",
-        "dbmdz-bert-base-italian-xxl-cased",
-        "deepset-deberta-v3-base-squad2",
-        "helsinki-nlp-opus-mt-en-it",
-        "mizuiro-sakura-luke-japanese-base-finetuned-ner",
-        "google-flan-t5-base"
+        "MLFlow-bert-base-cased"
     ],
     "workspace": "test-southcentralus",
-    "subscription": "ec1644c7-587f-4e34-bc8d-6c162a042cc2",
-    "resource_group": "huggingface-registry-test22",
-    "registry": "HuggingFace"
+    "subscription": "80c77c76-74ba-4c8c-8229-4c3b2957990c",
+    "resource_group": "huggingface-registry-test1",
+    "registry": "HuggingFace",
+    "environment": "automate-venv",
+    "compute": "Standard-E64s-v3",
+    "instance_type": "Standard_E64s_v3"
 }
