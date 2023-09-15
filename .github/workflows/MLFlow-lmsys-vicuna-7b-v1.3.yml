@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-lmsys/vicuna-7b-v1.3
+  test_model_name: lmsys/vicuna-7b-v1.3
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-2

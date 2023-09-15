@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli
+  test_model_name: ynie/roberta-large-snli_mnli_fever_anli_R1_R2_R3-nli
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-2

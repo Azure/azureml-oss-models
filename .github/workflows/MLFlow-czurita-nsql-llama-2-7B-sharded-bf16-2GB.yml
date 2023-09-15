@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-czurita/nsql-llama-2-7B-sharded-bf16-2GB
+  test_model_name: czurita/nsql-llama-2-7B-sharded-bf16-2GB
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-2

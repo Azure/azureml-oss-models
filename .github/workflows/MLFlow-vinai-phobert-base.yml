@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-vinai/phobert-base
+  test_model_name: vinai/phobert-base
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-1

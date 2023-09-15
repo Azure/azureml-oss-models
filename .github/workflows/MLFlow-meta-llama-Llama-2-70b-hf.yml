@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-meta-llama/Llama-2-70b-hf
+  test_model_name: meta-llama/Llama-2-70b-hf
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-0

@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-siebert/sentiment-roberta-large-english
+  test_model_name: siebert/sentiment-roberta-large-english
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-1

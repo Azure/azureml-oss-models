@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-upstage/SOLAR-0-70b-16bit
+  test_model_name: upstage/SOLAR-0-70b-16bit
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-2

@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-Hello-SimpleAI/chatgpt-detector-roberta
+  test_model_name: Hello-SimpleAI/chatgpt-detector-roberta
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-2

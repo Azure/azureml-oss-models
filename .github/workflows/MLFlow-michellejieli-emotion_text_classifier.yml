@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-michellejieli/emotion_text_classifier
+  test_model_name: michellejieli/emotion_text_classifier
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-3

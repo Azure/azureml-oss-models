@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-finiteautomata/bertweet-base-sentiment-analysis
+  test_model_name: finiteautomata/bertweet-base-sentiment-analysis
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-2

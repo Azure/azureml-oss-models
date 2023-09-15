@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  test_model_name: MLFlow-mrm8488/bert-spanish-cased-finetuned-ner
+  test_model_name: mrm8488/bert-spanish-cased-finetuned-ner
   test_sku_type: cpu
   test_trigger_next_model: true
   test_queue: test-koreacentral-0
