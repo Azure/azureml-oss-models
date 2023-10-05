@@ -1,3 +1,6 @@
+from transformers import AutoModel, AutoTokenizer, AutoConfig
+import transformers
+from urllib.request import urlopen
 from azure.ai.ml import MLClient, UserIdentityConfiguration
 from azure.identity import (
     DefaultAzureCredential,
@@ -9,9 +12,7 @@ import re
 import pandas as pd
 import os
 import shutil
-from transformers import AutoModel, AutoTokenizer, AutoConfig
-import transformers
-from urllib.request import urlopen
+
 try:
 	credential = DefaultAzureCredential()
 	credential.get_token("https://management.azure.com/.default")
