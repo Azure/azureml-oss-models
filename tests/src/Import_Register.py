@@ -5,21 +5,21 @@ from azure.identity import (
 )
 from azure.ai.ml.dsl import pipeline
 try:
-        credential = DefaultAzureCredential()
-        credential.get_token("https://management.azure.com/.default")
-    except Exception as ex:
-        # Fall back to InteractiveBrowserCredential in case DefaultAzureCredential not work
-        credential = InteractiveBrowserCredential()
+	credential = DefaultAzureCredential()
+	credential.get_token("https://management.azure.com/.default")
+except Exception as ex:
+	# Fall back to InteractiveBrowserCredential in case DefaultAzureCredential not work
+	credential = InteractiveBrowserCredential()
     print("workspace_name : ", queue.workspace)
-    try:
-        workspace_ml_client = MLClient.from_config(credential=credential)
-    except:
-        workspace_ml_client = MLClient(
-            credential=credential,
-            subscription_id=queue.subscription,
-            resource_group_name=queue.resource_group,
-            workspace_name=queue.workspace
-        )
+try:
+	workspace_ml_client = MLClient.from_config(credential=credential)
+except:
+	workspace_ml_client = MLClient(
+	    credential=credential,
+	    subscription_id=queue.subscription,
+	    resource_group_name=queue.resource_group,
+	    workspace_name=queue.workspace
+	)
 import_model = ml_client_registry.components.get(name="import_model_oss_test", label="latest")
 test_model_name = os.environ.get('test_model_name')
 def get_task(self) -> str:
