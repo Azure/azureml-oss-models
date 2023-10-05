@@ -4,46 +4,66 @@ from azure.identity import (
     InteractiveBrowserCredential,
 )
 from azure.ai.ml.dsl import pipeline
+from huggingface_hub import HfApi
+import re
+import pandas as pd
+import os
+import shutil
 try:
 	credential = DefaultAzureCredential()
 	credential.get_token("https://management.azure.com/.default")
 except Exception as ex:
 	# Fall back to InteractiveBrowserCredential in case DefaultAzureCredential not work
 	credential = InteractiveBrowserCredential()
-    print("workspace_name : ", queue.workspace)
+    # print("workspace_name : ", queue.workspace)
 try:
 	workspace_ml_client = MLClient.from_config(credential=credential)
 except:
 	workspace_ml_client = MLClient(
 	    credential=credential,
 	    subscription_id=queue.subscription,
-	    resource_group_name=queue.resource_group,
-	    workspace_name=queue.workspace
+        resource_group_name=queue.resource_group,
+        workspace_name=queue.workspace
 	)
+ml_client_registry = MLClient(credential, registry_name=queue.registry)
 import_model = ml_client_registry.components.get(name="import_model_oss_test", label="latest")
 test_model_name = os.environ.get('test_model_name')
-def get_task(self) -> str:
-        """ This method will read the huggin face api url data in a dataframe. Then it will findout 
-        the model which is of transformer type . Then it will find that particular model and its task
-
-        Returns:
-            str: task name
-        """
-        # response = urlopen(URL)
-        # # Load all the data with the help of json
-        # data_json = json.loads(response.read())
-        # # Convert it into dataframe and mention the specific column
-        # df = pd.DataFrame(data_json, columns=COLUMNS_TO_READ)
-        # # Find the data with the model which will be having trasnfomer tag
-        # df = df[df.tags.apply(lambda x: STRING_TO_CHECK in x)]
-        # # Find the data with that particular name
-        # required_data = df[df.modelId.apply(lambda x: x == self.model_name)]
-        # # Get the task
-        # required_data = required_data["pipeline_tag"].to_string()
-        # pattern = r'[0-9\s+]'
-        # final_data = re.sub(pattern, '', required_data)
-        # return final_data
-
+# test_model_name = "bert-base-uncased"
+experiment_name = f"Import Model Pipeline"
+URL = "https://huggingface.co/api/models?sort=downloads&direction=-1&limit=10000"
+COLUMNS_TO_READ = ["modelId", "pipeline_tag", "tags"]
+LIST_OF_COLUMNS = ['modelId', 'downloads',
+                   'lastModified', 'tags', 'pipeline_tag']
+TASK_NAME = ['fill-mask', 'token-classification', 'question-answering',
+             'summarization', 'text-generation', 'text-classification', 'translation']
+STRING_TO_CHECK = 'transformers'
+FILE_NAME = "task_and_library.json"
+class Model:
+    def __init__(self, model_name) -> None:
+        self.model_name = model_name
+    def set_next_trigger_model(queue):
+        print("In set_next_trigger_model...")
+    # file the index of test_model_name in models list queue dictionary
+        model_list = list(queue.models)
+        #model_name_without_slash = test_model_name.replace('/', '-')
+        check_mlflow_model = "MLFlow-"+test_model_name
+        index = model_list.index(check_mlflow_model)
+        #index = model_list.index(test_model_name)
+        print(f"index of {test_model_name} in queue: {index}")
+    # if index is not the last element in the list, get the next element in the list
+        if index < len(model_list) - 1:
+            next_model = model_list[index + 1]
+        else:
+            if (test_keep_looping == "true"):
+                next_model = queue[0]
+            else:
+                print("::warning:: finishing the queue")
+                next_model = ""
+    # write the next model to github step output
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+            print(f'NEXT_MODEL={next_model}')
+            print(f'NEXT_MODEL={next_model}', file=fh)
+    def get_task(self) -> str:
         hf_api = HfApi()
         # Get all the1 models in the list
         models = hf_api.list_models(
@@ -85,25 +105,6 @@ def get_task(self) -> str:
         # Replace number and space
         final_data = re.sub(pattern, '', required_data)
         return final_data
-		
-TASK_NAME = get_task()
-update_existing_model=True
-Reg_Model=test_model_name.replace('/','-')
-# version_list = list(ml_client_ws.models.list(Reg_Model))
-# foundation_model = ''
-# if len(version_list) == 0:
-#     print("Model not found in registry")
-huggingface_model_exists_in_registry = False
-# else
-#     model_version = version_list[0].version
-#     foundation_model = ml_client_ws.models.get(Reg_Model, model_version)
-#     print(
-#         "\n\nUsing model name: {0}, version: {1}, id: {2} for F.T".format(
-#             foundation_model.name, foundation_model.version, foundation_model.id
-#         )
-#     )
-#     huggingface_model_exists_in_registry = True
-# print (f"Latest model {foundation_model.name} version {foundation_model.version} created at {foundation_model.creation_context.created_at}")
 @pipeline
 def model_import_pipeline(model_id,update_existing_model, task_name):
     """
@@ -128,7 +129,15 @@ def model_import_pipeline(model_id,update_existing_model, task_name):
     return {
         "model_registration_details": import_model_job.outputs.model_registration_details
     }
-	
+if __name__ == "__main__":
+    model = Model(model_name=test_model_name)		
+    TASK_NAME = model.get_task()
+    print("TASK_NAME:==",TASK_NAME)
+    if test_trigger_next_model == "true":
+        set_next_trigger_model(queue)
+update_existing_model=True
+Reg_Model=test_model_name.replace('/','-')
+huggingface_model_exists_in_registry = False
 pipeline_object = model_import_pipeline(
     model_id=test_model_name,
     # compute=COMPUTE,
@@ -154,14 +163,11 @@ print(
 huggingface_pipeline_job = None
 # if schedule_huggingface_model_import:
     # submit the pipeline job
-huggingface_pipeline_job = ml_client_ws.jobs.create_or_update(
+huggingface_pipeline_job = workspace_ml_client.jobs.create_or_update(
     pipeline_object, experiment_name=experiment_name
 )
 # wait for the pipeline job to complete
-ml_client_ws.jobs.stream(huggingface_pipeline_job.name)
-
-import os
-import shutil
+workspace_ml_client.jobs.stream(huggingface_pipeline_job.name)
 
 download_path = "./pipeline_outputs/"
 
@@ -178,7 +184,7 @@ if huggingface_pipeline_job  is not None:
     pipeline_download_path = os.path.join(download_path, huggingface_pipeline_job.name)
     os.makedirs(pipeline_download_path, exist_ok=True)
 
-    ml_client_ws.jobs.download(
+    workspace_ml_client.jobs.download(
         name=huggingface_pipeline_job.name,
         download_path=pipeline_download_path,
         output_name="model_registration_details",
@@ -198,6 +204,6 @@ if huggingface_pipeline_job is not None:
     model_version = registration_details["version"]
 
     # Get the model object from workspace
-    model = ml_client_ws.models.get(name=model_name, version=model_version)
+    model = workspace_ml_client.models.get(name=model_name, version=model_version)
     print(f"\n{model_name}")
     print(model.__dict__)
