@@ -89,21 +89,21 @@ def get_task(self) -> str:
 TASK_NAME = get_task()
 update_existing_model=True
 Reg_Model=test_model_name.replace('/','-')
-version_list = list(ml_client_ws.models.list(Reg_Model))
-foundation_model = ''
-if len(version_list) == 0:
-    print("Model not found in registry")
-    huggingface_model_exists_in_registry = False
-else:
-    model_version = version_list[0].version
-    foundation_model = ml_client_ws.models.get(Reg_Model, model_version)
-    print(
-        "\n\nUsing model name: {0}, version: {1}, id: {2} for F.T".format(
-            foundation_model.name, foundation_model.version, foundation_model.id
-        )
-    )
-    huggingface_model_exists_in_registry = True
-print (f"Latest model {foundation_model.name} version {foundation_model.version} created at {foundation_model.creation_context.created_at}")
+# version_list = list(ml_client_ws.models.list(Reg_Model))
+# foundation_model = ''
+# if len(version_list) == 0:
+#     print("Model not found in registry")
+huggingface_model_exists_in_registry = False
+# else
+#     model_version = version_list[0].version
+#     foundation_model = ml_client_ws.models.get(Reg_Model, model_version)
+#     print(
+#         "\n\nUsing model name: {0}, version: {1}, id: {2} for F.T".format(
+#             foundation_model.name, foundation_model.version, foundation_model.id
+#         )
+#     )
+#     huggingface_model_exists_in_registry = True
+# print (f"Latest model {foundation_model.name} version {foundation_model.version} created at {foundation_model.creation_context.created_at}")
 @pipeline
 def model_import_pipeline(model_id,update_existing_model, task_name):
     """
