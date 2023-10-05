@@ -23,6 +23,18 @@ jobs:
         creds: ${{secrets.AZ_CRED1}}
     - name: pip-install-azure-ai-ml
       run: pip install azure-ai-ml 
+    - name: pip-install-transformers
+      run: pip install transformers
+    - name: pip-install-transformers[torch]
+      run: pip install transformers[torch]
+    - name: pip-install-torchvision
+      run: pip install torchvision 
+    - name: pip-install-mlflow
+      run: pip install mlflow
+    - name: pip-install-python-box
+      run: pip install python-box 
+    - name: pip-install-sacremoses
+      run: pip install sacremoses
     - name: deploy-model-step
       id: deploy-model-step
       run: python Import_Register.py
