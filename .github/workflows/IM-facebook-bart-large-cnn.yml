@@ -1,0 +1,34 @@
+name: IM-facebook-bart-large-cnn
+
+on: 
+  workflow_dispatch:
+
+env:
+  test_model_name: facebook/bart-large-cnn
+  test_sku_type: cpu
+  test_trigger_next_model: true
+  test_queue: test-southcentralus-4
+  test_set: huggingface-all
+  test_keep_looping: false
+
+jobs:
+  deploy-model-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check-out-repo-step
+      uses: actions/checkout@v2
+    - name: azure-login-step
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZ_CRED1}}
+    - name: pip-install-azure-ai-ml
+      run: pip install azure-ai-ml 
+    - name: deploy-model-step
+      id: deploy-model-step
+      run: python Import_Register.py
+      working-directory: tests/src
+    - name: trigger-next-model-step
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      if: ${{ env.test_trigger_next_model == 'true' && steps.deploy-model-step.outputs.NEXT_MODEL != '' && (success() || failure())}}
+      run: gh workflow run ${{ steps.deploy-model-step.outputs.NEXT_MODEL }} --ref ${{ github.ref_name }}
