@@ -1,0 +1,24 @@
+name: test-wf
+
+on: 
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/test-wf.yml
+
+env:
+  test_model_name: declare-lab-flan-alpaca-xl
+  test_sku_type: cpu
+  test_trigger_next_model: true
+  test_queue: test-centralus-2
+  test_set: huggingface-all
+  test_keep_looping: false
+
+jobs:
+  deploy-model-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: check-out-repo-step
+      uses: actions/checkout@v2
+ 
